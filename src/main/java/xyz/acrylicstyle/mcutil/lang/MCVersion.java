@@ -576,7 +576,7 @@ public enum MCVersion {
     BETA_1_6_2(13, "Beta 1.6.2"),
     BETA_1_6_1(13, "Beta 1.6.1"),
     BETA_1_6(13, "Beta 1.6"),
-    BETA_1_6_TEST_BUILD_3(12, BETA_1_6, "Beta 1.6 Test Build 3"),
+    BETA_1_6_TEST_BUILD_3(12, "Beta 1.6 Test Build 3"),
     BETA_1_5_02(11, "Beta 1.5_02"),
     BETA_1_5_01(11, "Beta 1.5_01"),
     BETA_1_5(11, "Beta 1.5"),
