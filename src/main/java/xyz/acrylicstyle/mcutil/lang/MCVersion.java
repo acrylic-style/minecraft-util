@@ -428,6 +428,7 @@ public enum MCVersion {
     SNAPSHOT_13W41A(0, v1_7, "13w41a"),
 
     /* pre-netty rewrite */
+    /* // nuke pre-netty rewrite
     SNAPSHOT_13W39B(80, v1_7, "13w39b"),
     SNAPSHOT_13W39A(80, v1_7, "13w39a"),
     SNAPSHOT_13W38C(79, v1_7, "13w38c"),
@@ -592,7 +593,7 @@ public enum MCVersion {
     BETA_1_1(7, "Beta 1.1"),
     BETA_1_0_2(7, "Beta 1.0.2"),
     BETA_1_0_01(7, "Beta 1.0_01"),
-    BETA_1_0(7, "Beta 1.0"),
+    BETA_1_0(7, "Beta 1.0"),*/
     ;
 
     private final int protocolVersion;
