@@ -10,6 +10,7 @@ import java.util.Map;
 
 @SuppressWarnings("unused")
 public enum MCVersion {
+    v1_16_1(736, 2567, true, "1.16.1"),
     v1_16(735, 2566, true, "1.16"),
     v1_16_RC1(734, 2565, true, v1_16, "1.16-rc1"),
     v1_16_PRE8(733, 2564, true, v1_16, "1.16-pre8"),
