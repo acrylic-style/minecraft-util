@@ -16,7 +16,7 @@ public enum MCVersion {
     v1_16_PRE8(733, 2564, true, v1_16, "1.16-pre8"),
     v1_16_PRE7(732, 2563, true, v1_16, "1.16-pre7"),
     v1_16_PRE6(730, 2562, true, v1_16, "1.16-pre6"),
-    v1_16_PRE5(749, 2561, true, v1_16, "1.16-pre5"),
+    v1_16_PRE5(729, 2561, true, v1_16, "1.16-pre5"),
     v1_16_PRE4(727, 2560, true, v1_16, "1.16-pre4"),
     v1_16_PRE3(725, 2559, true, v1_16, "1.16-pre3"),
     v1_16_PRE2(722, 2557, true, v1_16, "1.16-pre2"),
@@ -98,7 +98,7 @@ public enum MCVersion {
     v1_14_PRE1(472, 1947, true, v1_14, "1.14-pre1"),
     SNAPSHOT_19W14B(471, 1945, true, v1_14, "19w14b"),
     SNAPSHOT_19W14A(470, 1944, true, v1_14, "19w14a"),
-    MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools
+    //MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools // minecraft-util - damn protocol version 1
     SNAPSHOT_19W13B(469, 1943, true, v1_14, "19w13b"),
     SNAPSHOT_19W13A(468, 1942, true, v1_14, "19w13a"),
     SNAPSHOT_19W12B(467, 1941, true, v1_14, "19w12b"),
@@ -769,5 +769,20 @@ public enum MCVersion {
             if (version.modern) list.add(version);
         }
         return list;
+    }
+
+    @Override
+    public String toString() {
+        return "MCVersion{" + "protocolVersion=" + protocolVersion +
+                ", dataVersion=" + dataVersion +
+                ", modern=" + modern +
+                ", releaseCandidate=" + releaseCandidate +
+                ", prerelease=" + prerelease +
+                ", snapshot=" + snapshot +
+                ", snapshotFor=" + snapshotFor +
+                ", aprilFools=" + aprilFools +
+                ", beta=" + beta +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
