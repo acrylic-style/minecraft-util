@@ -7,7 +7,9 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
+import xyz.acrylicstyle.mcutil.lang.test.IgnoreTest;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,9 +29,24 @@ public class MCVersionTest {
 
     @Parameter public MCVersion version;
 
+    public static int skippedCount = 0;
+
     @Test
     public void ensureCorrectOrder() {
-        if (sortedData.indexOf(version) == version.ordinal()) {
+        try {
+            Field f = MCVersion.class.getField(version.name());
+            if (f.isAnnotationPresent(IgnoreTest.class)) {
+                String reason = f.getAnnotation(IgnoreTest.class).value();
+                System.out.println("Skipping test for " + version.name() + ": " + reason);
+                sortedData.remove(version);
+                skippedCount++;
+                tests++;
+                return;
+            }
+        } catch (ReflectiveOperationException e) {
+            throw new RuntimeException(e);
+        }
+        if (sortedData.indexOf(version) + skippedCount == version.ordinal()) {
             tests++;
             return;
         }
@@ -60,7 +77,7 @@ public class MCVersionTest {
     public static String summarize(MCVersion version) {
         return "MCVersion{" + "protocolVersion=" + version.getProtocolVersion()
                 + ", name='" + version.getName() + '\''
-                + ", indexOf=" + sortedData.indexOf(version)
+                + ", indexOf=" + (sortedData.indexOf(version) + skippedCount)
                 + ", ordinal=" + version.ordinal()
                 + '}';
     }

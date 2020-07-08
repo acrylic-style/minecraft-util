@@ -2,6 +2,7 @@ package xyz.acrylicstyle.mcutil.lang;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import xyz.acrylicstyle.mcutil.lang.test.IgnoreTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -98,7 +99,8 @@ public enum MCVersion {
     v1_14_PRE1(472, 1947, true, v1_14, "1.14-pre1"),
     SNAPSHOT_19W14B(471, 1945, true, v1_14, "19w14b"),
     SNAPSHOT_19W14A(470, 1944, true, v1_14, "19w14a"),
-    //MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools // minecraft-util - damn protocol version 1
+    @IgnoreTest("Protocol version is 1")
+    MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools
     SNAPSHOT_19W13B(469, 1943, true, v1_14, "19w13b"),
     SNAPSHOT_19W13A(468, 1942, true, v1_14, "19w13a"),
     SNAPSHOT_19W12B(467, 1941, true, v1_14, "19w12b"),
