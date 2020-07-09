@@ -434,6 +434,9 @@ public enum MCVersion {
     SNAPSHOT_13W41B(0, v1_7, "13w41b"),
     SNAPSHOT_13W41A(0, v1_7, "13w41a"),
 
+    @IgnoreTest("dummy version")
+    UNKNOWN(-1, "unknown"),
+
     /* pre-netty rewrite */
     /* // nuke pre-netty rewrite
     SNAPSHOT_13W39B(80, v1_7, "13w39b"),
@@ -735,6 +738,7 @@ public enum MCVersion {
         for (MCVersion version : values()) {
             if (version.protocolVersion == protocolVersion) list.add(version);
         }
+        if (list.size() == 0) list.add(UNKNOWN);
         cachedProtocolVersions.put(protocolVersion, list);
         return list;
     }
@@ -746,6 +750,7 @@ public enum MCVersion {
         for (MCVersion version : values()) {
             if (version.dataVersion == dataVersion) list.add(version);
         }
+        if (list.size() == 0) list.add(UNKNOWN);
         cachedDataVersions.put(dataVersion, list);
         return list;
     }
