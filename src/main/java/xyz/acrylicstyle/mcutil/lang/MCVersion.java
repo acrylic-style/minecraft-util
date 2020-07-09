@@ -11,6 +11,10 @@ import java.util.Map;
 
 @SuppressWarnings("unused")
 public enum MCVersion {
+    @IgnoreTest("not released yet")
+    v1_16_2(-1, -1, true, "1.16.2"),
+    SNAPSHOT_20W28A(740, 2570, true, v1_16_2, "20w28a"),
+    SNAPSHOT_20W27A(738, 2569, true, v1_16_2, "20w27a"),
     v1_16_1(736, 2567, true, "1.16.1"),
     v1_16(735, 2566, true, "1.16"),
     v1_16_RC1(734, 2565, true, v1_16, "1.16-rc1"),
