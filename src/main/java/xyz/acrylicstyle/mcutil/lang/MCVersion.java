@@ -11,8 +11,14 @@ import java.util.Map;
 
 @SuppressWarnings("unused")
 public enum MCVersion {
-    @IgnoreTest("not released yet")
-    v1_16_2(-1, -1, true, "1.16.2"),
+    v1_16_2(751, 2578, true, "1.16.2"),
+    v1_16_2_RC2(750, 2577, true, "1.16.2-rc2"),
+    v1_16_2_RC1(749, 2576, true, "1.16.2-rc1"),
+    v1_16_2_PRE3(748, 2575, true, "1.16.2-pre3"),
+    v1_16_2_PRE2(746, 2574, true, "1.16.2-pre2"),
+    v1_16_2_PRE1(744, 2573, true, "1.16.2-pre1"),
+    SNAPSHOT_20W30A(742, 2572, true, v1_16_2, "20w30a"),
+    SNAPSHOT_20W29A(741, 2571, true, v1_16_2, "20w29a"),
     SNAPSHOT_20W28A(740, 2570, true, v1_16_2, "20w28a"),
     SNAPSHOT_20W27A(738, 2569, true, v1_16_2, "20w27a"),
     v1_16_1(736, 2567, true, "1.16.1"),
@@ -103,7 +109,7 @@ public enum MCVersion {
     v1_14_PRE1(472, 1947, true, v1_14, "1.14-pre1"),
     SNAPSHOT_19W14B(471, 1945, true, v1_14, "19w14b"),
     SNAPSHOT_19W14A(470, 1944, true, v1_14, "19w14a"),
-    @IgnoreTest("Protocol version is 1")
+    @IgnoreTest("Protocol version is 1 :(")
     MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools
     SNAPSHOT_19W13B(469, 1943, true, v1_14, "19w13b"),
     SNAPSHOT_19W13A(468, 1942, true, v1_14, "19w13a"),
