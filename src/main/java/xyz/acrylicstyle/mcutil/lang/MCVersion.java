@@ -9,8 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({ "unused", "RedundantSuppression" })
 public enum MCVersion {
+    v1_16_3(753, 2579, true, "1.16.3"), // not released yet
+    v1_16_3_RC1(752, 2579, true, "1.16.3-rc1"),
     v1_16_2(751, 2578, true, "1.16.2"),
     v1_16_2_RC2(750, 2577, true, "1.16.2-rc2"),
     v1_16_2_RC1(749, 2576, true, "1.16.2-rc1"),
@@ -109,7 +111,7 @@ public enum MCVersion {
     v1_14_PRE1(472, 1947, true, v1_14, "1.14-pre1"),
     SNAPSHOT_19W14B(471, 1945, true, v1_14, "19w14b"),
     SNAPSHOT_19W14A(470, 1944, true, v1_14, "19w14a"),
-    @IgnoreTest("Protocol version is 1 :(")
+    @IgnoreTest("Protocol version is 1 on this april fool version")
     MC_3D_SHAREWARE_v1_34(1, 1943, true, null, true, "3D Shareware v1.34"), // april fools
     SNAPSHOT_19W13B(469, 1943, true, v1_14, "19w13b"),
     SNAPSHOT_19W13A(468, 1942, true, v1_14, "19w13a"),
