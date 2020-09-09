@@ -12,13 +12,13 @@ import java.util.Map;
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public enum MCVersion {
     v1_16_3(753, 2579, true, "1.16.3"), // not released yet
-    v1_16_3_RC1(752, 2579, true, "1.16.3-rc1"),
+    v1_16_3_RC1(752, 2579, true, v1_16_3, "1.16.3-rc1"),
     v1_16_2(751, 2578, true, "1.16.2"),
-    v1_16_2_RC2(750, 2577, true, "1.16.2-rc2"),
-    v1_16_2_RC1(749, 2576, true, "1.16.2-rc1"),
-    v1_16_2_PRE3(748, 2575, true, "1.16.2-pre3"),
-    v1_16_2_PRE2(746, 2574, true, "1.16.2-pre2"),
-    v1_16_2_PRE1(744, 2573, true, "1.16.2-pre1"),
+    v1_16_2_RC2(750, 2577, true, v1_16_2, "1.16.2-rc2"),
+    v1_16_2_RC1(749, 2576, true, v1_16_2, "1.16.2-rc1"),
+    v1_16_2_PRE3(748, 2575, true, v1_16_2, "1.16.2-pre3"),
+    v1_16_2_PRE2(746, 2574, true, v1_16_2, "1.16.2-pre2"),
+    v1_16_2_PRE1(744, 2573, true, v1_16_2, "1.16.2-pre1"),
     SNAPSHOT_20W30A(742, 2572, true, v1_16_2, "20w30a"),
     SNAPSHOT_20W29A(741, 2571, true, v1_16_2, "20w29a"),
     SNAPSHOT_20W28A(740, 2570, true, v1_16_2, "20w28a"),
