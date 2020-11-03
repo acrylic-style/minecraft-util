@@ -19,6 +19,7 @@ public class MCVersionTest {
     public static int tests = 0;
     public static final List<MCVersion> data = Arrays.asList(MCVersion.values());
     public static final List<MCVersion> sortedData = data.stream()
+            .filter(v -> v.getProtocolVersion() < 0x40000000)
             .sorted((o1, o2) -> o2.getProtocolVersion() - o1.getProtocolVersion())
             .collect(Collectors.toList());
 
@@ -33,6 +34,12 @@ public class MCVersionTest {
 
     @Test
     public void ensureCorrectOrder() {
+        if (version.getProtocolVersion() > 0x40000000) {
+            sortedData.remove(version);
+            skippedCount++;
+            tests++;
+            return;
+        }
         try {
             Field f = MCVersion.class.getField(version.name());
             if (f.isAnnotationPresent(IgnoreTest.class)) {
