@@ -11,7 +11,7 @@ import java.util.Map;
 
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public enum MCVersion {
-    v1_16_4(0x40000004, 2584, true, "1.16.4"), // unreleased version
+    v1_16_4(754, 2584, true, "1.16.4"),
     v1_16_4_RC1(0x40000003, 2583, true, "1.16.4-rc1"),
     v1_16_4_PRE2(0x40000002, 2582, true, "1.16.4-pre2"),
     v1_16_4_PRE1(0x40000001, 2581, true, "1.16.4-pre1"), // New network protocol scheme, with a high bit (bit 30) set for snapshots.
