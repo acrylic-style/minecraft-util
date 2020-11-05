@@ -11,6 +11,9 @@ import java.util.Map;
 
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public enum MCVersion {
+    @IgnoreTest("marker version (not released yet)")
+    v1_17(0, 0, true, "1.17"), // unreleased
+    SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"),
     v1_16_4(754, 2584, true, "1.16.4"),
     v1_16_4_RC1(0x40000003, 2583, true, "1.16.4-rc1"),
     v1_16_4_PRE2(0x40000002, 2582, true, "1.16.4-pre2"),
