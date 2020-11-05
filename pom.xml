@@ -6,7 +6,7 @@
 
     <groupId>xyz.acrylicstyle</groupId>
     <artifactId>minecraft-util</artifactId>
-    <version>0.0.14</version>
+    <version>0.1.0</version>
     <build>
         <plugins>
             <plugin>
@@ -33,6 +33,12 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>acrylic-repo2</id>
+            <url>https://repo2.acrylicstyle.xyz/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -50,6 +56,11 @@
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20190722</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.acrylicstyle</groupId>
+            <artifactId>java-util-all</artifactId>
+            <version>0.11.34</version>
         </dependency>
     </dependencies>
 </project>
