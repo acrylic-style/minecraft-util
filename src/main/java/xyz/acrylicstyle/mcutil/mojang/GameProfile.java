@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public final class GameProfile {
+public class GameProfile {
     @NotNull public final UUID id;
     @NotNull public final String name;
     @NotNull public final Property[] properties;

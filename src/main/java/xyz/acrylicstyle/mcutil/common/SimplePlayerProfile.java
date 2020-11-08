@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
-public final class SimplePlayerProfile implements PlayerProfile {
+public class SimplePlayerProfile implements PlayerProfile {
     @NotNull private final String name;
     @NotNull private final UUID uuid;
 

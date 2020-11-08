@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 
-public final class Property {
+public class Property {
     @NotNull public final String name;
     @NotNull public final String value;
     @Nullable public final String signature;
