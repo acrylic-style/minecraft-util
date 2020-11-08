@@ -5,6 +5,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.SignatureException;
+import java.util.Base64;
+
 public class Property {
     @NotNull public final String name;
     @NotNull public final String value;
@@ -31,5 +38,19 @@ public class Property {
         String value = json.getString("value");
         String signature = json.has("signature") ? json.getString("signature") : null;
         return new Property(name, value, signature);
+    }
+
+    public boolean hasSignature() { return this.signature != null; }
+
+    public boolean isSignatureValid(@NotNull PublicKey publicKey) {
+        try {
+            Signature signature = Signature.getInstance("SHA1withRSA");
+            signature.initVerify(publicKey);
+            signature.update(this.value.getBytes());
+            return signature.verify(Base64.getDecoder().decode(this.signature));
+        } catch (NoSuchAlgorithmException | SignatureException | InvalidKeyException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }
