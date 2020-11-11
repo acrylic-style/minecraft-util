@@ -21,21 +21,21 @@ import xyz.acrylicstyle.mcutil.mojang.results.ChangeNameResult;
 import java.util.UUID;
 
 public class MojangAPI {
-    private static final Collection<UUID, DataCache<GameProfile>> gameProfileCache = new Collection<>();
+    private static final Collection<UUID, DataCache<SimpleGameProfile>> gameProfileCache = new Collection<>();
     private static final Collection<UUID, DataCache<PlayerProfile>> playerProfileCacheByUUID = new Collection<>();
     private static final StringCollection<DataCache<PlayerProfile>> playerProfileCacheByName = new StringCollection<>();
 
     // cached
     @Contract(value = "_ -> new", pure = true)
     @NotNull
-    public static Promise<@NotNull GameProfile> getGameProfile(@NotNull UUID uuid) {
+    public static Promise<@NotNull SimpleGameProfile> getGameProfile(@NotNull UUID uuid) {
         if (gameProfileCache.containsKey(uuid)) {
-            DataCache<GameProfile> cache = gameProfileCache.get(uuid);
-            GameProfile gp = cache.get();
+            DataCache<SimpleGameProfile> cache = gameProfileCache.get(uuid);
+            SimpleGameProfile gp = cache.get();
             if (gp != null) return Promise.of(gp);
         }
         return new RESTAPI(String.format("https://sessionserver.mojang.com/session/minecraft/profile/%s?unsigned=false", uuid.toString().replaceAll("-", ""))).call()
-                .then(response -> GameProfile.parse(response.getResponse()))
+                .then(response -> SimpleGameProfile.parse(response.getResponse()))
                 .then(gp -> {
                     gameProfileCache.add(uuid, new DataCache<>(gp, System.currentTimeMillis() + 1000 * 60 * 10)); // 10 minutes of cache
                     return gp;
