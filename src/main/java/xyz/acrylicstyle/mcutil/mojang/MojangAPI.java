@@ -61,16 +61,24 @@ public class MojangAPI {
     // cached
     @NotNull
     public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name) {
+        return getPlayerProfile(name, false); // using bukkit/bungeecord api is unreliable when the player is nicked
+    }
+
+    // cached
+    @NotNull
+    public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name, boolean useAPI) {
         if (playerProfileCacheByName.containsKey(name)) {
             PlayerProfile cache = playerProfileCacheByName.get(name).get();
             if (cache != null) return Promise.of(cache);
         }
-        PlayerProfile player;
-        player = BukkitAPI.getPlayer(name);
-        if (player == null) player = BungeeCordAPI.getPlayer(name);
-        if (player != null) {
-            playerProfileCacheByName.add(name, new DataCache<>(player, System.currentTimeMillis() + 1000 * 60 * 10));
-            return Promise.of(player);
+        if (useAPI) {
+            PlayerProfile player;
+            player = BukkitAPI.getPlayer(name);
+            if (player == null) player = BungeeCordAPI.getPlayer(name);
+            if (player != null) {
+                playerProfileCacheByName.add(name, new DataCache<>(player, System.currentTimeMillis() + 1000 * 60 * 10));
+                return Promise.of(player);
+            }
         }
         return new RESTAPI("https://api.mojang.com/users/profiles/minecraft/" + name).call()
                 .then(response -> {
@@ -87,17 +95,23 @@ public class MojangAPI {
 
     // cached
     @NotNull
-    public static Promise<@NotNull String> getName(@NotNull UUID uuid) {
+    public static Promise<@NotNull String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
+
+    // cached
+    @NotNull
+    public static Promise<@NotNull String> getName(@NotNull UUID uuid, boolean useAPI) {
         if (playerProfileCacheByUUID.containsKey(uuid)) {
             PlayerProfile cache = playerProfileCacheByUUID.get(uuid).get();
             if (cache != null) return Promise.of(cache.getName());
         }
-        PlayerProfile player;
-        player = BukkitAPI.getPlayer(uuid);
-        if (player == null) BungeeCordAPI.getPlayer(uuid);
-        if (player != null) {
-            playerProfileCacheByUUID.add(uuid, new DataCache<>(player, System.currentTimeMillis() + 1000 * 60 * 10));
-            return Promise.of(player.getName());
+        if (useAPI) {
+            PlayerProfile player;
+            player = BukkitAPI.getPlayer(uuid);
+            if (player == null) BungeeCordAPI.getPlayer(uuid);
+            if (player != null) {
+                playerProfileCacheByUUID.add(uuid, new DataCache<>(player, System.currentTimeMillis() + 1000 * 60 * 10));
+                return Promise.of(player.getName());
+            }
         }
         return getNameChanges(uuid)
                 .then(CollectionList::last)
