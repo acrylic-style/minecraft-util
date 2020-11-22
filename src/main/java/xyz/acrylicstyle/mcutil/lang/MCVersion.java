@@ -13,6 +13,7 @@ import java.util.Map;
 public enum MCVersion {
     @IgnoreTest("marker version (not released yet)")
     v1_17(0, 0, true, "1.17"), // unreleased
+    SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"),
     SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"),
     v1_16_4(754, 2584, true, "1.16.4"),
     v1_16_4_RC1(0x40000003, 2583, true, "1.16.4-rc1"),
@@ -649,6 +650,7 @@ public enum MCVersion {
     }
 
     MCVersion(int protocolVersion, int dataVersion, boolean modern, @Nullable MCVersion snapshotFor, boolean aprilFools, @NotNull String name) {
+        if (name().equalsIgnoreCase("snapshot")) throw new IllegalArgumentException("This name is not allowed: " + name() + " (" + name + ")");
         this.protocolVersion = protocolVersion;
         this.dataVersion = dataVersion;
         this.modern = modern;
