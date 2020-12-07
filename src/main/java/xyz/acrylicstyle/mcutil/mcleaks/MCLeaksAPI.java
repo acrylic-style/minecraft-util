@@ -1,5 +1,6 @@
 package xyz.acrylicstyle.mcutil.mcleaks;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 import util.RESTAPI;
@@ -19,13 +20,16 @@ public class MCLeaksAPI {
         private final boolean success;
         private final E result;
 
+        @Contract(pure = true)
         public Result(boolean success, E result) {
             this.success = success;
             this.result = result;
         }
 
+        @Contract(pure = true)
         public boolean isSuccess() { return success; }
 
+        @Contract(pure = true)
         public E getResult() { return result; }
     }
 }

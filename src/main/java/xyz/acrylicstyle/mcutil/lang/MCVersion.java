@@ -13,6 +13,8 @@ import java.util.Map;
 public enum MCVersion {
     @IgnoreTest("marker version (not released yet)")
     v1_17(0, 0, true, "1.17"), // unreleased
+    SNAPSHOT_20W49A(0x40000008, 2685, v1_17, "20w49a"),
+    SNAPSHOT_20W48A(0x40000007, 2683, v1_17, "20w48a"),
     SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"),
     SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"),
     v1_16_4(754, 2584, true, "1.16.4"),
