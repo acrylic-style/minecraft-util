@@ -25,6 +25,11 @@ public class MojangAPI {
     private static final Collection<UUID, DataCache<PlayerProfile>> playerProfileCacheByUUID = new Collection<>();
     private static final StringCollection<DataCache<PlayerProfile>> playerProfileCacheByName = new StringCollection<>();
 
+    /**
+     * Fetches GameProfile of uuid. The result will be cached for 10 minutes.
+     * @param uuid the uuid
+     * @return the game profile
+     */
     // cached
     @Contract(value = "_ -> new", pure = true)
     @NotNull
@@ -42,6 +47,12 @@ public class MojangAPI {
                 });
     }
 
+    /**
+     * Fetches name change history. The result will not be cached. Last entry of the list contains the latest name
+     * and the uuid.
+     * @param uuid the uuid
+     * @return their name changes
+     */
     // not cached
     @NotNull
     public static Promise<@NotNull CollectionList<NameHistory>> getNameChanges(@NotNull UUID uuid) {
@@ -58,12 +69,27 @@ public class MojangAPI {
                 });
     }
 
+    /**
+     * Fetches profile of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API will not be
+     * used on this method. (This method is guaranteed to return the latest profile unless cached.) If you need
+     * this method to be fast, you may want to use {@link #getPlayerProfile(String, boolean)} instead.
+     * @param name the player name to find
+     * @return the player profile
+     */
     // cached
     @NotNull
     public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name) {
         return getPlayerProfile(name, false); // using bukkit/bungeecord api is unreliable when the player is nicked
     }
 
+    /**
+     * Fetches profile of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API may be
+     * used if you've specified to use API. When using Bukkit/BungeeCord API, the method call will be faster, but
+     * it might return unreliable result when the player is changed via internal method / field.
+     * @param name the player name to find
+     * @param useAPI whether to use Bukkit/BungeeCord API when available
+     * @return the player profile
+     */
     // cached
     @NotNull
     public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name, boolean useAPI) {
@@ -93,10 +119,25 @@ public class MojangAPI {
                 });
     }
 
+    /**
+     * Fetches the name of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API will not
+     * be used. If you need this method to be fast, you may want to use {@link #getPlayerProfile(String, boolean)}
+     * instead.
+     * @param uuid the player's uuid to get name.
+     * @return player name
+     */
     // cached
     @NotNull
     public static Promise<@NotNull String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
 
+    /**
+     * Fetches the name of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API may be
+     * used if you've specified to use API. When using Bukkit/BungeeCord API, the method call will be faster, but
+     * it might return unreliable result when the player is changed via internal method / field.
+     * @param uuid the player's uuid to get name.
+     * @param useAPI whether to use Bukkit/BungeeCord API when available
+     * @return player name
+     */
     // cached
     @NotNull
     public static Promise<@NotNull String> getName(@NotNull UUID uuid, boolean useAPI) {
@@ -122,6 +163,11 @@ public class MojangAPI {
                 });
     }
 
+    /**
+     * Fetches the unique id of the player.
+     * @param name the name to find
+     * @return player's uuid
+     */
     // cached
     @NotNull
     public static Promise<@NotNull UUID> getUniqueId(@NotNull String name) {
