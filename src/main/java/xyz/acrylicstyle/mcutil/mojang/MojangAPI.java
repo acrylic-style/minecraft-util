@@ -55,12 +55,12 @@ public class MojangAPI {
      */
     // not cached
     @NotNull
-    public static Promise<@NotNull CollectionList<NameHistory>> getNameChanges(@NotNull UUID uuid) {
+    public static Promise<@NotNull CollectionList<?, NameHistory>> getNameChanges(@NotNull UUID uuid) {
         return new RESTAPI("https://api.mojang.com/user/profiles/" + uuid.toString().replaceAll("-", "") + "/names").call(JSONArray.class)
                 .then(res -> res.getResponseCode() != 200 ? null : res.getResponse())
-                .then(array -> {
+                .<CollectionList<?, NameHistory>>then(array -> {
                     if (array == null) return CollectionList.of();
-                    CollectionList<NameHistory> histories = new CollectionList<>();
+                    CollectionList<?, NameHistory> histories = new CollectionList<>();
                     array.forEach(o -> {
                         JSONObject obj = (JSONObject) o;
                         histories.add(new NameHistory(obj.getString("name"), obj.has("changedToAt") ? obj.getLong("changedToAt") : null));
