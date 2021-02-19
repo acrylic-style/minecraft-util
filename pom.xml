@@ -6,7 +6,7 @@
 
     <groupId>xyz.acrylicstyle</groupId>
     <artifactId>minecraft-util</artifactId>
-    <version>0.2.8</version>
+    <version>0.2.9</version>
     <build>
         <plugins>
             <plugin>
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>xyz.acrylicstyle</groupId>
             <artifactId>java-util-all</artifactId>
-            <version>0.13.1b</version>
+            <version>0.14.3</version>
         </dependency>
     </dependencies>
 </project>

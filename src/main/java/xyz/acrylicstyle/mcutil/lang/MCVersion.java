@@ -13,11 +13,16 @@ import java.util.Map;
 public enum MCVersion {
     @IgnoreTest("marker version (not released yet)")
     v1_17(0, 0, true, "1.17"), // unreleased
+    SNAPSHOT_21W07A(0x4000000F, 2695, true, v1_17, "21w07a"),
+    SNAPSHOT_21W06A(0x4000000E, 2694, true, v1_17, "21w06a"), // imagine chunk section index going negative (the overworld now has a total height of 384 blocks)
+    SNAPSHOT_21W05B(0x4000000D, 2692, true, v1_17, "21w05b"),
+    SNAPSHOT_21W05A(0x4000000C, 2690, true, v1_17, "21w05a"),
+    SNAPSHOT_21W03A(0x4000000B, 2689, true, v1_17, "21w03a"),
     v1_16_5(754, 2686, true, "1.16.5"),
     v1_16_5_RC1(0x4000000A, 2685, true, "1.16.5-rc1"),
-    SNAPSHOT_20W51A(0x40000009, 2687, v1_17, "20w51a"),
-    SNAPSHOT_20W49A(0x40000008, 2685, v1_17, "20w49a"),
-    SNAPSHOT_20W48A(0x40000007, 2683, v1_17, "20w48a"),
+    SNAPSHOT_20W51A(0x40000009, 2687, true, v1_17, "20w51a"),
+    SNAPSHOT_20W49A(0x40000008, 2685, true, v1_17, "20w49a"),
+    SNAPSHOT_20W48A(0x40000007, 2683, true, v1_17, "20w48a"),
     SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"),
     SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"),
     v1_16_4(754, 2584, true, "1.16.4"),
