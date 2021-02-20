@@ -6,18 +6,19 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
+import util.ICollectionList;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
 import xyz.acrylicstyle.mcutil.lang.test.IgnoreTest;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RunWith(Parameterized.class)
 public class MCVersionTest {
     public static int tests = 0;
-    public static final List<MCVersion> data = Arrays.asList(MCVersion.values());
+    public static final List<MCVersion> data = ICollectionList.asList(MCVersion.values())
+            .filter(v -> v.ordinal() < MCVersion.UNKNOWN.ordinal()); // no checks are performed on very old versions
     public static final List<MCVersion> sortedData = data.stream()
             .filter(v -> v.getProtocolVersion() < 0x40000000)
             .sorted((o1, o2) -> o2.getProtocolVersion() - o1.getProtocolVersion())
@@ -42,8 +43,9 @@ public class MCVersionTest {
         }
         try {
             Field f = MCVersion.class.getField(version.name());
-            if (f.isAnnotationPresent(IgnoreTest.class)) {
-                String reason = f.getAnnotation(IgnoreTest.class).value();
+            IgnoreTest annotation = f.getAnnotation(IgnoreTest.class);
+            if (annotation != null) {
+                String reason = annotation.value();
                 System.out.println("Skipping test for " + version.name() + ": " + reason);
                 sortedData.remove(version);
                 skippedCount++;
@@ -84,6 +86,7 @@ public class MCVersionTest {
     public static String summarize(MCVersion version) {
         return "MCVersion{" + "protocolVersion=" + version.getProtocolVersion()
                 + ", name='" + version.getName() + '\''
+                + ", indexOfWithoutSkippedCount=" + sortedData.indexOf(version)
                 + ", indexOf=" + (sortedData.indexOf(version) + skippedCount)
                 + ", ordinal=" + version.ordinal()
                 + '}';

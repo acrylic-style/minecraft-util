@@ -85,7 +85,7 @@ public class MojangAPI {
     /**
      * Fetches profile of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API may be
      * used if you've specified to use API. When using Bukkit/BungeeCord API, the method call will be faster, but
-     * it might return unreliable result when the player is changed via internal method / field.
+     * it might return unreliable result when the player profile is changed via internal method / field.
      * @param name the player name to find
      * @param useAPI whether to use Bukkit/BungeeCord API when available
      * @return the player profile
@@ -106,11 +106,9 @@ public class MojangAPI {
                 return Promise.of(player);
             }
         }
-        return new RESTAPI("https://api.mojang.com/users/profiles/minecraft/" + name).call()
-                .then(response -> {
-                    if (response.getResponseCode() != 200) return null;
-                    return response.getResponse();
-                })
+        return new RESTAPI("https://api.mojang.com/users/profiles/minecraft/" + name)
+                .call()
+                .then(response -> response.getResponseCode() != 200 ? null : response.getResponse())
                 .then(obj -> {
                     if (obj == null) return null;
                     PlayerProfile profile = new SimplePlayerProfile(obj.getString("name"), UUIDUtil.uuidFromStringWithoutDashes(obj.getString("id")));
@@ -128,7 +126,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@NotNull String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
+    public static Promise<@Nullable String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
 
     /**
      * Fetches the name of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API may be
@@ -140,7 +138,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@NotNull String> getName(@NotNull UUID uuid, boolean useAPI) {
+    public static Promise<@Nullable String> getName(@NotNull UUID uuid, boolean useAPI) {
         if (playerProfileCacheByUUID.containsKey(uuid)) {
             PlayerProfile cache = playerProfileCacheByUUID.get(uuid).get();
             if (cache != null) return Promise.of(cache.getName());
@@ -156,8 +154,9 @@ public class MojangAPI {
         }
         return getNameChanges(uuid)
                 .then(CollectionList::last)
-                .then(history -> new SimplePlayerProfile(history.getName(), uuid))
+                .then(history -> history != null ? new SimplePlayerProfile(history.getName(), uuid) : null)
                 .then(profile -> {
+                    if (profile == null) return null;
                     playerProfileCacheByUUID.add(uuid, new DataCache<>(profile, System.currentTimeMillis() + 1000 * 60 * 10));
                     return profile.getName();
                 });
@@ -170,8 +169,8 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@NotNull UUID> getUniqueId(@NotNull String name) {
-        return getPlayerProfile(name).then(PlayerProfile::getUniqueId);
+    public static Promise<@Nullable UUID> getUniqueId(@NotNull String name) {
+        return getPlayerProfile(name).then(profile -> profile != null ? profile.getUniqueId() : null);
     }
 
     // ----- POST Actions

@@ -2,6 +2,7 @@ package xyz.acrylicstyle.mcutil.lang;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import util.ICollectionList;
 import xyz.acrylicstyle.mcutil.lang.test.IgnoreTest;
 
 import java.util.ArrayList;
@@ -460,11 +461,9 @@ public enum MCVersion {
     SNAPSHOT_13W41B(0, v1_7, "13w41b"),
     SNAPSHOT_13W41A(0, v1_7, "13w41a"),
 
-    @IgnoreTest("dummy version")
     UNKNOWN(-1, "unknown"),
 
-    /* pre-netty rewrite */
-    /* // nuke pre-netty rewrite
+    /* pre-netty versions */
     SNAPSHOT_13W39B(80, v1_7, "13w39b"),
     SNAPSHOT_13W39A(80, v1_7, "13w39a"),
     SNAPSHOT_13W38C(79, v1_7, "13w38c"),
@@ -498,9 +497,9 @@ public enum MCVersion {
     SNAPSHOT_13W16B(63, v1_6, "13w16b"),
     SNAPSHOT_13W16A(62, v1_6, "13w16a"),
     v1_5_2(61, "1.5.2"),
-    v2_0_BLUE(90, -1, false, null, true, "2.0 Blue"), // april fools
-    v2_0_RED(91, -1, false, null, true, "2.0 Red"), // april fools
-    v2_0_PURPLE(92, -1, false, null, true, "2.0 Purple"), // april fools
+    @IgnoreTest("april fools version") v2_0_BLUE(90, -1, false, null, true, "2.0 Blue"),
+    @IgnoreTest("april fools version") v2_0_RED(91, -1, false, null, true, "2.0 Red"),
+    @IgnoreTest("april fools version") v2_0_PURPLE(92, -1, false, null, true, "2.0 Purple"),
     v1_5_1(60, "1.5.1"),
     SNAPSHOT_13W12(60, v1_5_1, "13w12~"),
     SNAPSHOT_13W11A(60, v1_5_1, "13w11a"),
@@ -529,8 +528,8 @@ public enum MCVersion {
     v1_4_4(49, "1.4.4"),
     v1_4_3(48, "1.4.3"),
     v1_4_2(47, "1.4.2"),
-    v1_4_1(-1, "1.4.1"), // unknown
-    v1_4(-1, "1.4"), // unknown
+    @IgnoreTest("unknown pv") v1_4_1(-1, "1.4.1"),
+    @IgnoreTest("unknown pv") v1_4(-1, "1.4"),
     SNAPSHOT_12W42B(46, v1_4, "12w42b"),
     SNAPSHOT_12W42A(46, v1_4, "12w42a"),
     SNAPSHOT_12W41B(46, v1_4, "12w41b"),
@@ -629,7 +628,14 @@ public enum MCVersion {
     BETA_1_1(7, "Beta 1.1"),
     BETA_1_0_2(7, "Beta 1.0.2"),
     BETA_1_0_01(7, "Beta 1.0_01"),
-    BETA_1_0(7, "Beta 1.0"),*/
+    BETA_1_0(7, "Beta 1.0"),
+    PRE_BETA_2011_01_13(6, "2011-01-13"),
+    PRE_BETA_2010_12_01(6, "2010-12-01"),
+    PRE_BETA_2010_11_24(5, "2010-11-24"),
+    PRE_BETA_2010_11_10(4, "2010-11-10"),
+    PRE_BETA_2010_10_31(3, "2010-10-31"),
+    PRE_BETA_2010_09_10(2, "2010-09-10"),
+    PRE_BETA_2010_08_20(1, "2010-08-20"),
     ;
 
     private final int protocolVersion;
@@ -755,6 +761,12 @@ public enum MCVersion {
         return beta;
     }
 
+    /**
+     * Checks whether the release is full release (not snapshot, not beta, not pre-repease, not release candidate)
+     * @return true if this versions is full release
+     */
+    public boolean isRelease() { return !snapshot && snapshotFor == null && !beta && !prerelease && !releaseCandidate; }
+
     private static final Map<Integer, List<MCVersion>> cachedProtocolVersions = new HashMap<>();
     private static final Map<Integer, List<MCVersion>> cachedDataVersions = new HashMap<>();
 
@@ -770,6 +782,23 @@ public enum MCVersion {
         return list;
     }
 
+    @Nullable
+    public static MCVersion getLatestReleaseVersionByProtocolVersion(int protocolVersion) {
+        return ICollectionList.asList(getByProtocolVersion(protocolVersion)).filter(v -> v != UNKNOWN && v.isRelease()).first();
+    }
+
+    @Nullable
+    public static MCVersion getLatestVersionByProtocolVersion(int protocolVersion) {
+        return ICollectionList.asList(getByProtocolVersion(protocolVersion)).filter(v -> v != UNKNOWN).first();
+    }
+
+    @Nullable
+    public static MCVersion getLatestOrReleaseByProtocolVersion(int protocolVersion) {
+        MCVersion release = getLatestReleaseVersionByProtocolVersion(protocolVersion);
+        if (release != null) return release;
+        return getLatestVersionByProtocolVersion(protocolVersion);
+    }
+
     @NotNull
     public static List<MCVersion> getByDataVersion(int dataVersion) {
         if (cachedDataVersions.containsKey(dataVersion)) return cachedDataVersions.get(dataVersion);
@@ -780,6 +809,23 @@ public enum MCVersion {
         if (list.size() == 0) list.add(UNKNOWN);
         cachedDataVersions.put(dataVersion, list);
         return list;
+    }
+
+    @Nullable
+    public static MCVersion getLatestVersionByDataVersion(int dataVersion) {
+        return ICollectionList.asList(getByDataVersion(dataVersion)).filter(v -> v != UNKNOWN && v.isRelease()).first();
+    }
+
+    @Nullable
+    public static MCVersion getLatestReleaseVersionByDataVersion(int dataVersion) {
+        return ICollectionList.asList(getByDataVersion(dataVersion)).filter(v -> v != UNKNOWN).first();
+    }
+
+    @Nullable
+    public static MCVersion getLatestOrReleaseByDataVersion(int dataVersion) {
+        MCVersion release = getLatestReleaseVersionByDataVersion(dataVersion);
+        if (release != null) return release;
+        return getLatestVersionByDataVersion(dataVersion);
     }
 
     @NotNull
