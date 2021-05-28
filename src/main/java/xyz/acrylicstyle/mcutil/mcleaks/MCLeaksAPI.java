@@ -4,10 +4,14 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
-import util.RESTAPI;
-import util.promise.Promise;
+import util.rest.RESTAPI;
+import util.promise.rewrite.Promise;
 import xyz.acrylicstyle.mcutil.mcleaks.results.MCLeaksRedeemResult;
 
+/**
+ * @deprecated MCLeaks.net itself isn't working right now (2021/05/29, YYYY/MM/DD) and it may be removed at any time
+ */
+@Deprecated
 public class MCLeaksAPI {
     /**
      * Redeems MCLeaks Alt Token and returns a result. {@link MCLeaksRedeemResult} inside {@link Result} may be null

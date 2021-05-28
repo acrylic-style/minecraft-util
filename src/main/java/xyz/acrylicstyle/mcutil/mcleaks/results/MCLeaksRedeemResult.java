@@ -3,6 +3,10 @@ package xyz.acrylicstyle.mcutil.mcleaks.results;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @deprecated see comment on {@link xyz.acrylicstyle.mcutil.mcleaks.MCLeaksAPI}
+ */
+@Deprecated
 public final class MCLeaksRedeemResult {
     @NotNull private final String name;
     @NotNull private final String sessionId;

@@ -14,11 +14,13 @@ import java.util.Map;
 public enum MCVersion {
     @IgnoreTest("marker version (not released yet)")
     v1_17(0, 0, true, "1.17"), // unreleased
+    v1_17_PRE1(0x4000001D, 2716, v1_17, "1.17-pre1"),
+    SNAPSHOT_21W20A(0x4000001C, 2715, true, v1_17, "21w20a"),
     SNAPSHOT_21W19A(0x4000001B, 2714, true, v1_17, "21w19a"),
     SNAPSHOT_21W18A(0x4000001A, 2713, true, v1_17, "21w18a"),
     SNAPSHOT_21W17A(0x40000019, 2712, true, v1_17, "21w17a"),
     SNAPSHOT_21W16A(0x40000017, 2711, true, v1_17, "21w16a"),
-    SNAPSHOT_21W15A(0x40000016, 2709, true, v1_17, "21w15a"),
+    SNAPSHOT_21W15A(0x40000016, 2709, true, v1_17, "21w15a"), // world generation changes were rolled back
     SNAPSHOT_21W14A(0x40000015, 2706, true, v1_17, "21w14a"),
     SNAPSHOT_21W13A(0x40000014, 2705, true, v1_17, "21w13a"),
     SNAPSHOT_21W11A(0x40000013, 2703, true, v1_17, "21w11a"),
@@ -32,11 +34,11 @@ public enum MCVersion {
     SNAPSHOT_21W03A(0x4000000B, 2689, true, v1_17, "21w03a"),
     v1_16_5(754, 2686, true, "1.16.5"),
     v1_16_5_RC1(0x4000000A, 2685, true, "1.16.5-rc1"),
-    SNAPSHOT_20W51A(0x40000009, 2687, true, v1_17, "20w51a"),
-    SNAPSHOT_20W49A(0x40000008, 2685, true, v1_17, "20w49a"),
-    SNAPSHOT_20W48A(0x40000007, 2683, true, v1_17, "20w48a"),
-    SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"),
-    SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"),
+    SNAPSHOT_20W51A(0x40000009, 2687, true, v1_17, "20w51a"), // ^
+    SNAPSHOT_20W49A(0x40000008, 2685, true, v1_17, "20w49a"), // |
+    SNAPSHOT_20W48A(0x40000007, 2683, true, v1_17, "20w48a"), // | these 5 snapshots are intentionally located here, because 1.16.5 was released after few 1.17 snapshots
+    SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"), // |
+    SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"), // v
     v1_16_4(754, 2584, true, "1.16.4"),
     v1_16_4_RC1(0x40000003, 2583, true, "1.16.4-rc1"),
     v1_16_4_PRE2(0x40000002, 2582, true, "1.16.4-pre2"),

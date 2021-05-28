@@ -27,6 +27,8 @@ public enum ChangeNameResult {
      * Name was changed successfully.
      */
     SUCCESS,
+
+    UNKNOWN,
     ;
 
     @NotNull
@@ -37,7 +39,7 @@ public enum ChangeNameResult {
             case 403: return FORBIDDEN;
             case 504: return TIMED_OUT;
             case 204: return SUCCESS;
-            default: throw new RuntimeException("Missing mapping for " + statusCode);
+            default: return UNKNOWN;
         }
     }
 }
