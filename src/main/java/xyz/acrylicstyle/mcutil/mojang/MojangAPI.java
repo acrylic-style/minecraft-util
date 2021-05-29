@@ -100,7 +100,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name) {
+    public static Promise<@NotNull PlayerProfile> getPlayerProfile(@NotNull String name) {
         return getPlayerProfile(name, false); // using bukkit/bungeecord api is unreliable when the player is nicked
     }
 
@@ -115,7 +115,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@Nullable PlayerProfile> getPlayerProfile(@NotNull String name, boolean useAPI) {
+    public static Promise<@NotNull PlayerProfile> getPlayerProfile(@NotNull String name, boolean useAPI) {
         if (playerProfileCacheByName.containsKey(name)) {
             PlayerProfile cache = playerProfileCacheByName.get(name).get();
             if (cache != null) return Promise.resolve(cache);
@@ -132,14 +132,13 @@ public class MojangAPI {
         return new RESTAPI("https://api.mojang.com/users/profiles/minecraft/" + name)
                 .call()
                 .then(response -> {
-                    if (response.getResponseCode() == 200) {
+                    if (response.getResponseCode() == 200 && response.getResponse() != null) {
                         return response.getResponse();
                     } else {
                         throw new NoSuchElementException();
                     }
                 })
                 .then(obj -> {
-                    if (obj == null) return null;
                     PlayerProfile profile = new SimplePlayerProfile(obj.getString("name"), UUIDUtil.uuidFromStringWithoutDashes(obj.getString("id")));
                     playerProfileCacheByName.add(name, new DataCache<>(profile, System.currentTimeMillis() + 1000 * 60 * 10));
                     return profile;
@@ -155,7 +154,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@Nullable String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
+    public static Promise<@NotNull String> getName(@NotNull UUID uuid) { return getName(uuid, false); }
 
     /**
      * Fetches the name of the player. The result will be cached for 10 minutes. Bukkit/BungeeCord API may be
@@ -167,7 +166,7 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@Nullable String> getName(@NotNull UUID uuid, boolean useAPI) {
+    public static Promise<@NotNull String> getName(@NotNull UUID uuid, boolean useAPI) {
         if (playerProfileCacheByUUID.containsKey(uuid)) {
             PlayerProfile cache = playerProfileCacheByUUID.get(uuid).get();
             if (cache != null) return Promise.resolve(cache.getName());
@@ -183,9 +182,9 @@ public class MojangAPI {
         }
         return getNameChanges(uuid)
                 .then(CollectionList::last)
-                .then(history -> history != null ? new SimplePlayerProfile(history.getName(), uuid) : null)
+                .thenDo(history -> { if (history == null) throw new NoSuchElementException(); })
+                .then(history -> new SimplePlayerProfile(history.getName(), uuid))
                 .then(profile -> {
-                    if (profile == null) return null;
                     playerProfileCacheByUUID.add(uuid, new DataCache<>(profile, System.currentTimeMillis() + 1000 * 60 * 10));
                     return profile.getName();
                 });
@@ -198,8 +197,8 @@ public class MojangAPI {
      */
     // cached
     @NotNull
-    public static Promise<@Nullable UUID> getUniqueId(@NotNull String name) {
-        return getPlayerProfile(name).then(profile -> profile != null ? profile.getUniqueId() : null);
+    public static Promise<@NotNull UUID> getUniqueId(@NotNull String name) {
+        return getPlayerProfile(name).then(PlayerProfile::getUniqueId);
     }
 
     // ----- POST Actions
@@ -212,7 +211,7 @@ public class MojangAPI {
      * @return the promise that contains a result of this request
      */
     @NotNull
-    public static Promise<ChangeNameResult> changeName(@NotNull String accessToken, @NotNull PlayerProfile profile, @NotNull String password) {
+    public static Promise<@NotNull ChangeNameResult> changeName(@NotNull String accessToken, @NotNull PlayerProfile profile, @NotNull String password) {
         return new RESTAPI("https://api.mojang.com/user/profile/" + profile.getUniqueId().toString().replaceAll("-", ""), "POST", new RESTAPI.BodyBuilder().setJSON(new JSONObject().put("name", profile.getName()).put("password", password)).addRequestProperty("Authorization", "Bearer " + accessToken).build())
                 .call(String.class)
                 .then(RESTAPI.Response::getResponseCode)
