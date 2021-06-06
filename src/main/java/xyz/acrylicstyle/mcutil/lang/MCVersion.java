@@ -14,6 +14,11 @@ import java.util.Map;
 public enum MCVersion {
     @IgnoreTest("marker version (not released yet)")
     v1_17(0, 0, true, "1.17"), // unreleased
+    v1_17_RC1(0x40000022, 2722, v1_17, "1.17-rc1"),
+    v1_17_PRE5(0x40000021, 2721, v1_17, "1.17-pre5"),
+    v1_17_PRE4(0x40000020, 2720, v1_17, "1.17-pre4"),
+    v1_17_PRE3(0x4000001F, 2719, v1_17, "1.17-pre3"),
+    v1_17_PRE2(0x4000001E, 2718, v1_17, "1.17-pre2"),
     v1_17_PRE1(0x4000001D, 2716, v1_17, "1.17-pre1"),
     SNAPSHOT_21W20A(0x4000001C, 2715, true, v1_17, "21w20a"),
     SNAPSHOT_21W19A(0x4000001B, 2714, true, v1_17, "21w19a"),
@@ -36,7 +41,7 @@ public enum MCVersion {
     v1_16_5_RC1(0x4000000A, 2685, true, "1.16.5-rc1"),
     SNAPSHOT_20W51A(0x40000009, 2687, true, v1_17, "20w51a"), // ^
     SNAPSHOT_20W49A(0x40000008, 2685, true, v1_17, "20w49a"), // |
-    SNAPSHOT_20W48A(0x40000007, 2683, true, v1_17, "20w48a"), // | these 5 snapshots are intentionally located here, because 1.16.5 was released after few 1.17 snapshots
+    SNAPSHOT_20W48A(0x40000007, 2683, true, v1_17, "20w48a"), // | these 5 snapshots are for 1.17, not 1.16.5.
     SNAPSHOT_20W46A(0x40000006, 2682, true, v1_17, "20w46a"), // |
     SNAPSHOT_20W45A(0x40000005, 2681, true, v1_17, "20w45a"), // v
     v1_16_4(754, 2584, true, "1.16.4"),
