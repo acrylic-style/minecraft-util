@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class MCVersionTest {
     public static int tests = 0;
     public static final List<MCVersion> data = ICollectionList.asList(MCVersion.values())
-            .filter(v -> v.ordinal() < MCVersion.UNKNOWN.ordinal()); // no checks are performed on very old versions
+            .filter(v -> v.ordinal() <= MCVersion.SNAPSHOT_13W41A.ordinal()); // no checks are performed on very old versions
     public static final List<MCVersion> sortedData = data.stream()
             .filter(v -> v.getProtocolVersion() < 0x40000000)
             .sorted((o1, o2) -> o2.getProtocolVersion() - o1.getProtocolVersion())
@@ -32,6 +32,15 @@ public class MCVersionTest {
     @Parameter public MCVersion version;
 
     public static int skippedCount = 0;
+
+    @Test
+    public void ensureClientJsonClientJarServerJarArePresent() {
+        if (version.getProtocolVersion() != -1) {
+            assert version.getClientJson() != null : "client.json does not exist: " + version.name();
+            assert version.getClientJar() != null : "client.jar does not exist: " + version.name();
+            assert version.getServerJar() != null : "server.jar does not exist: " + version.name();
+        }
+    }
 
     @Test
     public void ensureCorrectOrder() {

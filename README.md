@@ -14,7 +14,7 @@ Prebuilt binaries can be found [here](https://repo2.acrylicstyle.xyz/xyz/acrylic
         <dependency>
             <groupId>xyz.acrylicstyle</groupId>
             <artifactId>minecraft-util</artifactId>
-            <version>0.2.4</version>
+            <version>[version]</version>
         </dependency>
     </dependencies>
 ```
