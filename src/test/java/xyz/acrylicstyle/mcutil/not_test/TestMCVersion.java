@@ -3,7 +3,10 @@ package xyz.acrylicstyle.mcutil.not_test;
 import org.jetbrains.annotations.NotNull;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class TestMCVersion {
     private static @NotNull String readLine() throws IOException {
@@ -21,6 +24,8 @@ public class TestMCVersion {
         System.out.println("1. Print the JSON of a random version");
         System.out.println("2. Print the JSON of ALL versions");
         System.out.println("3. Print the JSON of specified version");
+        System.out.println("4. Save the JSON of ALL versions to versions.json");
+        System.out.println("5. Save the JSON of ALL versions to versions.json (minified)");
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
         int action;
         while (true) {
@@ -30,7 +35,7 @@ public class TestMCVersion {
                 System.out.println("That's not an number. Please try again.");
                 continue;
             }
-            if (action < 1 || action > 3) {
+            if (action < 1 || action > 5) {
                 System.out.println("That's out of range.");
                 continue;
             }
@@ -62,9 +67,19 @@ public class TestMCVersion {
             }
             System.out.println(v.toJSONObject().toString(2));
         }
-    }
-
-    private static void outputAllValuesAsJSON() {
-        //
+        if (action == 4) {
+            File file = new File("./versions.json");
+            PrintStream ps = new PrintStream(new FileOutputStream(file));
+            ps.print(MCVersion.getAllVersionsAsJSON().toString(2));
+            ps.close();
+            System.out.println("Done: " + file.getAbsolutePath());
+        }
+        if (action == 5) {
+            File file = new File("./versions.json");
+            PrintStream ps = new PrintStream(new FileOutputStream(file));
+            ps.print(MCVersion.getAllVersionsAsJSON());
+            ps.close();
+            System.out.println("Done: " + file.getAbsolutePath());
+        }
     }
 }
