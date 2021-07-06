@@ -74,8 +74,13 @@ public enum MCVersion {
     // full release versions
     @IgnoreTest("not released yet")
     v1_18(-1, -1, "1.18"), // not released; set to release in late 2021. Caves & Cliffs: Part II
-    @IgnoreTest("not released yet")
-    v1_17_1(-1, -1, "1.17.1"), // not released; slated to be released on July 6, 2021
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/8b976413591b4132fc4f27370dcd87ce1e50fb2f/1.17.1.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/8d9b65467c7913fcf6f5b2e729d44a1e00fde150/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar")
+    @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/e4d540e0cba05a6097e885dffdf363e621f87d3f/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/f6cae1c5c1255f68ba4834b16a0da6a09621fe13/server.txt")
+    v1_17_1(756, 2730, "1.17.1"),
     @ReleaseCandidateFor(v1_17_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/7fabe4abc96d0ed905db327d6cc75976398a8969/1.17.1-rc1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/40595d7eeeebc212f6e2b8b5a3dbfc5377cfef9b/client.jar")
