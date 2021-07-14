@@ -58,7 +58,7 @@ public class MojangAPITest {
 
     @Test(timeout = 3000, expected = UnhandledPromiseException.class)
     public void xGetUniqueId() {
-        MojangAPI.getUniqueId("MojangSucksDick").complete();
+        MojangAPI.getUniqueId("I.Hope.This.Name.Isn't.Taken.").complete();
     }
 
     // #changeName cannot be tested for obvious reasons

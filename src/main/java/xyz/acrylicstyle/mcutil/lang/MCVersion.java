@@ -20,7 +20,7 @@ import java.util.Optional;
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public enum MCVersion {
     @IgnoreTest("not a version")
-    UNKNOWN(-1, "unknown"),
+    UNKNOWN("unknown"),
 
     @SuppressWarnings("DeprecatedIsStillUsed")
     @IgnoreTest("Marker version")
@@ -74,6 +74,13 @@ public enum MCVersion {
     // full release versions
     @IgnoreTest("not released yet")
     v1_18(-1, -1, "1.18"), // not released; set to release in late 2021. Caves & Cliffs: Part II
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip")
+    @ClientJar("https://launcher.mojang.com/v1/objects/b230ccffcf332c9d3619af85727d02e284ff4903/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/83a3c2e94b744ad8f0c8bc373dd70a85da59babf/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/117c5938948fb482bffb72e9ebf6f2f77a6d733d/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/3842b0e3eef95054f464d5de410f774ecead9f0f/server.txt")
+    v1_18_EXPERIMENTAL_SNAPSHOT_1(0x40000029, 2825, "1.18 Experimental Snapshot 1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8b976413591b4132fc4f27370dcd87ce1e50fb2f/1.17.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/8d9b65467c7913fcf6f5b2e729d44a1e00fde150/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar")
@@ -3208,6 +3215,7 @@ public enum MCVersion {
     @ServerJar("https://assets.minecraft.net/12w41b/minecraft_server.jar")
     @ServerExe("https://assets.minecraft.net/12w41b/Minecraft_Server.exe")
     SNAPSHOT_12W41B(46, "12w41b"),
+    @SnapshotFor(v1_4_2)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/12w41a.json")
     @ClientJar("https://assets.minecraft.net/12w41a/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/12w41a/minecraft_server.jar")
@@ -4579,8 +4587,14 @@ public enum MCVersion {
 
     @SuppressWarnings("unchecked")
     @Nullable
-    public <T> T getValueOf(Class<? extends Annotation> clazz) {
+    public <T> T getValueOf(@NotNull Class<? extends Annotation> clazz) {
         return this.<T>getResultOf(clazz).orElse(null);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Nullable
+    public <T> T getValueOf(@NotNull ValueTypes<T> valueTypes) {
+        return this.getValueOf(valueTypes.getAnnotationClass());
     }
 
     // returns the last entry

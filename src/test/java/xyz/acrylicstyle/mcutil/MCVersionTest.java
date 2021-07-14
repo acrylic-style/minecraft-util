@@ -14,6 +14,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Tests version order by protocol version
 @RunWith(Parameterized.class)
 public class MCVersionTest {
     public static int tests = 0;
@@ -93,7 +94,8 @@ public class MCVersionTest {
     }
 
     public static String summarize(MCVersion version) {
-        return "MCVersion{" + "protocolVersion=" + version.getProtocolVersion()
+        return "MCVersion{"
+                + "protocolVersion=" + version.getProtocolVersion()
                 + ", name='" + version.getName() + '\''
                 + ", indexOfWithoutSkippedCount=" + sortedData.indexOf(version)
                 + ", indexOf=" + (sortedData.indexOf(version) + skippedCount)

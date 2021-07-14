@@ -8,14 +8,14 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 import util.ICollectionList;
-import xyz.acrylicstyle.mcutil.lang.CavesAndCliffsDataPack;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
 import xyz.acrylicstyle.mcutil.lang.ServerExe;
-import xyz.acrylicstyle.mcutil.lang.ServerZip;
+import xyz.acrylicstyle.mcutil.lang.ValueTypes;
 
 import java.util.List;
 import java.util.Objects;
 
+// contains many tests that doesn't check for order
 @RunWith(Parameterized.class)
 public class AllMCVersionTest {
     public static final ICollectionList<MCVersion> data = ICollectionList.asList(MCVersion.values());
@@ -43,9 +43,9 @@ public class AllMCVersionTest {
                     if (contains(v.getServerJars(), Objects.requireNonNull(s))) throw new AssertionError("Duplicate server jar: " + s + " @ " + version.name());
                 }
             }
-            if (version.<String[]>getValueOf(ServerExe.class) != null) {
+            if (version.getValueOf(ValueTypes.SERVER_EXE) != null) {
                 for (String s : Objects.requireNonNull(version.<String[]>getValueOf(ServerExe.class))) {
-                    if (contains(v.getValueOf(ServerExe.class), Objects.requireNonNull(s))) throw new AssertionError("Duplicate server exe: " + s + " @ " + version.name());
+                    if (contains(v.getValueOf(ValueTypes.SERVER_EXE), Objects.requireNonNull(s))) throw new AssertionError("Duplicate server exe: " + s + " @ " + version.name());
                 }
             }
             // duplicate client/server mappings is completely fine
@@ -64,16 +64,23 @@ public class AllMCVersionTest {
 
     @Test
     public void ensureDownloadsAreInProperFormat() {
-        endsWith("client json", version.getClientJsons(), version.isCombatTest() ? ".zip" : ".json");
+        if (version != MCVersion.v1_18_EXPERIMENTAL_SNAPSHOT_1) {
+            endsWith("client json", version.getClientJsons(), version.isCombatTest() ? ".zip" : ".json");
+        }
         if (version != MCVersion.SNAPSHOT_12W19A && version != MCVersion.SNAPSHOT_12W18A) {
             endsWith("client jar", version.getClientJars(), ".jar");
         }
         endsWith("server jar", version.getServerJars(), ".jar");
-        endsWith("server exe", version.<String[]>getValueOf(ServerExe.class), ".exe");
+        endsWith("server exe", version.getValueOf(ValueTypes.SERVER_EXE), ".exe");
         endsWith("client mapping", version.getClientMappings(), ".txt");
         endsWith("server mapping", version.getServerMappings(), ".txt");
-        endsWith("caves and cliffs data pack", version.<String>getValueOf(CavesAndCliffsDataPack.class), ".zip");
-        endsWith("server zip", version.<String[]>getValueOf(ServerZip.class), ".zip");
+        endsWith("caves and cliffs data pack", version.getValueOf(ValueTypes.CAVES_AND_CLIFFS_DATA_PACK), ".zip");
+        endsWith("server zip", version.getValueOf(ValueTypes.SERVER_ZIP), ".zip");
+    }
+
+    @Test
+    public void ensureSnapshotsAreAnnotated() {
+        assert !version.name().contains("SNAPSHOT_") || version.isSnapshot() : version.name() + " is not annotated with @SnapshotFor";
     }
 
     private void endsWith(@NotNull String what, @Nullable String[] array, @NotNull String suffix) {
