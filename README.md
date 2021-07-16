@@ -1,5 +1,5 @@
 # minecraft-util
-Another minecraft utility that contains Mojang API (partially), MCLeaks API (also partially).
+Another minecraft utility that contains MCVersion enum class and Mojang API (partially).
 
 Prebuilt binaries can be found [here](https://repo2.acrylicstyle.xyz/xyz/acrylicstyle/minecraft-util/).
 
