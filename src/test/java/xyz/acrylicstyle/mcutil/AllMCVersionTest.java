@@ -10,6 +10,7 @@ import org.junit.runners.Parameterized.Parameters;
 import util.ICollectionList;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
 import xyz.acrylicstyle.mcutil.lang.ServerExe;
+import xyz.acrylicstyle.mcutil.lang.Type;
 import xyz.acrylicstyle.mcutil.lang.ValueTypes;
 
 import java.util.List;
@@ -55,6 +56,31 @@ public class AllMCVersionTest {
             }
             // duplicate client/server mappings is completely fine
         });
+    }
+
+    @Test
+    public void testVersionType() {
+        assert version == MCVersion.v1_18_EXPERIMENTAL_SNAPSHOT_1 ||
+                !version.isSnapshot() ||
+                version.isCombatTest() ||
+                version.getVersionType() == Type.Types.SNAPSHOT
+                : summarize(version) + " is snapshot but incorrect or missing @Type annotation";
+
+        assert !version.isPrerelease() ||
+                version.getVersionType() == Type.Types.SNAPSHOT
+                : summarize(version) + " is prerelease but incorrect or missing @Type annotation";
+
+        assert !version.isReleaseCandidate() ||
+                version.getVersionType() == Type.Types.SNAPSHOT
+                : summarize(version) + " is release candidate but incorrect or missing @Type annotation";
+
+        assert !version.isRelease() ||
+                version.getVersionType() == Type.Types.RELEASE
+                : summarize(version) + " is release but incorrect @Type annotation";
+
+        assert !version.isCombatTest() ||
+                version.getVersionType() == Type.Types.PENDING
+                : summarize(version) + " is combat test version but incorrect @Type annotation";
     }
 
     @Test
