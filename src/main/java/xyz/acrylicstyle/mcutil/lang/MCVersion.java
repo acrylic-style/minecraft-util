@@ -23,9 +23,9 @@ public enum MCVersion {
     UNKNOWN("unknown"),
 
     @SuppressWarnings("DeprecatedIsStillUsed")
-    @IgnoreTest("Marker version")
+    @IgnoreTest("not a version")
     @Deprecated
-    _COMBAT_TEST("Combat Test"),
+    _COMBAT_TEST("combat_test"),
 
     // combat test versions
     @SnapshotFor(_COMBAT_TEST)
@@ -34,42 +34,48 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/b707c44ac1503ad179fde86c78d41aa4d0cc78a5/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/5ea38a7b8d58837c97214f2a46e5e12151d51f83/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/d89f9e0eb8fbe6f2c91e749e8b59391cd0dd96d4/server.txt")
-    COMBAT_TEST_8C(803, 2707, "Combat Test 8c"), // Fork of 1.16.2
+    @Name("Combat Test 8c")
+    COMBAT_TEST_8C(803, 2707, "1.16_combat-6"), // Fork of 1.16.2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/9b2b984d635d373564b50803807225c75d7fd447/1_16_combat-5.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/123cf1bd6736a3c1a47e8c1727a3db18e3c9cace/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/635866257b4fc1ade528db8bd53ebbebb4816e5e/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/8d09f244923d77e27493038e02d926d401122f03/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/57882209cb9b4e10303e7a7a2b3b3f93ae32bb8f/server.txt")
-    COMBAT_TEST_8B(803, 2706, "Combat Test 8b"), // Fork of 1.16.2
+    @Name("Combat Test 8b")
+    COMBAT_TEST_8B(803, 2706, "1.16_combat-5"), // Fork of 1.16.2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/2557b99d95588505e988886220779087d7d6b1e9/1_16_combat-3.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/14991d31f1002e5cbd97e62310cba614666f876b/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/53c43fdae7d2ed01bbb31a82d99e31b9348e2a4b/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/907af4fb6a7d676921f9bcb7aa80f8749bf03592/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/7f1369734e3e5585d44b211812274f2ad7ac160d/server.txt")
-    COMBAT_TEST_7C(802, 2704, "Combat Test 7c"), // Fork of 1.16.2
+    @Name("Combat Test 7c")
+    COMBAT_TEST_7C(802, 2704, "1.16_combat-3"), // Fork of 1.16.2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://archive.org/download/Combat_Test_7ab/1_16_combat-2.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/0fbf7624030e67904cc0fbe3df2dbf34369a690d/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/464d3e619f3e8464e3974b4a6ea388911e31b2fc/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/29501c54a8ccd3ba4a0341a83d93a259e9a2cdde/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/1d70f0a8a544c524ea79e4a7c79f65f7a9dffc63/server.txt")
-    COMBAT_TEST_7B(802, 2703, "Combat Test 7b"), // Fork of 1.16.2
+    @Name("Combat Test 7b")
+    COMBAT_TEST_7B(802, 2703, "1.16_combat-2"), // Fork of 1.16.2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://archive.org/download/Combat_Test_7ab/1_16_combat-1.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/3ad450f458149702ec3dd7655af44ab422a83e72/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/ee1c898661f5342d52c6e0cdee0bec99f3f60910/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/050cccf384543060a95fe9c773b4db4922a7b16d/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/28aa23fa4ed247f59ad9317cff635432473ab4cb/server.txt")
-    COMBAT_TEST_7(802, 2702, "Combat Test 7"), // Fork of 1.16.2
+    @Name("Combat Test 7")
+    COMBAT_TEST_7(802, 2702, "1.16_combat-1"), // Fork of 1.16.2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/5a8ceec8681ed96ab6ecb9607fb5d19c8a755559/1_16_combat-0.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/4f08b4667575cbfc35e44c9556a0667bd3d0f5cc/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/1c35c493ade7a39e2d02bcc326498aaab96f1a09/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/185a362b6b301bfb71e12f788ce8fb998b806217/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/6ddb98ca992d93fd654bf89f801223b1c4d98695/server.txt")
-    COMBAT_TEST_6(801, 2701, "Combat Test 6"), // Fork of 1.16.2-pre3
+    @Name("Combat Test 6")
+    COMBAT_TEST_6(801, 2701, "1.16_combat-0"), // Fork of 1.16.2-pre3
 
     // full release versions
     @IgnoreTest("not released yet")
@@ -80,7 +86,8 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/83a3c2e94b744ad8f0c8bc373dd70a85da59babf/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/117c5938948fb482bffb72e9ebf6f2f77a6d733d/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/3842b0e3eef95054f464d5de410f774ecead9f0f/server.txt")
-    v1_18_EXPERIMENTAL_SNAPSHOT_1(0x40000029, 2825, "1.18 Experimental Snapshot 1"),
+    @Name("1.18 Experimental Snapshot 1")
+    v1_18_EXPERIMENTAL_SNAPSHOT_1(0x40000029, 2825, "1.18_experimental-snapshot-1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8b976413591b4132fc4f27370dcd87ce1e50fb2f/1.17.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/8d9b65467c7913fcf6f5b2e729d44a1e00fde150/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar")
@@ -89,12 +96,22 @@ public enum MCVersion {
     @ServerMapping("https://launcher.mojang.com/v1/objects/f6cae1c5c1255f68ba4834b16a0da6a09621fe13/server.txt")
     v1_17_1(756, 2730, "1.17.1"),
     @ReleaseCandidateFor(v1_17_1)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/f4fc06b4001baaf2383ba5efc6648867d539c65c/1.17.1-rc2.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/132b56af0236e9877261325b67d1606d126463ae/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/dd9ca1bdc855535cd7ce0565f02285ad4d6d1ae5/server.jar")
+    @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/38c2dcaf1ea2ed18611daed122c54ac7ad2ec9be/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/20e3df62c8698434fb626e715d899e93865b9785/server.txt")
+    @Name("1.17.1 Release Candidate 2")
+    v1_17_1_RC2(0x40000028, 2729, "1.17.1-rc2"),
+    @ReleaseCandidateFor(v1_17_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/7fabe4abc96d0ed905db327d6cc75976398a8969/1.17.1-rc1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/40595d7eeeebc212f6e2b8b5a3dbfc5377cfef9b/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/b93cbcf6c65b92621d67b735e8610f7682f54694/server.jar")
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/13cad5bd600c9ebc8ebe1038b432053e4c81fb9e/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/6839be84674e31281fa4539741e7eaab7723524a/server.txt")
+    @Name("1.17.1 Release Candidate 1")
     v1_17_1_RC1(0x40000027, 2728, "1.17.1-rc1"),
     @PrereleaseFor(v1_17_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/54d8949c65a3542bcbf9288dd745db2dd099abb0/1.17.1-pre3.json")
@@ -103,6 +120,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/11ef28414033c3010f9af6dadeef45a54b4026e9/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e009a085ba97816e196060404ae2be280c4a6689/server.txt")
+    @Name("1.17.1 Pre-release 3")
     v1_17_1_PRE3(0x40000026, 2727, "1.17.1-pre3"),
     @PrereleaseFor(v1_17_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/badb8ad3adc431e89f6de496b4cb8595beb522d1/1.17.1-pre2.json")
@@ -111,6 +129,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/ebbb1b7c4ec6a7103a01168cb4362a13db5bdc17/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/d99adc311dd0d2ef519840186eadd0e7461e333b/server.txt")
+    @Name("1.17.1 Pre-release 2")
     v1_17_1_PRE2(0x40000025, 2726, "1.17.1-pre2"),
     @PrereleaseFor(v1_17_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fc7ab9a2061ee1d2d02e0b2cf3fdd5b0cb9f9770/1.17.1-pre1.json")
@@ -119,6 +138,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/cd9dd46791ba48dc872d91b1e405dcc9dc542e85/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/27b8583a59c3803db3155640257e83d5138c9b11/server.txt")
+    @Name("1.17.1 Pre-release 1")
     v1_17_1_PRE1(0x40000024, 2725, "1.17.1-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/44fa141917df947ed5a138f5cfe667a34f7bbaca/1.17.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/1cf89c77ed5e72401b869f66410934804f3d6f52/client.jar")
@@ -134,6 +154,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/cb05fa784d1c99357cc5702a9df4daaf6ed58b9b/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/4a643e9c4b7b607da9c93f3f8a81d87a08b9ac34/server.txt")
+    @Name("1.17 Release Candidate 2")
     v1_17_RC2(0x40000023, 2723, "1.17-rc2"),
     @ReleaseCandidateFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/20b00f9d08344dc764fb3ead4bbe281b4182e508/1.17-rc1.json")
@@ -142,6 +163,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/f98bcfe6126153d862d072c574dbe48af778f5d9/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/98a1398dc4144f92e10dd6967a231763741952e7/server.txt")
+    @Name("1.17 Release Candidate 1")
     v1_17_RC1(0x40000022, 2722, "1.17-rc1"),
     @PrereleaseFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/db87878aa41877391c487dec9b63143c556c61c3/1.17-pre5.json")
@@ -150,6 +172,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/d1ddc678fa5d248aa855cf4723089ef6f7624b67/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/4fd01412588c91fbc94fb36eb9b57275de0f6be9/server.txt")
+    @Name("1.17 Pre-release 5")
     v1_17_PRE5(0x40000021, 2721, "1.17-pre5"),
     @PrereleaseFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3a82a1641c0fbaadc762280c89945e5f0b9b2183/1.17-pre4.json")
@@ -158,6 +181,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/6be34fd616ed3f57869fb92df860d5c2d90e681c/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0bdafb07d9b092dec693b3a7181504ed4bc4f5c4/server.txt")
+    @Name("1.17 Pre-release 4")
     v1_17_PRE4(0x40000020, 2720, "1.17-pre4"),
     @PrereleaseFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b392c937e2424d76aee65ab076f334311deb3241/1.17-pre3.json")
@@ -166,6 +190,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/33e1b9881086dab9e89e919797fbf323870d2469/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/394bffe6a0ba2ee2eaeb7163b0184afc533c704c/server.txt")
+    @Name("1.17 Pre-release 3")
     v1_17_PRE3(0x4000001F, 2719, "1.17-pre3"),
     @PrereleaseFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/da08b22628bb013f46d9d9aa7e6a78d458c78f6a/1.17-pre2.json")
@@ -174,6 +199,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/c3fc5f17f6a63498078cbcc72872e78c500120f6/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/f79c9cad034152d13c8fab69c441eb06138aacc6/server.txt")
+    @Name("1.17 Pre-release 2")
     v1_17_PRE2(0x4000001E, 2718, "1.17-pre2"),
     @PrereleaseFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fdbcc84afc00e47d92288c93a46b72598c6e2cf6/1.17-pre1.json")
@@ -182,6 +208,7 @@ public enum MCVersion {
     @CavesAndCliffsDataPack("https://launcher.mojang.com/v1/objects/e0738fc94f08362fe2eff71f5bd46288d6647e21/CavesAndCliffsPreview.zip")
     @ClientMapping("https://launcher.mojang.com/v1/objects/7310449e6c7bdd202e4f2cd6bd7ad177357f473c/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/1f6f65434a5ac334607a1141d676f7974308ae36/server.txt")
+    @Name("1.17 Pre-release 1")
     v1_17_PRE1(0x4000001D, 2716, "1.17-pre1"),
     @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/e8a53814450fd98c2d5de5eca8e89cf6760c89d2/21w20a.json")
@@ -320,36 +347,37 @@ public enum MCVersion {
     @ServerJar({"https://launcher.mojang.com/v1/objects/c0d0c4e477e88c909e105f3065797c6170d7b3e7/server.jar", "https://launcher.mojang.com/v1/objects/ae3acf34bb6e2d8cc4e11a1d52036cdea3ea980b/server.jar"})
     @ClientMapping("https://launcher.mojang.com/v1/objects/e3dfb0001e1079a1af72ee21517330edf52e6192/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/81d5c793695d8cde63afddb40dde88e3a88132ac/server.txt")
+    @Name("1.16.5 Release Candidate 1")
     v1_16_5_RC1(0x4000000A, 2685, "1.16.5-rc1"),
-    @SnapshotFor(v1_16_5)
+    @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c0054db03e69292f3fccceb7a795b17791d9582d/20w51a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ab0d1d122bc2c99daad33befe50a16a07d3b3bf7/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/fc87ef4c3cf1c815809249cc00ccade233b22cf5/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/1f4859972a54e7aeae1a35c76895f6e8ade33283/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/204c6e7852f82489bed28825a58b4d8acbf386cc/server.txt")
     SNAPSHOT_20W51A(0x40000009, 2687, "20w51a"),
-    @SnapshotFor(v1_16_5)
+    @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/13ef29a79cc0512e124963fd964e44fd11efe369/20w49a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/818705401f58ee4df2267bf97fa2e0fb6e78ce28/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/2fc0afe1fd31ca872761efbd2a7f635db234b359/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/141219c3dd05268d559a5e17e8b8f1f0bf982598/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0b30deba62ef6c2064dfd12f4f46b9d6388d9c8c/server.txt")
     SNAPSHOT_20W49A(0x40000008, 2685, "20w49a"),
-    @SnapshotFor(v1_16_5)
+    @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a02f99daa7db5a4a54833150b8ed6674282b1b2a/20w48a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/a894354496a03e4bce6fe6c03a68313f4660e482/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a14d24f89d5a4ec7521b91909caf4fee89c997f4/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/55550d2717feb75a77920e211655a649708b859d/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/a54f1c40e3b9a63a7a23fc268df7e79c2cb7e6cb/server.txt")
     SNAPSHOT_20W48A(0x40000007, 2683, "20w48a"),
-    @SnapshotFor(v1_16_5)
+    @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/00287a31ef6a14866a0b328637e60df6419d69bd/20w46a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f4c56c2b7218599b78074a500ab2a89a04db5b36/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/373675677cc57b9294a187a4d0ecab6f340d4189/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/d3687dd62798b403141db1fe7272607c53b6e9f0/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/5de650acd5894cf687a911fb9affb3b294de4dd2/server.txt")
     SNAPSHOT_20W46A(0x40000006, 2682, "20w46a"),
-    @SnapshotFor(v1_16_5)
+    @SnapshotFor(v1_17)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/61d57da4d2ac5833d19feab0d3a286237ca496dc/20w45a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/cf2cd62dfc63fc1a79061a3964d82bf26e0fd208/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/043ec38297d0ec58abd6f636bc92f5664a8ccecb/server.jar")
@@ -368,6 +396,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/daf2d997bd6b1725b6d59b48f533a6804d43db33/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/23a0bc36490545566a79ea5345f37283f61eeaa5/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0413b5c8bb13c62f81c1336c58c09e29d8b43cb6/server.txt")
+    @Name("1.16.4 Release Candidate 1")
     v1_16_4_RC1(0x40000003, 2583, "1.16.4-rc1"),
     @PrereleaseFor(v1_16_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/7a887ee8a022e476bfd8dbee9856dffcbd20fcef/1.16.4-pre2.json")
@@ -375,6 +404,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/ceb412d94900167f519100736bc5709853b50b8c/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/89f8af522cd3cfd0908217b1525d883e61145750/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/dedd2cf8e179614f7d3145ab5aa6ae6b11b7e3f5/server.txt")
+    @Name("1.16.4 Pre-release 2")
     v1_16_4_PRE2(0x40000002, 2582, "1.16.4-pre2"),
     @PrereleaseFor(v1_16_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fcde4c4f332110829f1bd117c897b1284fa37fac/1.16.4-pre1.json")
@@ -382,6 +412,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/28eb6f8c4c05eec278e3e7f9f0379a16adbfb91d/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/6366c7397087acc8f021401afd4c23220ad06197/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/cf2fa1a00c551d5a3d4d448f1beb7562abd66c47/server.txt")
+    @Name("1.16.4 Pre-release 1")
     v1_16_4_PRE1(0x40000001, 2581, "1.16.4-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/0b83240b80de22bdd47d93d2a0ed6f45bbd2779f/1.16.3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/1321521b2caf934f7fc9665aab7e059a7b2bfcdf/client.jar")
@@ -395,6 +426,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/562bf3e75afea00875cff4a06165f93056646f32/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/faac5028fbca3859db970cc4ca041aeec55f6d9d/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e75ff1e729aec4a3ec6a94fe1ddd2f5a87a2fd00/server.txt")
+    @Name("1.16.3 Release Candidate 1")
     v1_16_3_RC1(752, 2579, "1.16.3-rc1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/363cf3fef00f554a93ff3c54b189465efeb3d0bb/1.16.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/653e97a2d1d76f87653f02242d243cdee48a5144/client.jar")
@@ -408,6 +440,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/45287d794fa2631b8da9b9002696ebe406fbed6b/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/88fbd1c70c9244d23e6166a9703cc456d6f115e6/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0dbbb5aae568c2d9aa34e3be11e7b525054265d9/server.txt")
+    @Name("1.16.2 Release Candidate 2")
     v1_16_2_RC2(750, 2577, "1.16.2-rc2"),
     @ReleaseCandidateFor(v1_16_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ba82e3fa0db77b36fb53ae4d8e698dd81a69ae6f/1.16.2-rc1.json")
@@ -415,6 +448,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/203e18d79201b5e8c46019074b07e1c3b4c75f57/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/aadf5f67d80de8dd7d4643ce880ae8ab96552e22/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0dbbb5aae568c2d9aa34e3be11e7b525054265d9/server.txt")
+    @Name("1.16.2 Release Candidate 1")
     v1_16_2_RC1(749, 2576, "1.16.2-rc1"),
     @PrereleaseFor(v1_16_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/853759e47f8ccc595f07188d03d9151a50599a6e/1.16.2-pre3.json")
@@ -422,6 +456,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/bd47f78f185a525388e446aa44975c147057ebbd/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/4469589298cef77fb45badb202529d2cd4430818/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/b84128aa72df8d7de3e0dfe87e5e8010f2ae0e92/server.txt")
+    @Name("1.16.2 Pre-release 3")
     v1_16_2_PRE3(748, 2575, "1.16.2-pre3"),
     @PrereleaseFor(v1_16_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/2eb11fb39cd11715246a3a90dff2234a0252346f/1.16.2-pre2.json")
@@ -429,6 +464,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/d2cae287324631b2b4bfa609dd01c63cd6d4b78d/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/ed1630c1ed0455f0aa0e964d1eae13127199ced5/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/2cd92910f628edb36418e35c91bec901285f15de/server.txt")
+    @Name("1.16.2 Pre-release 2")
     v1_16_2_PRE2(746, 2574, "1.16.2-pre2"),
     @PrereleaseFor(v1_16_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/cd16042b22ca7607566f619bb490afaffb53c091/1.16.2-pre1.json")
@@ -436,6 +472,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/d4434bf4f2f0572a4eb54b3da1b1b3069a4e9ef2/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/adf7d5fd32f2f9d0d135c7061723a3d185708ba2/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/16c4ac0ec3c9ed95f67a781d5f3ca849f05473b9/server.txt")
+    @Name("1.16.2 Pre-release 1")
     v1_16_2_PRE1(744, 2573, "1.16.2-pre1"),
     @SnapshotFor(v1_16_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/6533eb6c1a1669dc61036369e97149b14de4614a/20w30a.json")
@@ -483,6 +520,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/7213e5ba8fe8d352141cf3dde907c26c43480092/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/f6fa59c948ba05b846da71dd38b9ab823a6073c6/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/60d3caa5ded0d36d976233c7a5184c51e79b8d2c/server.txt")
+    @Name("1.16 Release Candidate 1")
     v1_16_RC1(734, 2565, "1.16-rc1"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b7fb24f6d0491e6ac5f07eee08518a5cffe07345/1.16-pre8.json")
@@ -490,6 +528,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/d6a747371b200216653be9b4140cd2862eddbb0e/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/cc731ea8613341fe463db28e5d093a244cbb2b4f/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e12f3803214e464595e100530a23c56ad8b3c851/server.txt")
+    @Name("1.16 Pre-release 8")
     v1_16_PRE8(733, 2564, "1.16-pre8"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/49aee1659a469a63aeeb477d9a1b153b30fba6b8/1.16-pre7.json")
@@ -497,6 +536,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/577f7287642309a2a32e80be395329118dfddb3f/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/3c70f81a7c1c9f307be58a39ddeb5efb8e8ff632/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/5e42ed6871784b7def1332f1e735daffbcb0b141/server.txt")
+    @Name("1.16 Pre-release 7")
     v1_16_PRE7(732, 2563, "1.16-pre7"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a57cad8e98b65c9af672476824757a6d830ff93e/1.16-pre6.json")
@@ -504,6 +544,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/8984939f42371a7e614fa48669e308c4cc9ba228/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/1b80bd23bba9a2031efab807f68028168cb04094/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/950d8a2275c5e59ae3dfa4a36b998573f5f1fd6e/server.txt")
+    @Name("1.16 Pre-release 6")
     v1_16_PRE6(730, 2562, "1.16-pre6"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a276ca77ecd34b70f66769e9ba7ba6219cd2b9c1/1.16-pre5.json")
@@ -511,6 +552,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/56081523bca4f7074f111d1e8a9fd0a86d072a2b/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/b2aac6e5da41c67eb699cbcdf1d818aafa60fe45/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/5f32040b04f7df822c072e4630aae2c8f95b6fb3/server.txt")
+    @Name("1.16 Pre-release 5")
     v1_16_PRE5(729, 2561, "1.16-pre5"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/1f568b8829fdb009c99191fbe4c845fc45316dc7/1.16-pre4.json")
@@ -518,6 +560,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/018cdde89f8ff3831ce27c6c8dbf6831e99e0e75/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/5132f6ea6a8c605a994fd55481526a602b13cf54/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/9633b909686765f69ffd67b73eba0f3adbca1c4e/server.txt")
+    @Name("1.16 Pre-release 4")
     v1_16_PRE4(727, 2560, "1.16-pre4"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/dbf25e875316d0dcbab375f69796beedb94284a1/1.16-pre3.json")
@@ -525,6 +568,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/0b5653b65bc494fa55349682cebf50abf0d72ad9/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/4a012680147a891696f22fd031148c5e1564f760/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/a3ce901f9c3684ebd010292b6242de60d5ecf273/server.txt")
+    @Name("1.16 Pre-release 3")
     v1_16_PRE3(725, 2559, "1.16-pre3"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3bab9adc9f00b43dbd1987b228667ed048f467ec/1.16-pre2.json")
@@ -532,6 +576,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/8daeb71269eb164097d7d7ab1fa93fc93ab125c3/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/295bfd26b2a39e8793800fbc777c5ff03b1cc661/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/2c32da45ceb6382b959f215f3895719f51a426f4/server.txt")
+    @Name("1.16 Pre-release 2")
     v1_16_PRE2(722, 2557, "1.16-pre2"),
     @PrereleaseFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/aba32ceaeee4e07782a1740911f549862d2d838b/1.16-pre1.json")
@@ -539,6 +584,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/ce66f98cabc1038ceba3b715b7dad5f70e27f88a/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/2b11ab60280b7c95a092cd64fb175e0e5e8448ff/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/0cc5913ef77e4b7c6c78a66a1994254b4e295640/server.txt")
+    @Name("1.16 Pre-release 1")
     v1_16_PRE1(721, 2556, "1.16-pre1"),
     @SnapshotFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/aa41277e48a2ad1317239e05f7487cca11f94338/20w22a.json")
@@ -617,7 +663,8 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/c0711cd9608d1af3d6f05ac423dd8f4199780225/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/3d91233a24c5de720f0eb41927a0b00e45e89caa/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/a94a32e698caff0f5c5762b3dca045ddcd587071/server.txt")
-    SNAPSHOT_20W14(709, 2522, "20w14∞"), // april fools
+    @Name("20w14∞")
+    SNAPSHOT_20W14(709, 2522, "20w14~"), // april fools
     @SnapshotFor(v1_16)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ce5a5eb9a2ff1ba6080f1987d146d6c9d6ccb12c/20w13b.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e4f75e82519fe859932d22c9c05b762cd544af11/client.jar")
@@ -687,14 +734,16 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/0cc9a1582949297c8f1ca83b937c8d84ad295ffe/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/5c9745ba8db67bcc95e6de65a3a6dd1d4c655726/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/44b2ca1d4677f3fffaa0333c87a42a9449e0bc52/server.txt")
-    COMBAT_TEST_5(601, 2321, "Combat Test 5"), // Fork of 1.15.2-pre2
+    @Name("Combat Test 5")
+    COMBAT_TEST_5(601, 2321, "1.15_combat-6"), // Fork of 1.15.2-pre2
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/ac11ea96f3bb2fa2b9b76ab1d20cacb1b1f7ef60/1_15_combat-1.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/af7b75f44fdcf814727c45c2eb6e4acc01000465/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/4914bb3f9ae37dabdcbd68aa05eda1783f605336/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/0f78860aa616f0ac1d044be0db3b7e1ea4eda16f/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/219ba3c078eb40bea4daaa109c4b10f706e210c7/server.txt")
-    COMBAT_TEST_4(600, 2320, "Combat Test 4"), // Fork of 1.15-pre3
+    @Name("Combat Test 4")
+    COMBAT_TEST_4(600, 2320, "1.15_combat-1"), // Fork of 1.15-pre3
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b57e2563648f1a657dddab12d5626b0e6dde6ffd/1.15.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e3f78cd16f9eb9a52307ed96ebec64241cc5b32d/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar")
@@ -707,6 +756,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/f3eae938f3382ffeb8c3af150664d33864561110/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/e101497d78faca35dec18f632de16c25899b6f08/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e018f7413ad5b98d7427bc3027c95c78845e891b/server.txt")
+    @Name("1.15.2 Pre-release 2")
     v1_15_2_PRE2(577, 2229, "1.15.2-pre2"),
     @PrereleaseFor(v1_15_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/d92cceefd15b3e62b40af419f9511c9372d11088/1.15.2-pre1.json")
@@ -714,6 +764,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/5db50a719dc40d63aa95c6bdc5b302e425f673f2/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/8c8caf763afbe28a49c0880b250d2b2354a18363/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/76705a427c78e84a6921f8ded286f7b3a61070ad/server.txt")
+    @Name("1.15.2 Pre-Release 1")
     v1_15_2_PRE1(576, 2228, "1.15.2-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/5f08951bac12f943a09a62839ce8082215f201dd/1.15.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/8b11614bea9293592a947ea8f4fd72981ea66677/client.jar")
@@ -727,6 +778,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/289a247dd42928880769398b049d3890513f2917/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/24c55605b6ebd4ee0b28d41d609b68599ef23c67/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/d10e23f8def30fcf7d0a0d027f48f2731d80208f/server.txt")
+    @Name("1.15.1 Pre-release 1")
     v1_15_1_PRE1(574, 2226, "1.15.1-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/d15def518373e2044bb790f28b6fa3a47473ff0f/1.15.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7b07fd09d1e3aae1bc7a1304fedc73bfe5d81800/client.jar")
@@ -740,6 +792,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/c1f961491a8340a1809292b7189046896deaa338/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/a0bea08f0b96f6f30a350cd75270be63f7d0aac4/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/c79e5ee9c5167b730266910d4c5bafbaf27c2f52/server.txt")
+    @Name("1.15 Pre-release 7")
     v1_15_PRE7(572, 2224, "1.15-pre7"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ee365dbda3f8efbc9b5c7ef32b450a882628ac8b/1.15-pre6.json")
@@ -747,6 +800,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/8d5793fe302feb6c03d3c5e590ef940fc02f2864/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/3bad8b77c3461b0524cb1ed9ad9e3b727d9d437b/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/c79e5ee9c5167b730266910d4c5bafbaf27c2f52/server.txt")
+    @Name("1.15 Pre-release 6")
     v1_15_PRE6(571, 2223, "1.15-pre6"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fb227267e104aa6ff021ce5316f8d88350bfee30/1.15-pre5.json")
@@ -754,6 +808,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/d68ce004ce760b702e2f7e298a2a1ce7a7663c55/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/87ee6fe02bed0c7629e9d84a446ac138dc0f6afe/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/27e6c3184a2360cf0b5dd047dc40de927e4e052c/server.txt")
+    @Name("1.15 Pre-release 5")
     v1_15_PRE5(570, 2222, "1.15-pre5"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/f6410c70db5b860ba293b9e46e07984f7e1b2b4c/1.15-pre4.json")
@@ -761,6 +816,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/8f9e23414a01d21e2cd313b2595b164ccfda56aa/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/8c32d18e101ed343feec81d5d585a505830ed00f/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/512a0f07a4183f6c1f71401fea0bf26cb44b541e/server.txt")
+    @Name("1.15 Pre-release 4")
     v1_15_PRE4(569, 2221, "1.15-pre4"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/e739263a7bf4f1f84a191e6b439ca35f7ca5348c/1.15-pre3.json")
@@ -768,6 +824,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/eedb663e70f49a5592b88197ea68b0f32fd9ce97/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/af3543cb84957b119b89cfc7d1b072352b6cc2d0/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/c40a33c8fcb926ae610f732a383aaeb09e47c549/server.txt")
+    @Name("1.15 Pre-release 3")
     v1_15_PRE3(567, 2220, "1.15-pre3"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/67d54bdd396be77bfeb591c026ea85516c241376/1.15-pre2.json")
@@ -775,6 +832,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/0f0c2e3c25693189374c8a63179e3018ebfdc1ba/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/d97cdb2d6da314dd3aaf1e2eb524319e48d56493/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e52c6202bcd403df99f9e9e1e701e97942042d21/server.txt")
+    @Name("1.15 Pre-Release 2")
     v1_15_PRE2(566, 2219, "1.15-pre2"),
     @PrereleaseFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/d5d13a00263ff4a09005aa56e174be523e241487/1.15-pre1.json")
@@ -782,6 +840,7 @@ public enum MCVersion {
     @ServerJar("https://launcher.mojang.com/v1/objects/332b3382108e5bdb0b23717082c9b97c54ffc8ad/server.jar")
     @ClientMapping("https://launcher.mojang.com/v1/objects/4323ee7cf1b3cd30944d7855d85fa955fb279e2e/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e73be3dfee02376e041572ac0f39d301ac01a8de/server.txt")
+    @Name("1.15 Pre-release 1")
     v1_15_PRE1(565, 2218, "1.15-pre1"),
     @SnapshotFor(v1_15)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/5e35e3e9c7ac9f21f0d47c514041a8ab6a407b32/19w46b.json")
@@ -888,17 +947,20 @@ public enum MCVersion {
     @ClientJson("https://launcher.mojang.com/experiments/combat/0f209c9c84b81c7d4c88b4632155b9ae550beb89/1_14_combat-3.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/fd8f2712d8d5089f4f0ee817a6f6fbe7f9d4c6f1/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/8f8ff833e6c775286a54935dad282f8499578f9a/server.jar")
-    COMBAT_TEST_3(502, 2069, "Combat Test 3"), // Fork of 1.14.4
+    @Name("Combat Test 3")
+    COMBAT_TEST_3(502, 2069, "1.14_combat-3"), // Fork of 1.14.4
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/d164bb6ecc5fca9ac02878c85f11befae61ac1ca/1_14_combat-0.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/307045ecb6de9a9436d333d32440f5dbfc367c20/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/dbed2de0763a834bfaa851c0478c56aeee654010/server.jar")
-    COMBAT_TEST_2(501, 2068, "Combat Test 2"), // Fork of 1.14.4
+    @Name("Combat Test 2")
+    COMBAT_TEST_2(501, 2068, "1.14_combat-0"), // Fork of 1.14.4
     @SnapshotFor(_COMBAT_TEST)
     @ClientJson("https://launcher.mojang.com/experiments/combat/610f5c9874ba8926d5ae1bcce647e5f0e6e7c889/1_14_combat-212796.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/98cb56935c762c412b64ddda8e3851544243fb2d/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/168ae89abc66fd4ee2d84c844cd980ddae26e784/server.jar")
-    v1_14_3_COMBAT_TEST(500, 2067, "1.14.3 - Combat Test"), // Fork of 1.14.3
+    @Name("1.14.3 - Combat Test")
+    v1_14_3_COMBAT_TEST(500, 2067, "1.14_combat-212796"), // Fork of 1.14.3
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fbe94183241ba2fcf8cfb71703d9a145c225a76e/1.14.4.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/8c325a0c5bd674dd747d6ebaa4c791fd363ad8a9/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/3dc3d84a581f14691199cf6831b71ed1296a9fdf/server.jar")
@@ -909,36 +971,43 @@ public enum MCVersion {
     @ClientJson("https://launchermeta.mojang.com/v1/packages/7017bcd84c1f27c89c6cb4a8c117468c1e6d0723/1.14.4-pre7.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/53bf70e446ecfb4a88a7546ab3479c4cc868e143/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/98d1396495562dbb32828ef50bad7112c403c47e/server.jar")
+    @Name("1.14.4 Pre-Release 7")
     v1_14_4_PRE7(497, 1975, "1.14.4-pre7"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3e1a43d544fe15d6756c7461955c7f1899a54e9d/1.14.4-pre6.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/338cd13bb237252c59b59043b49340e545fa1722/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/d7b8f310278a5ea9efef03b4e441f12524253c5d/server.jar")
+    @Name("1.14.4 Pre-Release 6")
     v1_14_4_PRE6(496, 1974, "1.14.4-pre6"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/bbcefa7363b685d64b73f707d0045c5d64b0ff6c/1.14.4-pre5.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/db91103c10795811477ec33589b2e1cf452f43f2/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/f45379dfa2ecd946a2ed81c354225a4181261333/server.jar")
+    @Name("1.14.4 Pre-Release 5")
     v1_14_4_PRE5(495, 1973, "1.14.4-pre5"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8f267102ec892b73c906446dadc00dbce551a5db/1.14.4-pre4.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ee6386897fd6d7f777d4159fd45b26deaff14cff/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/853bf851bda5862b7f68baf93ae86fb90571ceca/server.jar")
+    @Name("1.14.4 Pre-Release 4")
     v1_14_4_PRE4(494, 1972, "1.14.4-pre4"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/05582943711628ecc6efa1849eb23c0c51117cbe/1.14.4-pre3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/4e7e41622e1fb083e093b071396dad50168c9613/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/b7ed47d4e600c6ead80f4c73c2e080625d07ef6e/server.jar")
+    @Name("1.14.4 Pre-Release 3")
     v1_14_4_PRE3(493, 1971, "1.14.4-pre3"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c95933990092b5bc44ad976bd87e76482b29c347/1.14.4-pre2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/96f1d6989a86f1bdbf4cc1583a88e6a16f985d17/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a7023b92091ca5872d35b17c8aab1c6daa833a69/server.jar")
+    @Name("1.14.4 Pre-Release 2")
     v1_14_4_PRE2(492, 1970, "1.14.4-pre2"),
     @PrereleaseFor(v1_14_4)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/825d0302ed7d7b55616319cff67a6a0f989f9bb6/1.14.4-pre1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/bcabf6e9e9664796bd97e01c54d1dbf27aa47c39/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/774c5619679673ec772b0f01f363d0145a9d6b51/server.jar")
+    @Name("1.14.4 Pre-Release 1")
     v1_14_4_PRE1(491, 1969, "1.14.4-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/2b9823a8699fb6811acd1f553c5bee009d30f64e/1.14.3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/af100b34ec7ef2b8b9cf7775b544d21d690dddec/client.jar")
@@ -948,21 +1017,25 @@ public enum MCVersion {
     @ClientJson("https://launchermeta.mojang.com/v1/packages/da615805ddafebbfdba8f977793988328bfe2bea/1.14.3-pre4.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7f35f02e03ad1b837d0302c874e8cbc662bf1b88/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/d5397db937499277165abb27f8af04885be8b6b6/server.jar")
+    @Name("1.14.3 Pre-Release 4")
     v1_14_3_PRE4(489, 1967, "1.14.3-pre4"),
     @PrereleaseFor(v1_14_3)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c3c3274f38be10d0574d3386b432dc497d35ecb7/1.14.3-pre3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/360c54d41522541f6eb303771192433de4ea1235/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a46e49e1541cf24a75aabe2756514565de83634a/server.jar")
+    @Name("1.14.3 Pre-Release 3")
     v1_14_3_PRE3(488, 1966, "1.14.3-pre3"),
     @PrereleaseFor(v1_14_3)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/e83b743d0b5f89c7ade23a702fe9dc5674624324/1.14.3-pre2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/a9358d6b2ac6025923155b46dc26cc74523ac130/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/64caea4b63611111d775e4558341cb9718a6ff4f/server.jar")
+    @Name("1.14.3 Pre-Release 2")
     v1_14_3_PRE2(487, 1965, "1.14.3-pre2"),
     @PrereleaseFor(v1_14_3)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/581a41e0240e3460f2e30a069cf5523de061158d/1.14.3-pre1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/c49ca8d28e3c64d39dc46d21dd92f421a34ec241/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/966984c5d8b5c3604a8838f8fb5635b8b9cd73c7/server.jar")
+    @Name("1.14.3 Pre-Release 1")
     v1_14_3_PRE1(486, 1964, "1.14.3-pre1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8b96abed06b23d3b752e653ada36062d70bf3da1/1.14.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ca6c5a139045967229975c0c0b7f93e78b4314c2/client.jar")
@@ -972,22 +1045,22 @@ public enum MCVersion {
     @ClientJson({"https://launchermeta.mojang.com/v1/packages/f90f601344058a812144eb71a49552b30a70d589/1.14.2_Pre-Release_4.json", "https://launchermeta.mojang.com/v1/packages/683456f319c3944c6adfdfd5631c77f3b25193e0/1.14.2_Pre-Release_4.json"})
     @ClientJar({"https://launcher.mojang.com/v1/objects/f14e1ab15fb7455c81c487b2d82b29773e7cf4f6/client.jar", "https://launcher.mojang.com/v1/objects/60783b7bab4125d55f187c859e4b41418ebc8719/client.jar"})
     @ServerJar("https://launcher.mojang.com/v1/objects/631e46624daaf9e8357fcb985e0fce489b020e74/server.jar")
-    v1_14_2_PRE4(484, 1962, "1.14.2-pre4"),
+    v1_14_2_PRE4(484, 1962, "1.14.2 Pre-Release 4"),
     @PrereleaseFor(v1_14_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/cf87272bd1bd131c19489a057506d09ff27e8e91/1.14.2_Pre-Release_3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e1490260d733b18dfc573ab181f9f2df8fb34303/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/307fb7e6208bd843060b1844857dc5e1d555a1df/server.jar")
-    v1_14_2_PRE3(483, 1960, "1.14.2-pre3"),
+    v1_14_2_PRE3(483, 1960, "1.14.2 Pre-Release 3"),
     @PrereleaseFor(v1_14_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b868f1988a00dab80ad4978dea5d693b9d2e2b5a/1.14.2_Pre-Release_2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/d12a34d8584f5465a4851f77bc5a1ce05ac9d59c/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/a2cedc73237e999a5d408ecf0923a130d69d45a1/server.jar")
-    v1_14_2_PRE2(482, 1959, "1.14.2-pre2"),
+    v1_14_2_PRE2(482, 1959, "1.14.2 Pre-Release 2"),
     @PrereleaseFor(v1_14_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/0159864166fd60a0b0e7481cbaa5c0c4ee1a1001/1.14.2_Pre-Release_1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/b1802f2bbe126d3b9a524a187eab1be3f346eb1c/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/1aad89bfe7a14bee70de0b07339a2f319771180f/server.jar")
-    v1_14_2_PRE1(481, 1958, "1.14.2-pre1"),
+    v1_14_2_PRE1(481, 1958, "1.14.2 Pre-Release 1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/965bea1177bb974be2a0f7ee98ed732c0ab010b0/1.14.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/55ba86ddcbc3579397f41910463ffd4056e1e523/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/ed76d597a44c5266be2a7fcd77a8270f1f0bc118/server.jar")
@@ -996,12 +1069,12 @@ public enum MCVersion {
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c6d68bf27f963a13b2110728cb15d77925b9b137/1.14.1_Pre-Release_2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/4074da2da9e8207c022e5e12355d4fe87063b86b/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/ea3a8bee27e1ca4185bf703fb4e414800f533fc9/server.jar")
-    v1_14_1_PRE2(479, 1956, "1.14.1-pre2"),
+    v1_14_1_PRE2(479, 1956, "1.14.1 Pre-Release 2"),
     @PrereleaseFor(v1_14_1)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fec802601da1a9e284876e158fe4913e548f8786/1.14.1_Pre-Release_1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/bf5ada613755329f9d194c1e8a5b26b6bbf30cca/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/0bbed1aa2ef4bd4c0d6134461ac3e8eba1dc5f62/server.jar")
-    v1_14_1_PRE1(478, 1955, "1.14.1-pre1"),
+    v1_14_1_PRE1(478, 1955, "1.14.1 Pre-Release 1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/d3c54d6469145f7c918537209660bf20e9207057/1.14.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7a762a59345c13af7d87111207a93f5a8607f6c0/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/f1a0073671057f01aa843443fef34330281333ce/server.jar")
@@ -1010,27 +1083,27 @@ public enum MCVersion {
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c122c7e15e90ffcfee53c642c9ba601e4365df20/1.14_Pre-Release_5.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/3e61d082391ad8d25c40d5825cae8843cfeaf579/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/5d550762b9c82ab4fe9f259c14fcf7bf7ed8017a/server.jar")
-    v1_14_PRE5(476, 1951, "1.14-pre5"),
+    v1_14_PRE5(476, 1951, "1.14 Pre-Release 5"),
     @PrereleaseFor(v1_14)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b0c367198170b890ecff1facd31b73a7baae8cff/1.14_Pre-Release_4.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/9d2f8dd80ddc2008ed87681186af5321cdb6e560/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/cf967a23b452ab474bf7bcb69fd029a5f8b84bba/server.jar")
-    v1_14_PRE4(475, 1950, "1.14-pre4"),
+    v1_14_PRE4(475, 1950, "1.14 Pre-Release 4"),
     @PrereleaseFor(v1_14)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3954faa41100368488e8657a15056b0e742a6972/1.14_Pre-Release_3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/12f85e0b940f3649c9ecb5a3201811f56992e5c0/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/6b747e1338e1aa058146032a659cf654c446552d/server.jar")
-    v1_14_PRE3(474, 1949, "1.14-pre3"),
+    v1_14_PRE3(474, 1949, "1.14 Pre-Release 3"),
     @PrereleaseFor(v1_14)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ed347c4d701b86e5f4ec3388284db48ddf90cd4d/1.14_Pre-Release_2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7d41669ddd780baecab2926d6ea6b08dac7d834f/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/353cc74b9aefd4675730449f50f5c0066063ac3f/server.jar")
-    v1_14_PRE2(473, 1948, "1.14-pre2"),
+    v1_14_PRE2(473, 1948, "1.14 Pre-Release 2"),
     @PrereleaseFor(v1_14)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/22552a86344ec100100e299cefc2ce6031a74726/1.14_Pre-Release_1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/eb144c0dbc03116c832cdd20d28a8a686327905a/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/6f27430bcd9b06d3dcb5d2966c75d5e491915c9c/server.jar")
-    v1_14_PRE1(472, 1947, "1.14-pre1"),
+    v1_14_PRE1(472, 1947, "1.14 Pre-Release 1"),
     @SnapshotFor(v1_14)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/eda0051523ec5df52cceed1ebe13135d3f268708/19w14b.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/a008dc3c45cb4f120ae5e0f124d5af2de1bafed5/client.jar")
@@ -1812,7 +1885,7 @@ public enum MCVersion {
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3c1973d91e234fa30eb12be0dce7587b0b3c75bd/1.RV-Pre1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/3843fae71dd283e68897ead618255fa1ddcf4c8d/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/f51d9489706f603be6be9716407f1dab5f7f2733/server.jar")
-    v1_RV_PRE1(108, 173, "1.RV-pre1"), // april fools
+    v1_RV_PRE1(108, 173, "1.RV-Pre1"), // april fools
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a7c5c055718d8e7d709f3f2338b4e8f1125b5aae/1.9.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/9bc7f02323d90b9385c1a5dbd47fb144a3fb8835/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/bf95d9118d9b4b827f524c878efd275125b56181/server.jar")
@@ -3013,18 +3086,21 @@ public enum MCVersion {
     @ClientJar("https://archive.org/download/2point-0-blue/2point0_blue.jar")
     @ServerJar("https://archive.org/download/2point-0-blue/2point0_blue_server.jar")
     @IgnoreTest("april fools version")
+    @Name("2.0")
     v2_0_BLUE(90, "2.0 Blue"),
     @AprilFoolsVersion
     @ClientJson("https://archive.org/download/2point-0-red/2point0_red.json")
     @ClientJar("https://archive.org/download/2point-0-red/2point0_red.jar")
     @ServerJar("https://archive.org/download/2point-0-red/2point0_red_server.jar")
     @IgnoreTest("april fools version")
+    @Name("2.0")
     v2_0_RED(91, "2.0 Red"),
     @AprilFoolsVersion
     @ClientJson("https://archive.org/download/2point-0-purple/2point0_purple.json")
     @ClientJar("https://archive.org/download/2point-0-purple/2point0_purple.jar")
     @ServerJar("https://archive.org/download/2point-0-purple/2point0_purple_server.jar")
     @IgnoreTest("april fools version")
+    @Name("2.0")
     v2_0_PURPLE(92, "2.0 Purple"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/71734ab8e78abfa294fedd297aef2dff6e8a9127/1.5.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/047136381a552f34b1963c43304a1ad4dc0d2d8e/client.jar")
@@ -3534,868 +3610,1148 @@ public enum MCVersion {
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.9-pre6.json")
     @ClientJar("https://assets.minecraft.net/1_9-pre6/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_9-pre6/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease 6")
     BETA_1_9_PRE6(22, "b1.9-pre6"),
     @PrereleaseFor(v1_0_0)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.9-pre5.json")
     @ClientJar("https://assets.minecraft.net/1_9-pre5/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_9-pre5/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease 5")
     BETA_1_9_PRE5(21, "b1.9-pre5"),
     @PrereleaseFor(v1_0_0)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.9-pre4.json")
     @ClientJar("https://assets.minecraft.net/1_9-pre4/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_9-pre4/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease 4")
     BETA_1_9_PRE4(20, "b1.9-pre4"), // missing pre-reupload client
     @PrereleaseFor(v1_0_0)
     @ClientJson({"https://archive.org/download/Minecraft-JE-Beta/Prereleases/b1.9-pre3-1/b1.9-pre3-1.json", "https://archive.org/download/Minecraft-JSONs/b1.9-pre3.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/Prereleases/b1.9-pre3-1/b1.9-pre3-1.jar", "https://assets.minecraft.net/1_9-pre3/minecraft.jar"})
     @ServerJar("https://assets.minecraft.net/1_9-pre3/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease 3")
     BETA_1_9_PRE3(19, "b1.9-pre3"), // missing pre-reupload client
     @PrereleaseFor(v1_0_0)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.9-pre2.json")
     @ClientJar("https://assets.minecraft.net/1_9-pre2/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_9-pre2/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease 2")
     BETA_1_9_PRE2(19, "b1.9-pre2"),
     @PrereleaseFor(v1_0_0)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.9-pre1.json")
     @ClientJar("https://assets.minecraft.net/1_9-pre/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_9-pre/minecraft_server.jar")
+    @Name("Beta 1.9 Prerelease")
     BETA_1_9_PRE(18, "b1.9-pre"),
 
     // Beta
     @ClientJson("https://launchermeta.mojang.com/v1/packages/2f6d2141c99bd626a069d8655135c4b13c45b981/b1.8.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/6b562463ccc2c7ff12ff350a2b04a67b3adcd37b/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.8.1.jar")
+    @Name("Beta 1.8.1")
     BETA_1_8_1(17, "b1.8.1"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/237811ba6f3418f3e64edb26246037625528ddf8/b1.8.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/3139e9c29b2c74f59ea04de760ac2af5bc21b410/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.8.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.8.exe")
+    @Name("Beta 1.8")
     BETA_1_8(17, "b1.8"),
     @PrereleaseFor(BETA_1_8)
+    @Name("Beta 1.8 (Preview)")
     BETA_1_8_PREVIEW(17, "b1.8 (preview)"), // missing
     @PrereleaseFor(BETA_1_8)
     @ClientJson("https://archive.org/download/Minecraft-JSONs/b1.8-pre2.json")
     @ClientJar("https://assets.minecraft.net/1_8-pre2/minecraft.jar")
     @ServerJar("https://assets.minecraft.net/1_8-pre2/minecraft_server.jar")
+    @Name("Beta 1.8 Pre-release 2 ;)")
     BETA_1_8_PRE2(16, "b1.8-pre2"),
     @PrereleaseFor(BETA_1_8)
     @ClientJson({"https://archive.org/download/Minecraft-JSONs/b1.8-pre1-1.json", "https://archive.org/download/Minecraft-JSONs/b1.8-pre1-2.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/Prereleases/b1.8-pre1-1/b1.8-pre1-1.jar", "https://assets.minecraft.net/1_8-pre/minecraft.jar"})
     @ServerJar("https://assets.minecraft.net/1_8-pre/minecraft_server.jar")
+    @Name("Beta 1.8 Pre-release")
     BETA_1_8_PRE(15, "b1.8-pre"), // missing pre-reupload server
     @ClientJson("https://launchermeta.mojang.com/v1/packages/66cafaf8ea5a7b76547eb24c848832af44255ba1/b1.7.3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/43db9b498cb67058d2e12d394e6507722e71bb45/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.7.3.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.7.3.exe")
+    @Name("Beta 1.7.3")
     BETA_1_7_3(14, "b1.7.3"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/275d06ff3878db13a98150a7342e0f9d114a85e0/b1.7.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7dc50cc5e2ff204a7283f0c7d38cd0370b49875b/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.7.2.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.7.2.exe")
+    @Name("Beta 1.7.2")
     BETA_1_7_2(14, "b1.7.2"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Beta/b1.7_01/b1.7_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Beta/b1.7_01/b1.7_01.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.7_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.7_01.exe")
+    @Name("Beta 1.7_01")
     BETA_1_7_01(14, "b1.7_01"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/28db3739983fcdef4dee4cfd7ef8754ed890d491/b1.7.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ad7960853437bcab86bd72c4a1b95f6fe19f4258/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.7.jar")
+    @Name("Beta 1.7")
     BETA_1_7(14, "b1.7"), // missing .exe file for server
     @PrereleaseFor(BETA_1_7)
+    @Name("Beta 1.7 (Preview)")
     BETA_1_7_PREVIEW(14, "b1.7 (preview)"), // missing
     @ClientJson("https://launchermeta.mojang.com/v1/packages/2870d0b84a71ae38a9157a72a730d2075e80e02b/b1.6.6.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f95fe05711d09553ca2a9089f981741c13d6b8c4/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.6.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.6.6.exe")
+    @Name("Beta 1.6.6")
     BETA_1_6_6(13, "b1.6.6"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/4053bd8447601f1d80f00d8c838bf14ebbe8ab51/b1.6.5.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/90ed9854b43c4d031ed07381ea3ae3071a8bba6f/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.5.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.6.5.exe")
+    @Name("Beta 1.6.5")
     BETA_1_6_5(13, "b1.6.5"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/74449d14511d02e5b754f241007fc3578059ac1b/b1.6.4.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/b5d3bdb8a7b12d163651f4787ac6ca14689aab9e/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.4.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.6.4.exe")
+    @Name("Beta 1.6.4")
     BETA_1_6_4(13, "b1.6.4"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/d51caee58632f1608887cc4ddbadf748387cd874/b1.6.3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/924e36dbb7c64abb30a95fe35f5affb5176f6cbc/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.3.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.6.3.exe")
+    @Name("Beta 1.6.3")
     BETA_1_6_3(13, "b1.6.3"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/873836b3204bca086ba8ce23c797a20a5d41afd0/b1.6.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e8aa50949b077b672be2e651ea3f7b1bbd9020e1/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.2.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.6.2.exe")
+    @Name("Beta 1.6.2")
     BETA_1_6_2(13, "b1.6.2"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/47410d4b934f4ed9754d4b522f10cade63ff3d67/b1.6.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/63a66d6d145696296bdaaeaba0a42f738b87a362/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6.1.jar")
+    @Name("Beta 1.6.1")
     BETA_1_6_1(13, "b1.6.1"), // missing .exe file for server
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8a62339d69ede6781646dacff76ad09bc90cd918/b1.6.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ecc0288d218fd7479027a17c150cbf283fa950a1/client.jar")
     @ServerJar({"https://betacraft.pl/server-archive/minecraft/b1.6-trailer.jar", "https://betacraft.pl/server-archive/minecraft/b1.6.jar"})
+    @Name("Beta 1.6")
     BETA_1_6(13, "b1.6"), // missing .exe file for server
     @PrereleaseFor(BETA_1_6)
+    @Name("Beta 1.6 (Preview)")
     BETA_1_6_PREVIEW(13, "b1.6 (preview)"), // missing
     @PrereleaseFor(BETA_1_6)
     @ClientJson("https://archive.org/download/Minecraft-JE-Beta/Prereleases/b1.6-tb3/b1.6-tb3.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Beta/Prereleases/b1.6-tb3/b1.6-tb3.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.6-test_build_3.jar")
-    BETA_1_6_TEST_BUILD_3(12, "b1.6 Test Build 3"),
+    @Name("Beta 1.6 Test Build 3")
+    BETA_1_6_TEST_BUILD_3(12, "b1.6-tb3"),
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.5_02.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.5_02.exe")
+    @Name("Beta 1.5_02")
     BETA_1_5_02(11, "b1.5_02"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c4f1e66a96aeec6184f219394cedd4290f25a869/b1.5_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e2a692e5e8160c84b29c834ecbf398618db9749c/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.5_01.jar")
+    @Name("Beta 1.5_01")
     BETA_1_5_01(11, "b1.5_01"), // missing .exe file for server
     @ClientJson("https://launchermeta.mojang.com/v1/packages/970c7f888d66a3a552c5a765892d4ebb90205206/b1.5.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f5ce1699cd728213c21054fa2f1490d162b002b4/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.5.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.5.exe")
+    @Name("Beta 1.5")
     BETA_1_5(11, "b1.5"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/793c5ef9f8d200508b136e9c328070426615f287/b1.4_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/6f157f26955c35006c1afa8b0479e0ce785fb864/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.4_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.4_01.exe")
+    @Name("Beta 1.4_01")
     BETA_1_4_01(10, "b1.4_01"),
     @ClientJson({"https://archive.org/download/Minecraft-JE-Beta/b1.4-1/b1.4-1.json", "https://launchermeta.mojang.com/v1/packages/5e4feaa9d732740383fcaa78226c1c00ade89031/b1.4.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/b1.4-1/b1.4-1.jar", "https://launcher.mojang.com/v1/objects/f6dbca5223ea2a7e89806e93d0b18162b2d58c20/client.jar"})
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.4.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.4.exe")
+    @Name("Beta 1.4")
     BETA_1_4(10, "b1.4"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/00aae99f814c6f010cc3c1500a490eab8feff739/b1.3_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/add3809d2c075e985d4b583632dac3d9c3872945/client.jar")
+    @Name("Beta 1.3_01")
     BETA_1_3_01(9, "b1.3_01"), // missing server?
     @ClientJson({"https://archive.org/download/Minecraft-JE-Beta/b1.3-1/b1.3-1.json", "https://launchermeta.mojang.com/v1/packages/4bb25e224116e7e06e08f0edaea49320b5ecf591/b1.3b.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/b1.3-1/b1.3-1.jar", "https://launcher.mojang.com/v1/objects/e19cfb3a2043f185c44237ef05eac80e8ad2d8e7/client.jar"})
-    @SuppressWarnings("HttpUrlsUsage") // false positive
+    @SuppressWarnings("HttpUrlsUsage")
     @ServerJar({"https://web.archive.org/web/20200601064044/http://betacraft.pl/server-archive/minecraft/b1.3-1.jar", "https://web.archive.org/web/20200601064052/http://betacraft.pl/server-archive/minecraft/b1.3-2.jar"})
     @ServerExe("https://web.archive.org/web/20200318020055/https://betacraft.pl/server-archive/minecraft/b1.3-2.exe")
+    @Name("Beta 1.3")
     BETA_1_3(9, "b1.3"), // missing reupload 1
     @ClientJson("https://launchermeta.mojang.com/v1/packages/9c72054ac75a87f30e285551afc09ffd712f5310/b1.2_02.json")
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/b1.2_02/b1.2_02.jar", "https://launcher.mojang.com/v1/objects/093f371e1a05d89664cfb8068d607953687d5d94/client.jar"})
+    @Name("Beta 1.2_02")
     BETA_1_2_02(8, "b1.2_02"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/50cee23732594092619661664c063e002ca11108/b1.2_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f71a5b58c9bd0e458878d78a34c9fb35e97d5222/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.2_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.2_01.exe")
+    @Name("Beta 1.2_01")
     BETA_1_2_01(8, "b1.2_01"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/4778e577854ebcca605c803915b9d0711cb0d760/b1.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/ba05d7a97926c61c03cf956f7ae92f3bede9474e/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.2.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.2.exe")
+    @Name("Beta 1.2")
     BETA_1_2(8, "b1.2"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/99e64986229cdb3f14ddfe131f807ae7850ceb10/b1.1_02.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e1c682219df45ebda589a557aadadd6ed093c86c/client.jar")
     @SuppressWarnings("HttpUrlsUsage") // false positive
     @ServerJar("https://web.archive.org/web/20101229164428/http://www.minecraft.net/download/minecraft_server.jar?v=1293558297827")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.1_02.exe")
+    @Name("Beta 1.1_02")
     BETA_1_1_02(8, "b1.1_02"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/3fbfcb1886ecc2663d1f37b2d3a7dfd882e7428d/b1.1_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/6d778940f48389a2741f03c9f17f3c57476fb208/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.1_01.jar")
-    BETA_1_1_01(7, "b1.1_01"),
+    @Name("Beta 1.1_01")
+    BETA_1_1_01(7, "b1.1_01"), // missing .exe file for server
     @ClientJson({"https://archive.org/download/Minecraft-JE-Beta/b1.1-1/b1.1-1.json", "https://archive.org/download/Minecraft-JE-Beta/b1.1-2/b1.1-2.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Beta/b1.1-1/b1.1-1.jar", "https://archive.org/download/Minecraft-JE-Beta/b1.1-2/b1.1-2.jar"})
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.1.jar")
+    @Name("Beta 1.1")
     BETA_1_1(7, "b1.1"), // missing .exe file for server
     @ClientJson("https://launchermeta.mojang.com/v1/packages/68c712ad1fc203d5694d9955f711ddfad8c6224b/b1.0.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/76d35cb452e739bd4780e835d17faf0785d755f9/client.jar")
+    @Name("Beta 1.0.2")
     BETA_1_0_2(7, "b1.0.2"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a9b1317798938f5cefcb8f23701fd9eb364210f5/b1.0_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/4caf69885b64132e42d3ce49996dbdb1691d7111/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.0_01.jar")
+    @Name("Beta 1.0_01")
     BETA_1_0_01(7, "b1.0_01"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/e96f34aaa1d24b976e9c0ca8a85086cf48bc16f2/b1.0.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/93faf3398ebf8008d59852dc3c2b22b909ca8a49/client.jar")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/b1.0.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/b1.0.exe")
+    @Name("Beta 1.0")
     BETA_1_0(7, "b1.0"),
 
     // alpha versions (server)
     @CorrespondingVersion("ALPHA_1_2_6")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.8.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.8.exe")
+    @Name("0.2.8")
     ALPHA_SERVER_0_2_8(6, "a0.2.8"),
     @CorrespondingVersion("ALPHA_1_2_5")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.7.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.7.exe")
+    @Name("0.2.7")
     ALPHA_SERVER_0_2_7(6, "a0.2.7"),
     @CorrespondingVersion("ALPHA_1_2_4_01")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.6_02.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.6_02.exe")
+    @Name("0.2.6_02")
     ALPHA_SERVER_0_2_6_02(6, "a0.2.6_02"),
     @CorrespondingVersion("ALPHA_1_2_3_05")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.6_01.jar")
+    @Name("0.2.6_01")
     ALPHA_SERVER_0_2_6_01(6, "a0.2.6_01"), // missing .exe file
     @CorrespondingVersion("ALPHA_1_2_3_05")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.6.jar")
+    @Name("0.2.6")
     ALPHA_SERVER_0_2_6(6, "a0.2.6"), // missing .exe file
     @CorrespondingVersion("ALPHA_1_2_3_02")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.5_02.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.5_02.exe")
+    @Name("0.2.5_02")
     ALPHA_SERVER_0_2_5_02(5, "a0.2.5_02"),
     @CorrespondingVersion("ALPHA_1_2_3_02")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.5_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.5_01.exe")
+    @Name("0.2.5_01")
     ALPHA_SERVER_0_2_5_01(5, "a0.2.5_01"),
     @CorrespondingVersion("ALPHA_1_2_3_01")
     @SuppressWarnings("HttpUrlsUsage") // false positive
     @ServerJar({"https://betacraft.pl/server-archive/minecraft/a0.2.5-1.jar", "https://web.archive.org/web/20101125091119/http://www.minecraft.net/download/minecraft_server.jar?v=1290567858573"})
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.5-2.exe")
+    @Name("0.2.5")
     ALPHA_SERVER_0_2_5(5, "a0.2.5"), // missing pre-reupload .exe file
     @CorrespondingVersion("ALPHA_1_2_2")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.4.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.4.exe")
+    @Name("0.2.4")
     ALPHA_SERVER_0_2_4(4, "a0.2.4"),
     @CorrespondingVersion("ALPHA_1_2_1_01")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.3.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.3.exe")
+    @Name("0.2.3")
     ALPHA_SERVER_0_2_3(3, "a0.2.3"),
     @CorrespondingVersion("ALPHA_1_2_0_02")
     @ServerJar("https://web.archive.org/web/20101101174449/https://www.minecraft.net/download/minecraft_server.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.2_01.exe")
+    @Name("0.2.2_01")
     ALPHA_SERVER_0_2_2_01(3, "a0.2.2_01"),
     @CorrespondingVersion("ALPHA_1_2_0")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.2.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.2.exe")
+    @Name("0.2.2")
     ALPHA_SERVER_0_2_2(3, "a0.2.2"),
     @CorrespondingVersion("ALPHA_1_1_2_01")
     @SuppressWarnings("HttpUrlsUsage") // false positive
     @ServerJar("https://web.archive.org/web/20101009003034/http://www.minecraft.net/download/minecraft_server.jar?v=1286508187877")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.1.exe")
+    @Name("0.2.1")
     ALPHA_SERVER_0_2_1(2, "a0.2.1"),
     @CorrespondingVersion("ALPHA_1_1_0")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.0_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.0_01.exe")
+    @Name("0.2.0_01")
     ALPHA_SERVER_0_2_0_01(2, "a0.2.0_01"),
     @CorrespondingVersion("ALPHA_1_1_0")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.2.0.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.2.0.exe")
+    @Name("0.2.0")
     ALPHA_SERVER_0_2_0(2, "a0.2.0"),
     @CorrespondingVersion("ALPHA_1_0_17_04")
     @SuppressWarnings("HttpUrlsUsage") // false positive
     @ServerJar("https://web.archive.org/web/20100831092001/http://www.minecraft.net/download/minecraft_server.jar?v=1283149033651")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.1.4.exe")
+    @Name("0.1.4")
     ALPHA_SERVER_0_1_4(1, "a0.1.4"),
     @CorrespondingVersion("ALPHA_1_0_16_02")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.1.3.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.1.3.exe")
+    @Name("0.1.3")
     ALPHA_SERVER_0_1_3(14, "a0.1.3"),
     @CorrespondingVersion("ALPHA_1_0_16_01")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.1.2_01.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.1.2_01.exe")
+    @Name("0.1.2_01")
     ALPHA_SERVER_0_1_2_01(14, "a0.1.2_01"),
     @CorrespondingVersion("ALPHA_1_0_16_01")
+    @Name("0.1.2")
     ALPHA_SERVER_0_1_2(14, "a0.1.2"), // missing
     @CorrespondingVersion("ALPHA_1_0_16")
+    @Name("0.1.1")
     ALPHA_SERVER_0_1_1(14, "a0.1.1"), // missing
     @CorrespondingVersion("ALPHA_1_0_15")
     @ServerJar("https://betacraft.pl/server-archive/minecraft/a0.1.0.jar")
     @ServerExe("https://betacraft.pl/server-archive/minecraft/a0.1.0.exe")
+    @Name("0.1.0")
     ALPHA_SERVER_0_1_0(13, "a0.1.0"),
 
     // alpha versions (client)
     @CorrespondingVersion("ALPHA_SERVER_0_2_8")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b539c8b7baabb3ab8886fa634310de51aeea60fc/a1.2.6.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/a68c817afd6c05c253ba5462287c2c19bbb57935/client.jar")
+    @Name("Alpha v1.2.6")
     ALPHA_1_2_6(6, "a1.2.6"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_7")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/332d9d9eabdf778e91952431c63d6583d7be7342/a1.2.5.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f48c7b6442ad8d01099ecee1c7c7332f1b1a80da/client.jar")
+    @Name("Alpha v1.2.5")
     ALPHA_1_2_5(6, "a1.2.5"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_6_02")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/90ae8b6c468cf1ae6dcd81ec22060df16888d87e/a1.2.4_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7be6298b05d1b0832ab45467a87a425640bc6bf0/client.jar")
+    @Name("Alpha v1.2.4_01")
     ALPHA_1_2_4_01(6, "a1.2.4_01"),
     // "When Notch released 1.2.4, he accidentally labeled it as 1.2.3_05 in game." - https://minecraft.fandom.com/wiki/Java_Edition_Alpha_v1.2.3_05#Trivia
     @CorrespondingVersion("ALPHA_SERVER_0_2_6_01")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.2.3_05/a1.2.3_05.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.2.3_05/a1.2.3_05.jar")
+    @Name("Alpha v1.2.3_05")
     ALPHA_1_2_3_05(6, "a1.2.3_05"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_5_02")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/561cd2611ab1d4463d86af181c07e43d364959c4/a1.2.3_04.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7f60cb9d0d40af20001d15287b78aa26a217a910/client.jar")
+    @Name("Alpha v1.2.3_04")
     ALPHA_1_2_3_04(5, "a1.2.3_04"),
     // "a1.2.3_03 has no credible evidence that it exists." - https://minecraft.fandom.com/wiki/Java_Edition_Alpha_v1.2.3_04
     @CorrespondingVersion("ALPHA_SERVER_0_2_5_02")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/58e7f651a1916dc088be1aa720fba45d0d3fce53/a1.2.3_02.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/dc61158e1df763f87483abb6ab540dc1c42e63c4/client.jar")
+    @Name("Alpha v1.2.3_02")
     ALPHA_1_2_3_02(5, "a1.2.3_02"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_5_02")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/0a7c36551006ff6aadfbe7239ae0128d3a4d575e/a1.2.3_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/1d46e65022f3a7cf4b8ad30ee5a8d52b3b2b9486/client.jar")
+    @Name("Alpha v1.2.3_01")
     ALPHA_1_2_3_01(5, "a1.2.3_01"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_5_02")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ccbea3f4157f75fdfcffd8573cc6e00e9b7229f5/a1.2.3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f4be258122cb62208b350cd2068685ad859bb447/client.jar")
+    @Name("Alpha v1.2.3")
     ALPHA_1_2_3(5, "a1.2.3"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_4")
     @ClientJson({"https://launchermeta.mojang.com/v1/packages/19c2157b33a61e0d327f5c7ca3571650233a1750/a1.2.2a.json", "https://launchermeta.mojang.com/v1/packages/99313782ccb819b69c87d94fe56bf9c2775eeff7/a1.2.2b.json"})
     @ClientJar({"https://launcher.mojang.com/v1/objects/7d9d85eaca9627d3a40e6d122182f2d22d39dbf9/client.jar", "https://launcher.mojang.com/v1/objects/1c28c8431392641045b59e98a81877d7c94ff0ca/client.jar"})
+    @Name("Alpha v1.2.2")
     ALPHA_1_2_2(4, "a1.2.2"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_3")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/dbe66f4427a61218f3fe4c92feec8f684cbf9f4a/a1.2.1_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/e4226f9ba622634e3101681bc641eec7ee9e72fd/client.jar")
+    @Name("Alpha v1.2.1_01")
     ALPHA_1_2_1_01(3, "a1.2.1_01"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_3")
+    @Name("Alpha v1.2.1")
     ALPHA_1_2_1(3, "a1.2.1"), // missing
     @CorrespondingVersion("ALPHA_SERVER_0_2_2_01")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ca94dd898097c752e39c8dde617ebe6f2e3c9def/a1.2.0_02.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/b99da0a683e6dc1ade4df1bf159e021ad07d4fca/client.jar")
+    @Name("Alpha v1.2.0_02")
     ALPHA_1_2_0_02(3, "a1.2.0_02"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_2_01")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/58c796ad40add21b4eda8b88bbadf6eeeb92bd22/a1.2.0_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/332bfe7bf26f6a5cc93ee85e6759ce33784409d0/client.jar")
+    @Name("Alpha v1.2.0_01")
     ALPHA_1_2_0_01(3, "a1.2.0_01"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.2.0/a1.2.0.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.2.0/a1.2.0.jar")
+    @Name("Alpha v1.2.0")
     ALPHA_1_2_0(3, "a1.2.0"),
     @PrereleaseFor(ALPHA_1_2_0)
+    @Name("Alpha v1.2.0 (Preview)")
     ALPHA_1_2_0_PREVIEW(3, "a1.2.0 (Preview)"), // missing; unreleased; corresponding server unknown
     @CorrespondingVersion("ALPHA_SERVER_0_2_1")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/cd8b97e8d3bab2a32675edfea566bd51c4f29ec1/a1.1.2_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/daa4b9f192d2c260837d3b98c39432324da28e86/client.jar")
+    @Name("Alpha v1.2.2_01")
     ALPHA_1_1_2_01(2, "a1.1.2_01"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_1")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/c1d9c991421de18ad411ddc2921ce45b25af8dcd/a1.1.2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/f9b4b66f9c18bf4800d80f1c8865a837f92c6105/client.jar")
+    @Name("Alpha v1.1.2")
     ALPHA_1_1_2(2, "a1.1.2"),
     @CorrespondingVersion("ALPHA_SERVER_0_2_1")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.1.1/a1.1.1%20%28Moresteck%27s%20grey%20screen%20fix%29.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.1.1/a1.1.1.jar")
+    @Name("Alpha v1.1.1")
     ALPHA_1_1_1(2, "a1.1.1"), // https://kotaku.com/minecraft-alpha-1-1-1-an-extremely-rare-version-was-f-1847179654
     @CorrespondingVersion("ALPHA_SERVER_0_2_0_01")
     @ClientJson({"https://archive.org/download/Minecraft-JE-Alpha/a1.1.0-1/a1.1.0-1.json", "https://archive.org/download/Minecraft-JE-Alpha/a1.1.0-2/a1.1.0-2.json", "https://launchermeta.mojang.com/v1/packages/513b9734343b9c26c375b9f2a0eb79808e4040dd/a1.1.0.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Alpha/a1.1.0-1/a1.1.0-1.jar", "https://archive.org/download/Minecraft-JE-Alpha/a1.1.0-2/a1.1.0-2.jar", "https://launcher.mojang.com/v1/objects/d58d1db929994ff383bdbe6fed31887e04b965c3/client.jar"})
+    @Name("Alpha v1.1.0")
     ALPHA_1_1_0(2, "a1.1.0"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_4")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8662234a983f57aa29f3c518433a2a608642dd12/a1.0.17_04.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/61cb4c717981f34bf90e8502d2eb8cf2aa6db0cd/client.jar")
+    @Name("Alpha v1.0.17_04")
     ALPHA_1_0_17_04(1, "a1.0.17_04"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_4")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.17_03/a1.0.17_03.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.17_03/a1.0.17_03.jar")
+    @Name("Alpha v1.0.17_03")
     ALPHA_1_0_17_03(1, "a1.0.17_03"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_4")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/eec2fb8ca9641381c3db4497d33c5dcd315357ff/a1.0.17_02.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/39f20ee472a40322e034643a8d1668836f5052bd/client.jar")
+    @Name("Alpha v1.0.17_02")
     ALPHA_1_0_17_02(1, "a1.0.17_02"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_4")
+    @Name("Alpha v1.0.17_01")
     ALPHA_1_0_17_01(-1, "a1.0.17_01"), // missing; unknown protocol version
     @CorrespondingVersion("ALPHA_SERVER_0_1_4")
+    @Name("Alpha v1.0.17")
     ALPHA_1_0_17(-1, "a1.0.17"), // missing; unknown protocol version
     @CorrespondingVersion("ALPHA_SERVER_0_1_3")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.16_02/a1.0.16_02.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.16_02/a1.0.16_02.jar")
+    @Name("Alpha v1.0.16_02")
     ALPHA_1_0_16_02(14, "a1.0.16_02"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_2_01")
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.16_01/a1.0.16_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.16_01/a1.0.16_01.jar")
+    @Name("Alpha v1.0.16_01")
     ALPHA_1_0_16_01(14, "a1.0.16_01"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_1")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/edfc04847f7f7cecb62b19b63c515ee0ad62ff0b/a1.0.16.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/98ce80c7630ccb3bb38687ff98bfd18935d49a57/client.jar")
+    @Name("Alpha v1.0.16")
     ALPHA_1_0_16(14, "a1.0.16"),
     @CorrespondingVersion("ALPHA_SERVER_0_1_0")
     @ClientJson("https://launchermeta.mojang.com/v1/packages/79c282e2f3e0d1149d0d332d26a1b6a5feed8e68/a1.0.15.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/03edaff812bedd4157a90877e779d7b7ecf78e97/client.jar")
+    @Name("Alpha v1.0.15")
     ALPHA_1_0_15(13, "a1.0.15"),
     @ClientJson({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.14-1/a1.0.14-1.json", "https://archive.org/download/Minecraft-JE-Alpha/a1.0.14-2/a1.0.14-2.json", "https://launchermeta.mojang.com/v1/packages/309d8288ed9fb822563d48cda30f7e57025f0299/a1.0.14.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.14-1/a1.0.14-1.jar", "https://archive.org/download/Minecraft-JE-Alpha/a1.0.14-2/a1.0.14-2.jar", "https://launcher.mojang.com/v1/objects/9b4b90d8def2a680b7c9eca40dd03e2266c8977a/client.jar"})
+    @Name("Alpha v1.0.14")
     ALPHA_1_0_14(12, "a1.0.14"),
     @ClientJson({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.13_01-1/a1.0.13_01-1.json", "https://archive.org/download/Minecraft-JE-Alpha/a1.0.13_01-2/a1.0.13_01-2.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.13_01-1/a1.0.13_01-1.jar", "https://archive.org/download/Minecraft-JE-Alpha/a1.0.13_01-2/a1.0.13_01-2.jar"})
+    @Name("Alpha v1.0.13_01")
     ALPHA_1_0_13_01(12, "a1.0.13_01"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.13/a1.0.13.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.13/a1.0.13.jar")
+    @Name("Alpha v1.0.13")
     ALPHA_1_0_13(12, "a1.0.13"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.12/a1.0.12.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.12/a1.0.12.jar")
+    @Name("Alpha v1.0.12")
     ALPHA_1_0_12(11, "a1.0.12"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/1a472c2eaa0bae82c536b7071dda9082312ec10e/a1.0.11.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/d7ceb02909d0e1031a99ff4d8053d3f4abfbb2da/client.jar")
+    @Name("Alpha v1.0.11")
     ALPHA_1_0_11(10, "a1.0.11"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.10/a1.0.10.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.10/a1.0.10.jar")
+    @Name("Alpha v1.0.10")
     ALPHA_1_0_10(10, "a1.0.10"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.9/a1.0.9.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.9/a1.0.9.jar")
+    @Name("Alpha v1.0.9")
     ALPHA_1_0_9(10, "a1.0.9"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.8_01/a1.0.8_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.8_01/a1.0.8_01.jar")
+    @Name("Alpha v1.0.8_01")
     ALPHA_1_0_8_01(10, "a1.0.8_01"),
+    @Name("Alpha v1.0.8")
     ALPHA_1_0_8(10, "a1.0.8"), // missing
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.7/a1.0.7.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.7/a1.0.7.jar")
+    @Name("Alpha v1.0.7")
     ALPHA_1_0_7(10, "a1.0.7"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6_03/a1.0.6_03.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6_03/a1.0.6_03.jar")
+    @Name("Alpha v1.0.6_03")
     ALPHA_1_0_6_03(10, "a1.0.6_03"),
+    @Name("Alpha v1.0.6_02")
     ALPHA_1_0_6_02(10, "a1.0.6_02"), // missing; changelog unknown
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6_01/a1.0.6_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6_01/a1.0.6_01.jar")
+    @Name("Alpha v1.0.6_01")
     ALPHA_1_0_6_01(10, "a1.0.6_01"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6/a1.0.6.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.6/a1.0.6.jar")
+    @Name("Alpha v1.0.6")
     ALPHA_1_0_6(10, "a1.0.6"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/6b010534bd297043ecf210a9d4c445f35b4a8160/a1.0.5_01.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/73f569bf5556580979606049204835ae1a54f04d/client.jar")
+    @Name("Alpha v1.0.5_01")
     ALPHA_1_0_5_01(10, "a1.0.5_01"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.5/a1.0.5.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.5/a1.0.5.jar")
+    @Name("Alpha v1.0.5")
     ALPHA_1_0_5(10, "a1.0.5"), // missing pre-reupload
     @ClientJson({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.4/a1.0.4.json", "https://launchermeta.mojang.com/v1/packages/f9c108b4f4167dacbb1af000b9c94e132e7b9d50/a1.0.4.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Alpha/a1.0.4/a1.0.4.jar", "https://launcher.mojang.com/v1/objects/e5838277b3bb193e58408713f1fc6e005c5f3c0c/client.jar"})
+    @Name("Alpha v1.0.4")
     ALPHA_1_0_4("a1.0.4"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.3/a1.0.3.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.3/a1.0.3.jar")
+    @Name("Alpha v1.0.3")
     ALPHA_1_0_3("a1.0.3"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.2_02/a1.0.2_02.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.2_02/a1.0.2_02.jar")
+    @Name("Alpha v1.0.2_02")
     ALPHA_1_0_2_02("a1.0.2_02"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.2_01/a1.0.2_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.2_01/a1.0.2_01.jar")
+    @Name("ALpha v1.0.2_01")
     ALPHA_1_0_2_01("a1.0.2_01"),
+    @Name("Alpha v1.0.2")
     ALPHA_1_0_2("a1.0.2"), // missing; changelog unknown
     @ClientJson("https://archive.org/download/Minecraft-JE-Alpha/a1.0.1_01/a1.0.1_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Alpha/a1.0.1_01/a1.0.1_01.jar")
+    @Name("Alpha v1.0.1_01")
     ALPHA_1_0_1_01("a1.0.1_01"),
+    @Name("Alpha v1.0.1")
     ALPHA_1_0_1("a1.0.1"), // missing
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100630-2/inf-20100630-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100630-2/inf-20100630-2.jar")
+    @Name("Alpha v1.0.0")
     ALPHA_1_0_0("a1.0.0"),
 
-    // Infdev
+    // Infdev (They just says "Infdev" in-game)
     @AlVersion(1.138)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100630-1/inf-20100630-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100630-1/inf-20100630-1.jar")
-    INFDEV_20100630("Infdev 20100630"),
+    @Name("Infdev 20100630")
+    INFDEV_20100630("inf-20100630"),
     @AlVersion(1.137)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100629/inf-20100629.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100629/inf-20100629.jar")
-    INFDEV_20100629("Infdev 20100629"),
+    @Name("Infdev 20100629")
+    INFDEV_20100629("inf-20100629"),
     @AlVersion(1.136)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100627/inf-20100627.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100627/inf-20100627.jar")
-    INFDEV_20100627("Infdev 20100627"),
+    @Name("Infdev 20100627")
+    INFDEV_20100627("inf-20100627"),
     @AlVersion(1.135)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100625-2/inf-20100625-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100625-2/inf-20100625-2.jar")
-    INFDEV_20100625_2("Infdev 20100625-2"),
+    @Name("Infdev 20100625-2")
+    INFDEV_20100625_2("inf-20100625-2"),
     @AlVersion(1.134)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100625-1/inf-20100625-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100625-1/inf-20100625-1.jar")
-    INFDEV_20100625_1("Infdev 20100625-1"),
+    @Name("Infdev 20100625-1")
+    INFDEV_20100625_1("inf-20100625-1"),
     @AlVersion(1.133)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100624/inf-20100624.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100624/inf-20100624.jar")
-    INFDEV_20100624("Infdev 20100624"),
+    @Name("Infdev 20100624")
+    INFDEV_20100624("inf-20100624"),
     @AlVersion(1.132)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/17456a662179425cc46c71189c27f81bc14aaf07/inf-20100618.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/89eab2c1a353707cc00f074dffba9cb7a4f5e304/client.jar")
-    INFDEV_20100618("Infdev 20100618"),
+    @Name("Infdev 20100618")
+    INFDEV_20100618("inf-20100618"),
     @AlVersion(1.131)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100617-3/inf-20100617-3.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100617-3/inf-20100617-3.jar")
-    INFDEV_20100617_2("Infdev 20100617-2"),
+    @Name("Infdev 20100617-2")
+    INFDEV_20100617_2("inf-20100617-2"),
     @AlVersion(1.13)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100617-2/inf-20100617-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100617-2/inf-20100617-2.jar")
-    INFDEV_20100617_1("Infdev 20100617-1"),
+    @Name("Infdev 20100617-1")
+    INFDEV_20100617_1("inf-20100617-1"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100616/inf-20100616.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100616/inf-20100616.jar")
-    INFDEV_20100616("Infdev 20100616"), // unknown al_version
+    @Name("Infdev 20100616")
+    INFDEV_20100616("inf-20100616"), // unknown al_version
     @AlVersion(1.129)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100615/inf-20100615.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100615/inf-20100615.jar")
-    INFDEV_20100615("Infdev 20100615"),
+    @Name("Infdev 20100615")
+    INFDEV_20100615("inf-20100615"),
     @AlVersion(1.128)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100611/inf-20100611.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100611/inf-20100611.jar")
-    INFDEV_20100611("Infdev 20100611"),
+    @Name("Infdev 20100611")
+    INFDEV_20100611("inf-20100611"),
     @AlVersion(1.127)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100608/inf-20100608.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100608/inf-20100608.jar")
-    INFDEV_20100608("Infdev 20100608"),
+    @Name("Infdev 20100608")
+    INFDEV_20100608("inf-20100608"),
     @AlVersion(1.126)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100607/inf-20100607.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100607/inf-20100607.jar")
-    INFDEV_20100607("Infdev 20100607"),
+    @Name("Infdev 20100607")
+    INFDEV_20100607("inf-20100607"),
     @AlVersion(1.125)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100420/inf-20100420.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100420/inf-20100420.jar")
-    INFDEV_20100420("Infdev 20100420"),
+    @Name("Infdev 20100420")
+    INFDEV_20100420("inf-20100420"),
     @AlVersion(1.124)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100415/inf-20100415.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100415/inf-20100415.jar")
-    INFDEV_20100415("Infdev 20100415"),
+    @Name("Infdev 20100415")
+    INFDEV_20100415("inf-20100415"),
     @AlVersion(1.123)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100414/inf-20100414.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100414/inf-20100414.jar")
-    INFDEV_20100414("Infdev 20100414"),
+    @Name("Infdev 20100414")
+    INFDEV_20100414("inf-20100414"),
     @AlVersion(1.122)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100413/inf-20100413.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100413/inf-20100413.jar")
-    INFDEV_20100413("Infdev 20100413"),
+    @Name("Infdev 20100413")
+    INFDEV_20100413("inf-20100413"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100330/inf-20100330.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100330/inf-20100330.jar")
-    INFDEV_20100330("Infdev 20100330"), // unknown al_version; missing unedited copy; may be split into -1 and -2
+    @Name("Infdev 20100330")
+    INFDEV_20100330("inf-20100330"), // unknown al_version; missing unedited copy; may be split into -1 and -2
     @AlVersion(1.118)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100327/inf-20100327.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100327/inf-20100327.jar")
-    INFDEV_20100327("Infdev 20100327"),
+    @Name("Infdev 20100327")
+    INFDEV_20100327("inf-20100327"),
     @AlVersion(1.116)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100325/inf-20100325.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100325/inf-20100325.jar")
-    INFDEV_20100325("Infdev 20100325"), // may be split into -1 and -2
+    @Name("Infdev 20100325")
+    INFDEV_20100325("inf-20100325"), // may be split into -1 and -2
     @AlVersion(1.114)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100321/inf-20100321.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100321/inf-20100321.jar")
-    INFDEV_20100321("Infdev 20100321"),
+    @Name("Infdev 20100321")
+    INFDEV_20100321("inf-20100321"),
     @AlVersion(1.112)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100320/inf-20100320.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100320/inf-20100320.jar")
-    INFDEV_20100320("Infdev 20100320"),
+    @Name("Infdev 20100320")
+    INFDEV_20100320("inf-20100320"),
     @AlVersion(1.111)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100316/inf-20100316.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100316/inf-20100316.jar")
-    INFDEV_20100316("Infdev 20100316"),
+    @Name("Infdev 20100316")
+    INFDEV_20100316("inf-20100316"),
     @AlVersion(1.109)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100313/inf-20100313.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100313/inf-20100313.jar")
-    INFDEV_20100313("Infdev 20100313"),
+    @Name("Infdev 20100313")
+    INFDEV_20100313("inf-20100313"),
     @AlVersion(1.108)
     @ClientJson("https://archive.org/download/Minecraft-JE-Infdev/inf-20100227/inf-20100227.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Infdev/inf-20100227/inf-20100227.jar")
-    INFDEV_20100227_2("Infdev 20100227-2"),
-    INFDEV_20100227_1("Infdev 20100227-1"), // missing; unknown al_version
+    @Name("Infdev 20100227-2")
+    INFDEV_20100227_2("inf-20100227-2"),
+    @Name("Infdev 20100227-1")
+    INFDEV_20100227_1("inf-20100227-1"), // missing; unknown al_version
 
     // Indev
     @AlVersion(1.107)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100223/in-20100223.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100223/in-20100223.jar")
-    INDEV_20100223("Indev 20100223"),
+    @Name("Indev 20100223")
+    INDEV_20100223("in-20100223"),
     @AlVersion(1.106)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100219/in-20100219.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100219/in-20100219.jar")
-    INDEV_20100219("Indev 20100219"),
+    @Name("Indev 20100219")
+    INDEV_20100219("in-20100219"),
     @AlVersion(1.105)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100218/in-20100218.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100218/in-20100218.jar")
-    INDEV_20100218("Indev 20100218"),
+    @Name("Indev 20100218")
+    INDEV_20100218("in-20100218"),
     @AlVersion(1.103)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100214-2/in-20100214-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100214-2/in-20100214-2.jar")
-    INDEV_20100214("Indev 20100214"),
+    @Name("Indev 20100214")
+    INDEV_20100214("in-20100214"),
     @AlVersion(1.102)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100214-1/in-20100214-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100214-1/in-20100214-1.jar")
-    INDEV_20100213("Indev 20100213"),
+    @Name("Indev 20100213")
+    INDEV_20100213("in-20100213"),
     @AlVersion({1.100, 1.101})
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100212-2/in-20100212-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100212-2/in-20100212-2.jar")
-    INDEV_20100212_2("Indev 20100212-2"),
+    @Name("Indev 20100212-2")
+    INDEV_20100212_2("in-20100212-2"),
     @AlVersion(1.099)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100212-1/in-20100212-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100212-1/in-20100212-1.jar")
-    INDEV_20100212_1("Indev 20100212-1"),
-    INDEV_20100211("Indev 20100211"), // missing; unknown al_version
+    @Name("Indev 20100212-1")
+    INDEV_20100212_1("in-20100212-1"),
+    @Name("Indev 20100211")
+    INDEV_20100211("in-20100211"), // missing; unknown al_version
     @AlVersion(1.086)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100207-2/in-20100207-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100207-2/in-20100207-2.jar")
-    INDEV_20100207_2("Indev 20100207-2"),
+    @Name("Indev 20100207_2")
+    INDEV_20100207_2("in-20100207_2"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100207-1/in-20100207-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100207-1/in-20100207-1.jar")
-    INDEV_20100207_1("Indev 20100207-1"), // unknown al_version
+    @Name("Indev 20100207_1")
+    INDEV_20100207_1("in-20100207_1"), // unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100206-2103/in-20100206-2103.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100206-2103/in-20100206-2103.jar")
-    INDEV_20100206("Indev 20100206"), // missing pre-reupload; unknown al_version
-    INDEV_20100205("Indev 0.31 20100205"), // missing; unknown al_version
-    INDEV_20100204_2("Indev 0.31 20100204-2"), // missing; unknown al_version
-    INDEV_20100204_1("Indev 0.31 20100204-1"), // missing; unknown al_version
+    @Name("Indev 20100206")
+    INDEV_20100206("in-20100206"), // missing pre-reupload; unknown al_version
+    @Name("Indev 20100205")
+    INDEV_20100205("in-20100205"), // missing; unknown al_version
+    @Name("Indev 20100204-2")
+    INDEV_20100204_2("in-20100204-2"), // missing; unknown al_version
+    @Name("Indev 20100204-1")
+    INDEV_20100204_1("in-20100204-1"), // missing; unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100203/in-20100203.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100203/in-20100203.jar")
-    INDEV_20100202("Indev 0.31 20100202"), // unknown al_version
+    @Name("Indev 20100202")
+    INDEV_20100202("in-20100202"), // unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100201-3/in-20100201-3.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100201-3/in-20100201-3.jar")
-    INDEV_20100201_2("Indev 0.31 20100201-2"), // unknown al_version
+    @Name("Indev 20100201-2")
+    INDEV_20100201_2("in-20100201-2"), // unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100201-2/in-20100201-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100201-2/in-20100201-2.jar")
-    INDEV_20100201_1("Indev 0.31 20100201-1"), // unknown al_version
+    @Name("Indev 20100201-1")
+    INDEV_20100201_1("in-20100201-1"), // unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100201-1/in-20100201-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100201-1/in-20100201-1.jar")
-    INDEV_20100131("Indev 0.31 20100131"), // unknown al_version
+    @Name("Indev 20100131")
+    INDEV_20100131("in-20100131"), // unknown al_version
     @AlVersion(1.059)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100130/in-20100130.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100130/in-20100130.jar")
-    INDEV_20100130("Indev 0.31 20100130"),
+    @Name("Indev 20100130")
+    INDEV_20100130("in-20100130"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100129/in-20100129.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100129/in-20100129.jar")
-    INDEV_20100129("Indev 0.31 20100129"), // unknown al_version
+    @Name("Indev 20100129")
+    INDEV_20100129("in-20100129"), // unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100128-2304/in-20100128-2304.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100128-2304/in-20100128-2304.jar")
-    INDEV_20100128("Indev 0.31 20100128"), // unknown al_version
+    @Name("Indev 20100128")
+    INDEV_20100128("in-20100128"), // unknown al_version
     @AlVersion(1.047)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100125-2/in-20100125-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100125-2/in-20100125-2.jar")
-    INDEV_20100125("Indev 0.31 20100125"),
+    @Name("Indev 20100125")
+    INDEV_20100125("in-20100125"),
     @AlVersion(1.046)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100125-1/in-20100125-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100125-1/in-20100125-1.jar")
-    INDEV_20100124_2("Indev 0.31 20100124-2"),
-    INDEV_20100124_1("Indev 0.31 20100124-1"), // missing; unknown al_version
-    INDEV_20100122("Indev 0.31 20100122"), // missing; unknown al_version
-    INDEV_20100114("Indev 0.31 20100114"), // missing; unknown al_version
-    INDEV_20100113("Indev 0.31 20100113"), // missing; unknown al_version
-    INDEV_20100111("Indev 0.31 20100111"), // missing; unknown al_version
+    @Name("Indev 20100124-2")
+    INDEV_20100124_2("in-20100124-2"),
+    @Name("Indev 20100124-1")
+    INDEV_20100124_1("in-20100124-1"), // missing; unknown al_version
+    @Name("Indev 20100122")
+    INDEV_20100122("in-20100122"), // missing; unknown al_version
+    @Name("Indev 20100114")
+    INDEV_20100114("in-20100114"), // missing; unknown al_version
+    @Name("Indev 20100113")
+    INDEV_20100113("in-20100113"), // missing; unknown al_version
+    @Name("Indev 20100111")
+    INDEV_20100111("in-20100111"), // missing; unknown al_version
     @AlVersion(1.033)
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100111-1/in-20100111-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100111-1/in-20100111-1.jar")
-    INDEV_20100110("Indev 0.31 20100110"),
-    INDEV_20100109("Indev 0.31 20100109"), // missing; unknown al_version
-    INDEV_20100107("Indev 0.31 20100107"), // missing; unknown al_version
-    INDEV_20100106("Indev 0.31 20100106"), // missing; unknown al_version
+    @Name("Indev 20100110")
+    INDEV_20100110("in-20100110"),
+    @Name("Indev 20100109")
+    INDEV_20100109("in-20100109"), // missing; unknown al_version
+    @Name("Indev 20100107")
+    INDEV_20100107("in-20100107"), // missing; unknown al_version
+    @Name("Indev 20100106")
+    INDEV_20100106("in-20100106"), // missing; unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20100105/in-20100105.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20100105/in-20100105.jar")
-    INDEV_20100104("Indev 0.31 20100104"),
+    @Name("Indev 20100104")
+    INDEV_20100104("in-20100104"),
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20091231-2/in-20091231-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20091231-2/in-20091231-2.jar")
-    INDEV_20091231_2("Indev 0.31 20091231-2"), // unknown al_version
-    INDEV_20091231_1("Indev 0.31 20091231-1"), // missing; unknown al_version
+    @Name("Indev 20091231-2")
+    INDEV_20091231_2("in-20091231-2"), // unknown al_version
+    @Name("Indev 20091231-1")
+    INDEV_20091231_1("in-20091231-1"), // missing; unknown al_version
     @ClientJson("https://archive.org/download/Minecraft-JE-Indev/in-20091223-2/in-20091223-2.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Indev/in-20091223-2/in-20091223-2.jar")
-    INDEV_20091223_2("Indev 0.31 20091223-2"), // missing pre-reupload; unknown al_version
-    INDEV_20091223_1("Indev 0.31 20091223-1"), // missing; unknown al_version
+    @Name("Indev 20091223-2")
+    INDEV_20091223_2("in-20091223-2"), // missing pre-reupload; unknown al_version
+    @Name("Indev 20091223-1")
+    INDEV_20091223_1("in-20091223-1"), // missing; unknown al_version
 
     // Private indev versions (missing; unknown al_version)
-    INDEV_20091222("Indev 0.31 20091222"),
-    INDEV_20091219_4("Indev 0.31 20091219-4"),
-    INDEV_20091219_3("Indev 0.31 20091219-3"),
-    INDEV_20091219_2("Indev 0.31 20091219-2"),
-    INDEV_20091219_1("Indev 0.31 20091219-1"),
-    INDEV_20091208("Indev 0.31 20091208"),
+    @Name("Indev 20091222")
+    INDEV_20091222("in-20091222"),
+    @Name("Indev 20091219-4")
+    INDEV_20091219_4("in-20091219-4"),
+    @Name("Indev 20091219-3")
+    INDEV_20091219_3("in-20091219-3"),
+    @Name("Indev 20091219-2")
+    INDEV_20091219_2("in-20091219-2"),
+    @Name("Indev 20091219-1")
+    INDEV_20091219_1("in-20091219-1"),
+    @Name("Indev 20091208")
+    INDEV_20091208("in-20091208"),
 
     // Classic versions (server)
     @CorrespondingVersion("CLASSIC_0_30")
     @SuppressWarnings("HttpUrlsUsage") // false positive
     @ServerZip("https://web.archive.org/web/20100611210644/http://minecraft.net/minecraft-server.zip")
+    @Name("c1.10.1")
     CLASSIC_SERVER_1_10_1(7, "c1.10.1"),
     @CorrespondingVersion("CLASSIC_0_30")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.10.zip")
+    @Name("c1.10")
     CLASSIC_SERVER_1_10(7, "c1.10"),
     @CorrespondingVersion("CLASSIC_0_29_02")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.9.1.zip")
+    @Name("c1.9.1")
     CLASSIC_SERVER_1_9_1(7, "c1.9.1"),
     @CorrespondingVersion("CLASSIC_0_28_01")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.8.3.zip")
+    @Name("c1.8.3")
     CLASSIC_SERVER_1_9(7, "c1.9"),
     @CorrespondingVersion("CLASSIC_0_0_23a_01")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.8.2.zip")
+    @Name("c1.8.2")
     CLASSIC_SERVER_1_8_2(6, "c1.8.2"),
     @CorrespondingVersion("CLASSIC_0_0_20a")
+    @Name("c1.8.1")
     CLASSIC_SERVER_1_8_1(6, "c1.8.1"), // missing
     @CorrespondingVersion("CLASSIC_0_0_20a")
+    @Name("c1.8")
     CLASSIC_SERVER_1_8(6, "c1.8"), // missing
     @CorrespondingVersion("CLASSIC_0_0_19a_06")
+    @Name("c1.7")
     CLASSIC_SERVER_1_7(5, "c1.7"), // missing
     @CorrespondingVersion("CLASSIC_0_0_19a_05")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.6.zip")
+    @Name("c1.6")
     CLASSIC_SERVER_1_6(5, "c1.6"),
     @CorrespondingVersion("CLASSIC_0_0_19a_03")
+    @Name("c1.5")
     CLASSIC_SERVER_1_5(5, "c1.5"), // missing
     @CorrespondingVersion("CLASSIC_0_0_18a_02")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.4.1.zip")
+    @Name("c1.4.1")
     CLASSIC_SERVER_1_4_1(4, "c1.4.1"),
     @CorrespondingVersion("CLASSIC_0_0_18a_01")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.4-1.zip")
+    @Name("c1.4")
     CLASSIC_SERVER_1_4(4, "c1.4"), // missing reupload
     @CorrespondingVersion("CLASSIC_0_0_17a")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.3.zip")
+    @Name("c1.3")
     CLASSIC_SERVER_1_3(4, "c1.3"),
     @CorrespondingVersion("CLASSIC_0_0_16a_02")
     @ServerZip("https://betacraft.pl/server-archive/minecraft/c1.2.zip")
+    @Name("c1.2")
     CLASSIC_SERVER_1_2(3, "c1.2"),
     @CorrespondingVersion("CLASSIC_0_0_16a_01")
+    @Name("c1.1")
     CLASSIC_SERVER_1_1(-1, "c1.1"), // missing; unknown protocol version
     @CorrespondingVersion("CLASSIC_0_0_16a")
+    @Name("c1.0")
     CLASSIC_SERVER_1_0(-1, "c1.0"), // missing; unknown protocol version
 
     // Classic versions (client)
-    @AlVersion({6.8, 7.21})
+    @AlVersion(7.21)
     @CorrespondingVersion("CLASSIC_SERVER_1_10_1")
-    @ClientJson({"https://archive.org/download/Minecraft-JE-Classic/c0.30-1/c0.30-1.json", "https://archive.org/download/Minecraft-JE-Classic/c0.30-2/c0.30-2.json", "https://launchermeta.mojang.com/v1/packages/397c549a479b202ff899345465ecab885635cf85/c0.30_01c.json"})
-    @ClientJar({"https://archive.org/download/Minecraft-JE-Classic/c0.30-1/c0.30-1.jar", "https://archive.org/download/Minecraft-JE-Classic/c0.30-2/c0.30-2.jar", "https://launcher.mojang.com/v1/objects/54622801f5ef1bcc1549a842c5b04cb5d5583005/client.jar"})
-    CLASSIC_0_30(7, "Classic 0.30"),
+    @ClientJson({"https://archive.org/download/Minecraft-JE-Classic/c0.30-2/c0.30-2.json", "https://launchermeta.mojang.com/v1/packages/397c549a479b202ff899345465ecab885635cf85/c0.30_01c.json"})
+    @ClientJar({"https://archive.org/download/Minecraft-JE-Classic/c0.30-2/c0.30-2.jar", "https://launcher.mojang.com/v1/objects/54622801f5ef1bcc1549a842c5b04cb5d5583005/client.jar"})
+    @Name("c0.30c")
+    CLASSIC_0_30_CREATIVE(7, "c0.30c"),
+    @AlVersion(6.8)
+    @CorrespondingVersion("CLASSIC_SERVER_1_10_1")
+    @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.30-1/c0.30-1.json")
+    @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.30-1/c0.30-1.jar")
+    @Name("c0.30")
+    CLASSIC_0_30(7, "c0.30"),
     @AlVersion(7.15)
     @CorrespondingVersion("CLASSIC_SERVER_1_9_1")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.29_02/c0.29_02.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.29_02/c0.29_02.jar")
-    CLASSIC_0_29_02(7, "Classic 0.29_02"),
+    @Name("c0.29_02")
+    CLASSIC_0_29_02(7, "c0.29_02"),
     @AlVersion(7.14)
     @CorrespondingVersion("CLASSIC_SERVER_1_9_1")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.29_01/c0.29_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.29_01/c0.29_01.jar")
-    CLASSIC_0_29_01(7, "Classic 0.29_01"),
+    @Name("c0.29_01")
+    CLASSIC_0_29_01(7, "c0.29_01"),
     @AlVersion(7.13)
     @CorrespondingVersion("CLASSIC_SERVER_1_9_1")
-    CLASSIC_0_29(7, "Classic 0.29"), // missing
+    @Name("c0.29")
+    CLASSIC_0_29(7, "c0.29"), // missing
     @AlVersion(7.12)
     @CorrespondingVersion("CLASSIC_SERVER_1_9")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.28_01/c0.28_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.28_01/c0.28_01.jar")
-    CLASSIC_0_28_01(7, "Classic 0.28_01"),
+    @Name("c0.28_01")
+    CLASSIC_0_28_01(7, "c0.28_01"),
     @CorrespondingVersion("CLASSIC_SERVER_1_9")
-    CLASSIC_0_28(-1, "Classic 0.28"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.28")
+    CLASSIC_0_28(-1, "c0.28"), // missing; unknown al_version; unknown protocol version
     @AlVersion(6.56)
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.27_st/c0.27_st.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.27_st/c0.27_st.jar")
-    CLASSIC_0_27(6, "Classic 0.27 SURVIVAL TEST"),
-    CLASSIC_0_26(6, "Classic 0.26 SURVIVAL TEST"), // missing; unknown al_version
+    @Name("c0.27 SURVIVAL TEST")
+    CLASSIC_0_27(6, "c0.27_st"),
+    @Name("c0.26 SURVIVAL TEST")
+    CLASSIC_0_26(6, "c0.26_st"), // missing; unknown al_version
     @AlVersion(6.52)
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.25_05_st/c0.25_05_st.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.25_05_st/c0.25_05_st.jar")
-    CLASSIC_0_25_05(6, "Classic 0.25_05 SURVIVAL TEST"),
+    @Name("c0.25_05 SURVIVAL TEST")
+    CLASSIC_0_25_05(6, "c0.25_05_st"),
     // "0.25_04 SURVIVAL TEST does not exist" - https://minecraft.fandom.com/wiki/Java_Edition_Classic_0.25_05_SURVIVAL_TEST#Trivia
-    CLASSIC_0_25_03(6, "Classic 0.25_03 SURVIVAL TEST"), // missing; unknown al_version
-    CLASSIC_0_25_02(6, "Classic 0.25_02 SURVIVAL TEST"), // missing; unknown al_version
-    CLASSIC_0_25_01(6, "Classic 0.25_01 SURVIVAL TEST"), // missing; unknown al_version
-    CLASSIC_0_25(6, "Classic 0.25 SURVIVAL TEST"), // missing; unknown al_version
+    @Name("c0.25_03 SURVIVAL TEST")
+    CLASSIC_0_25_03(6, "c0.25_03_st"), // missing; unknown al_version
+    @Name("c0.25_02 SURVIVAL TEST")
+    CLASSIC_0_25_02(6, "c0.25_02_st"), // missing; unknown al_version
+    @Name("c0.25_01 SURVIVAL TEST")
+    CLASSIC_0_25_01(6, "c0.25_01_st"), // missing; unknown al_version
+    @Name("c0.25 SURVIVAL TEST")
+    CLASSIC_0_25(6, "c0.25_st"), // missing; unknown al_version
     @AlVersion(6.47)
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.24_st_03/c0.24_st_03.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.24_st_03/c0.24_st_03.jar")
-    CLASSIC_0_24_SURVIVAL_TEST_03(6, "Classic 0.24_SURVIVAL_TEST_03"),
-    CLASSIC_0_24_SURVIVAL_TEST_02(6, "Classic 0.24_SURVIVAL_TEST_02"), // missing; unknown al_version
-    CLASSIC_0_24_SURVIVAL_TEST_01(6, "Classic 0.24_SURVIVAL_TEST_01"), // missing; unknown al_version
-    CLASSIC_0_24_SURVIVAL_TEST(6, "Classic 0.24_SURVIVAL_TEST"), // missing; unknown al_version
+    @Name("c0.24_SURVIVAL_TEST_03")
+    CLASSIC_0_24_SURVIVAL_TEST_03(6, "c0.24_st_03"),
+    @Name("c0.24_SURVIVAL_TEST_02")
+    CLASSIC_0_24_SURVIVAL_TEST_02(6, "c0.24_st_02"), // missing; unknown al_version
+    @Name("c0.24_SURVIVAL_TEST_01")
+    CLASSIC_0_24_SURVIVAL_TEST_01(6, "c0.24_st_01"), // missing; unknown al_version
+    @Name("c0.24_SURVIVAL_TEST")
+    CLASSIC_0_24_SURVIVAL_TEST(6, "c0.24_st"), // missing; unknown al_version
     @AlVersion({6.38, 6.5})
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.23a_01/c0.0.23a_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.23a_01/c0.0.23a_01.jar")
-    CLASSIC_0_0_23a_01(6, "Classic 0.0.23a_01"),
+    @Name("c0.0.23a_01")
+    CLASSIC_0_0_23a_01(6, "c0.0.23a_01"),
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_23a(6, "Classic 0.0.23a"), // missing; unknown al_version
+    @Name("c0.0.23a")
+    CLASSIC_0_0_23a(6, "c0.0.23a"), // missing; unknown al_version
     @AlVersion(6.36)
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.22a_05/c0.0.22a_05.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.22a_05/c0.0.22a_05.jar")
-    CLASSIC_0_0_22a_05(6, "Classic 0.0.22a_05"),
+    @Name("c0.0.22a_05")
+    CLASSIC_0_0_22a_05(6, "c0.0.22a_05"),
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_22a_04(6, "Classic 0.0.22a_04"), // missing; unknown al_version
+    @Name("c0.0.22a_04")
+    CLASSIC_0_0_22a_04(6, "c0.0.22a_04"), // missing; unknown al_version
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_22a_03(6, "Classic 0.0.22a_03"), // missing; unknown al_version
+    @Name("c0.0.22a_03")
+    CLASSIC_0_0_22a_03(6, "c0.0.22a_03"), // missing; unknown al_version
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_22a_02(6, "Classic 0.0.22a_02"), // missing; unknown al_version
+    @Name("c0.0.22a_02")
+    CLASSIC_0_0_22a_02(6, "c0.0.22a_02"), // missing; unknown al_version
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_22a_01(6, "Classic 0.0.22a_01"), // missing; unknown al_version
+    @Name("c0.0.22a_01")
+    CLASSIC_0_0_22a_01(6, "c0.0.22a_01"), // missing; unknown al_version
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_22a(6, "Classic 0.0.22a"), // missing; unknown al_version
+    @Name("c0.0.22a")
+    CLASSIC_0_0_22a(6, "c0.0.22a"), // missing; unknown al_version
     @AlVersion(6.27)
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_21a_01(6, "Classic 0.0.21a_01"), // missing
+    @Name("c0.0.21a_01")
+    CLASSIC_0_0_21a_01(6, "c0.0.21a_01"), // missing
     @AlVersion(6.26)
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.21a/c0.0.21a.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.21a/c0.0.21a.jar")
-    CLASSIC_0_0_21a(6, "Classic 0.0.21a"), // missing pre-reupload
+    @Name("c0.0.21a")
+    CLASSIC_0_0_21a(6, "c0.0.21a"), // missing pre-reupload
     @AlVersion(6.23)
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
-    CLASSIC_0_0_20a_02(6, "Classic 0.0.20a_02"), // missing
+    @Name("c0.0.20a_02")
+    CLASSIC_0_0_20a_02(6, "c0.0.20a_02"), // missing
     @CorrespondingVersion("CLASSIC_SERVER_1_8_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.20a_01/c0.0.20a_01.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.20a_01/c0.0.20a_01.jar")
-    CLASSIC_0_0_20a_01(6, "Classic 0.0.20a_01"), // unknown al_version
+    @Name("c0.0.20a_01")
+    CLASSIC_0_0_20a_01(6, "c0.0.20a_01"), // unknown al_version
     @CorrespondingVersion("CLASSIC_SERVER_1_8_1")
-    CLASSIC_0_0_20a(-1, "Classic 0.0.20a"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.20a")
+    CLASSIC_0_0_20a(-1, "c0.0.20a"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_7")
-    CLASSIC_0_0_19a_06(-1, "Classic 0.0.19a_06"), // missing pre-reupload; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_06")
+    CLASSIC_0_0_19a_06(-1, "c0.0.19a_06"), // missing pre-reupload; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_6")
-    CLASSIC_0_0_19a_05(-1, "Classic 0.0.19a_05"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_05")
+    CLASSIC_0_0_19a_05(-1, "c0.0.19a_05"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_6")
-    CLASSIC_0_0_19a_04(-1, "Classic 0.0.19a_04"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_04")
+    CLASSIC_0_0_19a_04(-1, "c0.0.19a_04"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_5")
-    CLASSIC_0_0_19a_03(-1, "Classic 0.0.19a_03"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_03")
+    CLASSIC_0_0_19a_03(-1, "c0.0.19a_03"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_5")
-    CLASSIC_0_0_19a_02(-1, "Classic 0.0.19a_02"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_02")
+    CLASSIC_0_0_19a_02(-1, "c0.0.19a_02"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_5")
-    CLASSIC_0_0_19a_01(-1, "Classic 0.0.19a_01"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a_01")
+    CLASSIC_0_0_19a_01(-1, "c0.0.19a_01"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_5")
-    CLASSIC_0_0_19a(-1, "Classic 0.0.19a"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.19a")
+    CLASSIC_0_0_19a(-1, "c0.0.19a"), // missing; unknown al_version; unknown protocol version
     @AlVersion(6.08)
     @CorrespondingVersion("CLASSIC_SERVER_1_4_1")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.18a_02/c0.0.18a_02.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.18a_02/c0.0.18a_02.jar")
-    CLASSIC_0_0_18a_02(4, "Classic 0.0.18a_02"),
+    @Name("c0.0.18a_02")
+    CLASSIC_0_0_18a_02(4, "c0.0.18a_02"),
     @AlVersion(6.07)
     @CorrespondingVersion("CLASSIC_SERVER_1_4_1")
-    CLASSIC_0_0_18a_01(-1, "Classic 0.0.18a_01"), // missing; unknown protocol version
+    @Name("c0.0.18a_01")
+    CLASSIC_0_0_18a_01(-1, "c0.0.18a_01"), // missing; unknown protocol version
     @AlVersion(6.06)
     @CorrespondingVersion("CLASSIC_SERVER_1_4")
-    CLASSIC_0_0_18a(-1, "Classic 0.0.18a"), // missing; unknown protocol version
+    @Name("c0.0.18a")
+    CLASSIC_0_0_18a(-1, "c0.0.18a"), // missing; unknown protocol version
     @AlVersion(6.05)
     @CorrespondingVersion("CLASSIC_SERVER_1_3")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.17a/c0.0.17a.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.17a/c0.0.17a.jar")
-    CLASSIC_0_0_17a(4, "Classic 0.0.17a"),
+    @Name("c0.0.17a")
+    CLASSIC_0_0_17a(4, "c0.0.17a"),
     @AlVersion(5.51)
     @CorrespondingVersion("CLASSIC_SERVER_1_2")
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.16a_02/c0.0.16a_02.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.16a_02/c0.0.16a_02.jar")
-    CLASSIC_0_0_16a_02(3, "Classic 0.0.16a_02"), // missing pre-reupload and reupload 1-2
+    @Name("c0.0.16a_02")
+    CLASSIC_0_0_16a_02(3, "c0.0.16a_02"), // missing pre-reupload and reupload 1-2
     @CorrespondingVersion("CLASSIC_SERVER_1_1")
-    CLASSIC_0_0_16a_01(-1, "Classic 0.0.16a_01"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.16a_01")
+    CLASSIC_0_0_16a_01(-1, "c0.0.16a_01"), // missing; unknown al_version; unknown protocol version
     @CorrespondingVersion("CLASSIC_SERVER_1_0")
-    CLASSIC_0_0_16a(-1, "Classic 0.0.16a"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_03(-1, "Classic 0.0.15a_03"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_02(-1, "Classic 0.0.15a_02"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_8(-1, "Classic 0.0.15a (Multiplayer Test 8)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_7(-1, "Classic 0.0.15a (Multiplayer Test 7)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_6(-1, "Classic 0.0.15a (Multiplayer Test 6)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_5(-1, "Classic 0.0.15a (Multiplayer Test 5)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_4(-1, "Classic 0.0.15a (Multiplayer Test 4)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_3(-1, "Classic 0.0.15a (Multiplayer Test 3)"), // missing; unknown al_version; unknown protocol version
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_2(-1, "Classic 0.0.15a (Multiplayer Test 2)"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.16a")
+    CLASSIC_0_0_16a(-1, "c0.0.16a"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a_03")
+    CLASSIC_0_0_15a_03(-1, "c0.0.15a_03"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a_02")
+    CLASSIC_0_0_15a_02(-1, "c0.0.15a_02"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 8)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_8(-1, "c0.0.15a_mt8"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 7)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_7(-1, "c0.0.15a_mt7"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 6)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_6(-1, "c0.0.15a_mt6"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 5)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_5(-1, "c0.0.15a_mt5"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 4)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_4(-1, "c0.0.15a_mt4"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 3)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_3(-1, "c0.0.15a_mt3"), // missing; unknown al_version; unknown protocol version
+    @Name("c0.0.15a (Multiplayer Test 2)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_2(-1, "c0.0.15a_mt2"), // missing; unknown al_version; unknown protocol version
     @ClientJson("https://archive.org/download/Minecraft-JSONs/c0.0.15a-1.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.15a-1/c0.0.15a-1.jar")
-    CLASSIC_0_0_15a_MULTIPLAYER_TEST_1("Classic 0.0.15a (Multiplayer Test 1)"), // unknown al_version
+    @Name("c0.0.15a (Multiplayer Test 1)")
+    CLASSIC_0_0_15a_MULTIPLAYER_TEST_1("c0.0.15a_mt1"), // unknown al_version
     @AlVersion({5.36, 5.39})
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.14a_08/c0.0.14a_08.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.14a_08/c0.0.14a_08.jar")
-    CLASSIC_0_0_14a_08("Classic 0.0.14a_08"),
-    CLASSIC_0_0_14a_07("Classic 0.0.14a_07"), // missing; unknown al_version
-    CLASSIC_0_0_14a_06("Classic 0.0.14a_06"), // missing; unknown al_version
-    CLASSIC_0_0_14a_05("Classic 0.0.14a_05"), // missing; unknown al_version
-    CLASSIC_0_0_14a_04("Classic 0.0.14a_04"), // missing; unknown al_version
+    @Name("c0.0.14a_08")
+    CLASSIC_0_0_14a_08("c0.0.14a_08"),
+    @Name("c0.0.14a_07")
+    CLASSIC_0_0_14a_07("c0.0.14a_07"), // missing; unknown al_version
+    @Name("c0.0.14a_06")
+    CLASSIC_0_0_14a_06("c0.0.14a_06"), // missing; unknown al_version
+    @Name("c0.0.14a_05")
+    CLASSIC_0_0_14a_05("c0.0.14a_05"), // missing; unknown al_version
+    @Name("c0.0.14a_04")
+    CLASSIC_0_0_14a_04("c0.0.14a_04"), // missing; unknown al_version
     @AlVersion(5.27)
-    CLASSIC_0_0_14a_03("Classic 0.0.14a_03"), // missing
-    CLASSIC_0_0_14a_01("Classic 0.0.14a_01"), // missing; unknown al_version
-    CLASSIC_0_0_14a("Classic 0.0.14a"), // missing; unknown al_version
+    @Name("c0.0.14a_03")
+    CLASSIC_0_0_14a_03("c0.0.14a_03"), // missing
+    @Name("c0.0.14a_01")
+    CLASSIC_0_0_14a_01("c0.0.14a_01"), // missing; unknown al_version
+    @Name("c0.0.14a")
+    CLASSIC_0_0_14a("c0.0.14a"), // missing; unknown al_version
     @AlVersion(5.17)
     @ClientJson({"https://archive.org/download/Minecraft-JE-Classic/c0.0.13a_03/c0.0.13a_03.json", "https://launchermeta.mojang.com/v1/packages/6acc567327d839965034870250f77a5b4bba0916/c0.0.13a_03.json"})
     @ClientJar({"https://archive.org/download/Minecraft-JE-Classic/c0.0.13a_03/c0.0.13a_03.jar", "https://launcher.mojang.com/v1/objects/7ba9e63aec8a15a99ecd47900c848cdce8a51a03/client.jar"})
-    CLASSIC_0_0_13a_03("Classic 0.0.13a_03"),
+    @Name("c0.0.13a_03")
+    CLASSIC_0_0_13a_03("c0.0.13a_03"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/7677a2d81caba8719dc797851828032ddf45d622/c0.0.13a.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/936d575b1ab1a04a341ad43d76e441e88d2cd987/client.jar")
-    CLASSIC_0_0_13a_WORLD_SIZE_TEST_1("Classic 0.0.13a World size test 1"), // in-game version says just "0.0.13a"
-    CLASSIC_0_0_13a("Classic 0.0.13a"), // missing; unknown al_version
+    @Name("c0.0.13a World size test 1")
+    CLASSIC_0_0_13a_WORLD_SIZE_TEST_1("c0.0.13a_wst1"), // in-game version says just "0.0.13a"
+    @Name("c0.0.13a")
+    CLASSIC_0_0_13a("c0.0.13a"), // missing; unknown al_version
     @AlVersion(3.14)
     @ClientJson("https://archive.org/download/Minecraft-JE-Classic/c0.0.12a_03/c0.0.12a_03.json")
     @ClientJar("https://archive.org/download/Minecraft-JE-Classic/c0.0.12a_03/c0.0.12a_03.jar")
-    CLASSIC_0_0_12a_03("Classic 0.0.12a_03"), // missing pre-reupload
-    CLASSIC_0_0_12a_02("Classic 0.0.12a_02"), // missing; unknown al_version
-    CLASSIC_0_0_12a_01("Classic 0.0.12a_01"), // missing; unknown al_version
-    CLASSIC_0_0_12a("Classic 0.0.12a"), // missing; unknown al_version
-    CLASSIC_0_0_11a("Classic 0.0.11a"), // missing; unknown al_version
-    CLASSIC_0_0_10a("Classic 0.0.10a"), // missing; unknown al_version
+    @Name("c0.0.12a_03")
+    CLASSIC_0_0_12a_03("c0.0.12a_03"), // missing pre-reupload
+    @Name("c0.0.12a_02")
+    CLASSIC_0_0_12a_02("c0.0.12a_02"), // missing; unknown al_version
+    @Name("c0.0.12a_01")
+    CLASSIC_0_0_12a_01("c0.0.12a_01"), // missing; unknown al_version
+    @Name("c0.0.12a")
+    CLASSIC_0_0_12a("c0.0.12a"), // missing; unknown al_version
+    @Name("c0.0.11a")
+    CLASSIC_0_0_11a("c0.0.11a"), // missing; unknown al_version
+    @Name("c0.0.10a")
+    CLASSIC_0_0_10a("c0.0.10a"), // missing; unknown al_version
     @AlVersion(0.9)
-    CLASSIC_0_0_9a("Classic 0.0.9a"), // missing
+    @Name("c0.0.9a")
+    CLASSIC_0_0_9a("c0.0.9a"), // missing
     // "Notch did not release versions 0.0.4a through 0.0.8a, assuming they existed to begin with." - https://minecraft.fandom.com/wiki/Java_Edition_Classic_0.0.9a
-    CLASSIC_0_0_3a("Classic 0.0.3a"), // missing; unknown al_version
-    CLASSIC_0_0_2a("Classic 0.0.2a"), // missing; unknown al_version
+    @Name("c0.0.3a")
+    CLASSIC_0_0_3a("c0.0.3a"), // missing; unknown al_version
+    @Name("c0.0.2a")
+    CLASSIC_0_0_2a("c0.0.2a"), // missing; unknown al_version
 
     // pre-Classic
     PRE_CLASSIC_MC_161648("mc-161648"), // missing; unofficial name
@@ -4418,23 +4774,23 @@ public enum MCVersion {
     PRE_CLASSIC_RD_131655("rd-131655"), // missing
     ;
 
+    private static final ICollectionList<MCVersion> VALUES = ICollectionList.asList(values());
     private final int protocolVersion;
     private final int dataVersion;
-    private final String name;
+    private final String id;
 
-    MCVersion(@NotNull String name) {
-        this(-1, name);
+    MCVersion(@NotNull String id) {
+        this(-1, id);
     }
 
-    MCVersion(int protocolVersion, @NotNull String name) {
-        this(protocolVersion, -1, name);
+    MCVersion(int protocolVersion, @NotNull String id) {
+        this(protocolVersion, -1, id);
     }
 
-    MCVersion(int protocolVersion, int dataVersion, @NotNull String name) {
-        if (name().equalsIgnoreCase("snapshot")) throw new IllegalArgumentException("Illegal name: " + name() + " (" + name + ")");
+    MCVersion(int protocolVersion, int dataVersion, @NotNull String id) {
         this.protocolVersion = protocolVersion;
         this.dataVersion = dataVersion;
-        this.name = name;
+        this.id = id;
     }
 
     private static final double[] EMPTY_DOUBLE_ARRAY = new double[0];
@@ -4464,15 +4820,12 @@ public enum MCVersion {
         return getValueOf(PrereleaseFor.class);
     }
 
-    /**
-     * Checks whether or not the version name contains "server".
-     */
-    public boolean isServer() {
-        return name().toLowerCase().contains("server");
+    public boolean hasServer() {
+        return /*name().toLowerCase().contains("server") || */getServerJar() != null || getServerMapping() != null || getValueOf(ValueTypes.SERVER_EXE) != null;
     }
 
-    public boolean isClient() {
-        return !isServer();
+    public boolean hasClient() {
+        return getClientJar() != null || getClientMapping() != null;
     }
 
     /**
@@ -4513,11 +4866,18 @@ public enum MCVersion {
         return name().toLowerCase().contains("combat_test");
     }
 
+    @NotNull
+    public String getId() {
+        return this.id;
+    }
+
     /**
      * @return the version name
      */
     @NotNull
     public String getName() {
+        String name = getValueOf(ValueTypes.NAME);
+        if (name == null) return this.id;
         return name;
     }
 
@@ -4625,8 +4985,8 @@ public enum MCVersion {
         return getLastEntry(getServerMappings());
     }
 
-    // if version has reupload(s): 0 -> original, 1 -> reupload
-    // if not: 0 -> original
+    // last element = latest version
+    // first element = oldest (original) version
 
     @Nullable
     public String[] getClientJsons() {
@@ -4660,6 +5020,11 @@ public enum MCVersion {
         return array[array.length - 1];
     }
 
+    @NotNull
+    public static ICollectionList<MCVersion> getValues() {
+        return VALUES;
+    }
+
     private static final Map<Integer, List<MCVersion>> cachedProtocolVersions = new HashMap<>();
     private static final Map<Integer, List<MCVersion>> cachedDataVersions = new HashMap<>();
 
@@ -4677,17 +5042,16 @@ public enum MCVersion {
 
     @Nullable
     public static MCVersion getLatestReleaseVersionByProtocolVersion(int protocolVersion) {
-        return ICollectionList.asList(getByProtocolVersion(protocolVersion)).filter(v -> v != UNKNOWN && v.isRelease()).first();
+        return getByProtocolVersion(protocolVersion).stream().filter(v -> v != UNKNOWN && v.isRelease()).findFirst().orElse(null);
     }
 
     @Nullable
     public static MCVersion getLatestVersionByProtocolVersion(int protocolVersion) {
-        return ICollectionList.asList(getByProtocolVersion(protocolVersion)).filter(v -> v != UNKNOWN).first();
+        return getByProtocolVersion(protocolVersion).stream().filter(v -> v != UNKNOWN).findFirst().orElse(null);
     }
 
-    // the method name is very misleading... "getReleaseOrLatestByProtocolVersion" is correct
     @Nullable
-    public static MCVersion getLatestOrReleaseByProtocolVersion(int protocolVersion) {
+    public static MCVersion getReleaseOrLatestByProtocolVersion(int protocolVersion) {
         MCVersion release = getLatestReleaseVersionByProtocolVersion(protocolVersion);
         if (release != null) return release;
         return getLatestVersionByProtocolVersion(protocolVersion);
@@ -4724,7 +5088,7 @@ public enum MCVersion {
 
     @Nullable
     public static MCVersion getByAlVersion(double alVersion) {
-        return ICollectionList.asList(values()).filter(v -> Arrays.stream(v.getAlVersions()).anyMatch(d -> d == alVersion)).last();
+        return VALUES.filter(v -> Arrays.stream(v.getAlVersions()).anyMatch(d -> d == alVersion)).last();
     }
 
     @NotNull
@@ -4754,6 +5118,17 @@ public enum MCVersion {
         return list;
     }
 
+    // name() -> getId() -> getName() -> null
+    @Nullable
+    public static MCVersion findVersion(@NotNull String s) {
+        for (MCVersion version : MCVersion.values()) {
+            if (version.name().equalsIgnoreCase(s)) return version;
+            if (version.getId().equalsIgnoreCase(s)) return version;
+            if (version.getName().equalsIgnoreCase(s)) return version;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "MCVersion{" + "protocolVersion=" + protocolVersion +
@@ -4764,7 +5139,8 @@ public enum MCVersion {
                 ", snapshotFor=" + getSnapshotFor() +
                 ", aprilFools=" + isAprilFools() +
                 ", beta=" + isBeta() +
-                ", name='" + name + '\'' +
+                ", name='" + getName() + '\'' +
+                ", id='" + getId() + '\'' +
                 '}';
     }
 
@@ -4783,22 +5159,25 @@ public enum MCVersion {
     }
 
     @NotNull
-    private JSONObject toJSONObject(boolean noCorrespondingVersion) {
+    private JSONObject toJSONObject(boolean recursive) {
         JSONObject o = new JSONObject();
         o.put("_name", name());
         o.put("_ordinal", ordinal());
+        o.put("id", getId());
         o.put("name", getName());
         o.put("protocol_version", getProtocolVersion());
         o.put("data_version", getDataVersion());
+        o.put("has_client", hasClient());
+        o.put("has_server", hasServer());
         o.put("is_modern", isModern());
         o.put("is_release", isRelease());
         o.put("is_release_candidate", isReleaseCandidate());
         o.put("is_prerelease", isPrerelease());
         o.put("is_snapshot", isSnapshot());
         o.put("is_aprilfools", isAprilFools());
-        o.put("release_candidate_for", valueOrNull(getReleaseCandidateFor()));
-        o.put("prerelease_for", valueOrNull(getPrereleaseFor()));
-        o.put("snapshot_for", valueOrNull(getSnapshotFor()));
+        if (!recursive) o.put("release_candidate_for", toJSONOrNull(getReleaseCandidateFor()));
+        if (!recursive) o.put("prerelease_for", toJSONOrNull(getPrereleaseFor()));
+        if (!recursive) o.put("snapshot_for", toJSONOrNull(getSnapshotFor()));
         o.put("caves_and_cliffs_datapack", valueOrNull(getValueOf(CavesAndCliffsDataPack.class)));
         o.put("client_json", valueOrNull(getClientJson()));
         o.put("client_jsons", valueOrNull(getClientJsons()));
@@ -4815,10 +5194,16 @@ public enum MCVersion {
         o.put("server_zip", valueOrNull(getLastEntry(getValueOf(ServerZip.class))));
         o.put("server_zips", valueOrNull(getValueOf(ServerZip.class)));
         o.put("al_version", getAlVersions());
-        if (!noCorrespondingVersion) {
-            o.put("corresponding_version", Optional.ofNullable(getCorrespondingVersion()).<Object>map(v -> v.toJSONObject(true)).orElse(JSONObject.NULL));
-        }
+        if (!recursive) o.put("corresponding_version", toJSONOrNull(getCorrespondingVersion()));
+        o.put("release_candidates", VALUES.filter(v -> v.getReleaseCandidateFor() == this).map(MCVersion::toJSONOrNull));
+        o.put("prereleases", VALUES.filter(v -> v.getPrereleaseFor() == this).map(MCVersion::toJSONOrNull));
+        o.put("snapshots", VALUES.filter(v -> v.getSnapshotFor() == this).map(MCVersion::toJSONOrNull));
         return o;
+    }
+
+    @NotNull
+    private static Object toJSONOrNull(@Nullable MCVersion version) {
+        return Optional.ofNullable(version).<Object>map(v -> v.toJSONObject(true)).orElse(JSONObject.NULL);
     }
 
     @Contract(value = "!null -> param1", pure = true)

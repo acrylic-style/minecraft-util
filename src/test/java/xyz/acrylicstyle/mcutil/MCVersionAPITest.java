@@ -25,7 +25,7 @@ public class MCVersionAPITest {
 
     @Test
     public void getLatestOrReleaseByPV() {
-        MCVersion version = MCVersion.getLatestOrReleaseByProtocolVersion(5);
+        MCVersion version = MCVersion.getReleaseOrLatestByProtocolVersion(5);
         assert version == MCVersion.v1_7_10 : version;
     }
 

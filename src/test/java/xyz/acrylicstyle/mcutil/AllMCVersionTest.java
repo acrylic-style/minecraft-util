@@ -28,9 +28,14 @@ public class AllMCVersionTest {
     @Parameter public MCVersion version;
 
     @Test
-    public void ensureNoNameDupe() {
-        if (data.filter(v -> v.getName().equals(version.getName())).size() > 1) {
-            throw new AssertionError("There are 2 or more duplicates of: " + summarize(version));
+    public void ensureNoDupe() {
+        if (!version.name().startsWith("v2_0") && !version.isAprilFools()) {
+            if (data.filter(v -> v.getName().equals(version.getName())).size() > 1) {
+                throw new AssertionError("There are 2 or more duplicates of names: " + summarize(version));
+            }
+        }
+        if (data.filter(v -> v.getId().equals(version.getId())).size() > 1) {
+            throw new AssertionError("There are 2 or more duplicates of IDs: " + summarize(version));
         }
         data.filter(v -> v != version).forEach(v -> {
             if (version.getClientJars() != null) {

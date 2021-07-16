@@ -19,6 +19,7 @@ public final class ValueTypes<T> {
     public static final ValueTypes<MCVersion> PRE_RELEASE_FOR = new ValueTypes<>(PrereleaseFor.class);
     public static final ValueTypes<MCVersion> SNAPSHOT_FOR = new ValueTypes<>(SnapshotFor.class);
     public static final ValueTypes<MCVersion> CORRESPONDING_VERSION = new ValueTypes<>(CorrespondingVersion.class);
+    public static final ValueTypes<String> NAME = new ValueTypes<>(Name.class);
 
     private final Class<? extends Annotation> annotation;
 

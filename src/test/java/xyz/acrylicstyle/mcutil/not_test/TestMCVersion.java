@@ -58,6 +58,10 @@ public class TestMCVersion {
                         v = version;
                         break w;
                     }
+                    if (version.getId().equalsIgnoreCase(line)) {
+                        v = version;
+                        break w;
+                    }
                     if (version.getName().equalsIgnoreCase(line)) {
                         v = version;
                         break w;
@@ -68,18 +72,32 @@ public class TestMCVersion {
             System.out.println(v.toJSONObject().toString(2));
         }
         if (action == 4) {
+            System.out.println("This command generates a large file. Are you sure want to continue? [y/N]");
+            if (!readLine().equalsIgnoreCase("y")) {
+                System.out.println("Aborted.");
+                return;
+            }
+            long start = System.currentTimeMillis();
             File file = new File("./versions.json");
             PrintStream ps = new PrintStream(new FileOutputStream(file));
             ps.print(MCVersion.getAllVersionsAsJSON().toString(2));
             ps.close();
-            System.out.println("Done: " + file.getAbsolutePath());
+            long time = System.currentTimeMillis() - start;
+            System.out.println("Done: " + file.getAbsolutePath() + " (" + time + " ms)");
         }
         if (action == 5) {
-            File file = new File("./versions.json");
+            System.out.println("This command generates a large file. Are you sure want to continue? [y/N]");
+            if (!readLine().equalsIgnoreCase("y")) {
+                System.out.println("Aborted.");
+                return;
+            }
+            long start = System.currentTimeMillis();
+            File file = new File("./versions-min.json");
             PrintStream ps = new PrintStream(new FileOutputStream(file));
             ps.print(MCVersion.getAllVersionsAsJSON());
             ps.close();
-            System.out.println("Done: " + file.getAbsolutePath());
+            long time = System.currentTimeMillis() - start;
+            System.out.println("Done: " + file.getAbsolutePath() + " (" + time + " ms)");
         }
     }
 }
