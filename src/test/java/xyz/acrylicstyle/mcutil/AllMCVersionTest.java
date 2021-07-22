@@ -60,7 +60,7 @@ public class AllMCVersionTest {
 
     @Test
     public void testVersionType() {
-        assert version == MCVersion.v1_18_EXPERIMENTAL_SNAPSHOT_1 ||
+        assert version.name().startsWith("v1_18_EXPERIMENTAL_SNAPSHOT") ||
                 !version.isSnapshot() ||
                 version.isCombatTest() ||
                 version.getVersionType() == Type.Types.SNAPSHOT
@@ -95,7 +95,7 @@ public class AllMCVersionTest {
 
     @Test
     public void ensureDownloadsAreInProperFormat() {
-        if (version != MCVersion.v1_18_EXPERIMENTAL_SNAPSHOT_1) {
+        if (!version.name().startsWith("v1_18_EXPERIMENTAL_SNAPSHOT")) {
             endsWith("client json", version.getClientJsons(), version.isCombatTest() ? ".zip" : ".json");
         }
         if (version != MCVersion.SNAPSHOT_12W19A && version != MCVersion.SNAPSHOT_12W18A) {
