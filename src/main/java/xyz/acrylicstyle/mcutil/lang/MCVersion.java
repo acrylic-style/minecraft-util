@@ -88,6 +88,33 @@ public enum MCVersion {
     @IgnoreTest("not released yet")
     v1_18(-1, -1, "1.18"), // not released; set to release in late 2021. Caves & Cliffs: Part II
     @SnapshotFor(v1_18)
+    @ClientJson("https://launcher.mojang.com/v1/objects/d9cb7f6fb4e440862adfb40a385d83e3f8d154db/1_18_experimental-snapshot-5.zip")
+    @ClientJar("https://launcher.mojang.com/v1/objects/d2fa097ee28096bc262b131770ddcfe897001203/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/6680fe47a8d599193219f155d7d878feb05bfeb3/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/86cb95da8a8f19f9e3881af6354539fe87ecad07/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/98b1d1ebd93aacc0561b90d77fee1f1049f8ba21/server.txt")
+    @Name("1.18 experimental snapshot 5")
+    @Type(Types.PENDING)
+    v1_18_EXPERIMENTAL_SNAPSHOT_5(0x4000002D, 2829, "1.18_experimental-snapshot-5"),
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip")
+    @ClientJar("https://launcher.mojang.com/v1/objects/f52d527002d3678da1c9e63aae0200a1063ec184/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/ac942062c6b0bf5da61ed2c7b701a13a01462c63/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/50788601a528da2f35483f6852302ec085a05c65/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/38bae2e9a3f7bd315a383eb3c388c994385be14c/server.txt")
+    @Name("1.18 experimental snapshot 4")
+    @Type(Types.PENDING)
+    v1_18_EXPERIMENTAL_SNAPSHOT_4(0x4000002C, 2828, "1.18_experimental-snapshot-4"),
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launcher.mojang.com/v1/objects/846648ff9fe60310d584061261de43010e5c722b/1_18_experimental-snapshot-3.zip")
+    @ClientJar("https://launcher.mojang.com/v1/objects/7d7acdf4165867cd7334bfa5f3f00af742c5ce16/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/cbe106c19f5072222ce54039aa665a8aaf97097d/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/6685e6de966b4970d947302f55376913454cf512/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/7751261f6f27641bd605b579bc00598fc4afd556/server.txt")
+    @Name("1.18 experimental snapshot 3")
+    @Type(Types.PENDING)
+    v1_18_EXPERIMENTAL_SNAPSHOT_3(0x4000002B, 2827, "1.18_experimental-snapshot-3"),
+    @SnapshotFor(v1_18)
     @ClientJson("https://launcher.mojang.com/v1/objects/0adfe4f321aa45248fc88ac888bed5556633e7fb/1_18_experimental-snapshot-2.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/1108159d2734fda202c782ff08e74bf1e399bad4/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/9fa3fd2939f9785bafc6a0a3507c3c967fbeafed/server.jar")
@@ -95,7 +122,7 @@ public enum MCVersion {
     @ServerMapping("https://launcher.mojang.com/v1/objects/dde78de8bc0937fa8324efd62d78244febd431e9/server.txt")
     @Name("1.18 experimental snapshot 2")
     @Type(Types.PENDING)
-    v1_18_EXPERIMENTAL_SNAPSHOT_2(0x40000030, 2826, "1.18_experimental-snapshot-2"),
+    v1_18_EXPERIMENTAL_SNAPSHOT_2(0x4000002A, 2826, "1.18_experimental-snapshot-2"),
     @SnapshotFor(v1_18)
     @ClientJson("https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip")
     @ClientJar("https://launcher.mojang.com/v1/objects/b230ccffcf332c9d3619af85727d02e284ff4903/client.jar")
