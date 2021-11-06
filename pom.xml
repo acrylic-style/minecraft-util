@@ -6,7 +6,7 @@
 
     <groupId>xyz.acrylicstyle</groupId>
     <artifactId>minecraft-util</artifactId>
-    <version>0.5.4</version>
+    <version>0.5.5</version>
     <build>
         <plugins>
             <plugin>
