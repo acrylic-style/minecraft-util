@@ -85,8 +85,39 @@ public enum MCVersion {
     COMBAT_TEST_6(801, 2701, "1.16_combat-0"), // Fork of 1.16.2-pre3
 
     // full release versions
-    @IgnoreTest("not released yet")
-    v1_18(-1, -1, "1.18"), // not released; set to release in November 31. Caves & Cliffs: Part II
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/cdd1c0f485c0ea5a5aae60d4e62d316b2141f227/1.18.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/d49eb6caed53d23927648c97451503442f9e26fd/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/e824c89c612c0b9cb438ef739c44726c59bbf679/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/a8fe854e35a69df7289d3f03fc0821f6363f2238/server.txt")
+    v1_18(757, 2860, "1.18"),
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/8d6c34be0b1efb7d8a35e756da40b3e4d4343e6a/1.18-rc4.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/4cf8ed5168308946275308cae955ec70b4379477/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/5889357fe058d867f6e27ee3f033286c430ec91e/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/b64667a23e5ea5f0cc0547241c253d2a72a97c56/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/a36b4033a861c6e9bd3ced78b267e6aeaa75b639/server.txt")
+    @Name("1.18 Release Candidate 4")
+    @Type(Types.SNAPSHOT)
+    v1_18_RC4(0x4000003C, 2759, "1.18-rc4"),
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/21db6043aabebc4012674572a678f856d666a9d9/1.18-rc3.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/060dd014d59c90d723db87f9c9cedb511f374a71/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/9a03d2c4ec2c737ce9d17a43d3774cdc0ea21030/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/b64667a23e5ea5f0cc0547241c253d2a72a97c56/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/a36b4033a861c6e9bd3ced78b267e6aeaa75b639/server.txt")
+    @Name("1.18 Release Candidate 3")
+    @Type(Types.SNAPSHOT)
+    v1_18_RC3(0x4000003B, 2758, "1.18-rc3"),
+    @SnapshotFor(v1_18)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/be0e85e9e15f0c8b02cb2793ee37ea1a0593d7ba/1.18-rc2.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/6d90a50cc252b78f959b5d41c46f8d983efda594/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/96162b8d0af608bee2febe602bdb46942e85f6d8/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/44441ef893cb6531e8322d257e8d03d5463fb810/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/97dd4d70ba711b6dbd6f61b9c7dde9e02e4d00fd/server.txt")
+    @Name("1.18 Release Candidate 2")
+    @Type(Types.SNAPSHOT)
+    v1_18_RC2(0x4000003A, 2757, "1.18-rc2"),
     @SnapshotFor(v1_18)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/2010f28a4d0431e6c82d5a27f06b2214e78fe8fc/1.18-rc1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/6232765f8b87066e271ab984eccd8a8f3af03630/client.jar")
