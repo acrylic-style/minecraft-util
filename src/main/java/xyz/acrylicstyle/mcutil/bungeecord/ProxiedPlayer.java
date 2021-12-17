@@ -7,7 +7,6 @@ import xyz.acrylicstyle.mcutil.common.PlayerProfile;
 
 import java.util.UUID;
 
-@SuppressWarnings("deprecation")
 public final class ProxiedPlayer implements PlayerProfile {
     public static final RefClass<?> CLASS = Ref.forName("net.md_5.bungee.api.connection.ProxiedPlayer");
 
@@ -17,9 +16,9 @@ public final class ProxiedPlayer implements PlayerProfile {
 
     @NotNull
     @Override
-    public final UUID getUniqueId() { return (UUID) CLASS.getMethod("getUniqueId").invokeObj(player); }
+    public UUID getUniqueId() { return (UUID) CLASS.getMethod("getUniqueId").invokeObj(player); }
 
     @NotNull
     @Override
-    public final String getName() { return (String) CLASS.getMethod("getName").invokeObj(player); }
+    public String getName() { return (String) CLASS.getMethod("getName").invokeObj(player); }
 }

@@ -8,7 +8,6 @@ import xyz.acrylicstyle.mcutil.common.PlayerProfile;
 
 import java.util.UUID;
 
-@SuppressWarnings("deprecation")
 public final class BungeeCordAPI {
     public static final boolean available;
     public static final RefClass<?> CLASS;

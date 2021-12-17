@@ -6,7 +6,7 @@
 
     <groupId>xyz.acrylicstyle</groupId>
     <artifactId>minecraft-util</artifactId>
-    <version>0.5.10</version>
+    <version>1.0.0</version>
     <build>
         <plugins>
             <plugin>
@@ -33,6 +33,9 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <util.version>0.16.5</util.version>
+    </properties>
     <repositories>
         <repository>
             <id>acrylic-repo2</id>
@@ -58,9 +61,24 @@
             <version>20210307</version>
         </dependency>
         <dependency>
-            <groupId>xyz.acrylicstyle</groupId>
-            <artifactId>java-util-all</artifactId>
-            <version>[0.15.4,)</version>
+            <groupId>xyz.acrylicstyle.util</groupId>
+            <artifactId>http</artifactId>
+            <version>${util.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.acrylicstyle.util</groupId>
+            <artifactId>collection</artifactId>
+            <version>${util.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.acrylicstyle.util</groupId>
+            <artifactId>promise</artifactId>
+            <version>${util.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.acrylicstyle.util</groupId>
+            <artifactId>reflect</artifactId>
+            <version>${util.version}</version>
         </dependency>
     </dependencies>
 </project>

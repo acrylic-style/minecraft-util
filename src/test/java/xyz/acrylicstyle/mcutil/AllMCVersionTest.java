@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
-import util.ICollectionList;
+import util.collection.ICollectionList;
 import xyz.acrylicstyle.mcutil.lang.MCVersion;
 import xyz.acrylicstyle.mcutil.lang.ServerExe;
 import xyz.acrylicstyle.mcutil.lang.Type;
