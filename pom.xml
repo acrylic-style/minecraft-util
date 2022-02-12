@@ -6,7 +6,8 @@
 
     <groupId>xyz.acrylicstyle</groupId>
     <artifactId>minecraft-util</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
+
     <build>
         <plugins>
             <plugin>
@@ -33,15 +34,18 @@
             </plugin>
         </plugins>
     </build>
+
     <properties>
         <util.version>0.16.5</util.version>
     </properties>
+
     <repositories>
         <repository>
-            <id>acrylic-repo2</id>
-            <url>https://repo2.acrylicstyle.xyz/</url>
+            <id>acrylic-repo</id>
+            <url>https://repo.acrylicstyle.xyz/</url>
         </repository>
     </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -81,4 +85,15 @@
             <version>${util.version}</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>acrylicstyle-repo</id>
+            <url>https://repo.acrylicstyle.xyz/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>acrylicstyle-repo</id>
+            <url>https://repo.acrylicstyle.xyz/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

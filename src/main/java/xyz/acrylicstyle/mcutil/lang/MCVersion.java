@@ -85,6 +85,34 @@ public enum MCVersion {
     COMBAT_TEST_6(801, 2701, "1.16_combat-0"), // Fork of 1.16.2-pre3
 
     // full release versions
+    @IgnoreTest("Unreleased version")
+    v1_19(-1, -1, "1.19"),
+    @IgnoreTest("Unreleased version")
+    v1_18_2(-1, -1, "1.18.2"),
+    @SnapshotFor(v1_18_2)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/3c6e119c0ff307accf31b596f9cd47ffa2ec6305/22w06a.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/b863174b1147a6a9d9ab4922d9ced4eee19452ac/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/60c757a63f21877f8b053904ac76d04ff3cb76ef/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/c0c33fbe60c9ba2f4a92bc831e52aadb46bb2651/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/e39e107d5387eb76fb1f68deb7a957e01be83369/server.txt")
+    @Type(Types.SNAPSHOT)
+    SNAPSHOT_22W06A(1073741891, 2968, "22w06a"),
+    @SnapshotFor(v1_18_2)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/71e396631e76b57a8410f949bd455200f24143a0/22w05a.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/55a4f20d845b32482d1b26afc51a3d9da561492d/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/e6183efda3cea1871cb090b37ec7e0305d6ebbde/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/031d74e4ae523a6fbc1e8052bccc55978f7806bd/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/b2c3a549d7d796808a82e57a50cc9a8b3ca12a38/server.txt")
+    @Type(Types.SNAPSHOT)
+    SNAPSHOT_22W05A(1073741890, 2967, "22w05a"),
+    @SnapshotFor(v1_18_2)
+    @ClientJson("https://launchermeta.mojang.com/v1/packages/e2da73bc82ae65d2f112dd88c63b659eac264c70/22w03a.json")
+    @ClientJar("https://launcher.mojang.com/v1/objects/813b1bfe9158a3b553e44e33c8ba0a6babc6fff2/client.jar")
+    @ServerJar("https://launcher.mojang.com/v1/objects/686320be073916ae97b1ad78d22627809491dfc2/server.jar")
+    @ClientMapping("https://launcher.mojang.com/v1/objects/5617ef79eb0bbe6977f7c49346e54a6eb6b0f11c/client.txt")
+    @ServerMapping("https://launcher.mojang.com/v1/objects/e6bb23276072ada7b95a5f0b3cf172d1458c1ee6/server.txt")
+    @Type(Types.SNAPSHOT)
+    SNAPSHOT_22W03A(1073741889, 2966, "22w03a"),
     @ClientJson("https://launchermeta.mojang.com/v1/packages/b0bdc637e4c4cbf0501500cbaad5a757b04848ed/1.18.1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/7e46fb47609401970e2818989fa584fd467cd036/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar")
