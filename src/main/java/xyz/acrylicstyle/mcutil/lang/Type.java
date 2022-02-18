@@ -11,8 +11,17 @@ public @interface Type {
     Types value();
 
     enum Types {
+        /**
+         * Usually used for experimental snapshots and <i>not</i> available in the launcher.
+         */
         PENDING,
+        /**
+         * Used for snapshots/pre-releases/release-candidates and available in the launcher.
+         */
         SNAPSHOT,
+        /**
+         * Used for full releases (such as 1.18.1).
+         */
         RELEASE,
     }
 }
