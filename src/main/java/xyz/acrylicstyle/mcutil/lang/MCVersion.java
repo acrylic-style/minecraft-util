@@ -102,6 +102,7 @@ public enum MCVersion {
     @ClientMapping("https://launcher.mojang.com/v1/objects/a661c6a55a0600bd391bdbbd6827654c05b2109c/client.txt")
     @ServerMapping("https://launcher.mojang.com/v1/objects/e562f588fea155d96291267465dc3323bfe1551b/server.txt")
     v1_18_2(758, 2975, "1.18.2"),
+    @ReleaseCandidateFor(v1_18_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/a2fdd5749ab3f214f566c07065788a56cb068611/1.18.2-rc1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/a2699aadf0435f35cc0694d2f9e9403baac27ee2/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/2f52c69c90d63c024548ae5c5438ff3156ece6c2/server.jar")
@@ -110,6 +111,7 @@ public enum MCVersion {
     @Name("1.18.2 Release Candidate 1")
     @Type(Types.SNAPSHOT)
     v1_18_2_RC1(0x40000049, 2974, "1.18.2-rc1"),
+    @PrereleaseFor(v1_18_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/fcc448917e087672f34476aaa27935904d3bb847/1.18.2-pre3.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/8dcc197b6dca3dfa2f6a0d5d3f0ff79de39b4700/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/1c898afff0449eed08ad8036aaa4c652952035de/server.jar")
@@ -118,6 +120,7 @@ public enum MCVersion {
     @Name("1.18.2 Pre-release 3")
     @Type(Types.SNAPSHOT)
     v1_18_2_PRE3(0x40000048, 2973, "1.18.2-pre3"),
+    @PrereleaseFor(v1_18_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/8da33264b60e2cbe50646235e9fcbe1b5e0d7d43/1.18.2-pre2.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/d0a4d6f3c6ba2232b7e1ac4223f8a93741c8e47a/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/888cb380db39a115cfe978c00922d24536bdd2a5/server.jar")
@@ -126,6 +129,7 @@ public enum MCVersion {
     @Name("1.18.2 Pre-release 2")
     @Type(Types.SNAPSHOT)
     v1_18_2_PRE2(0x40000047, 2972, "1.18.2-pre2"),
+    @PrereleaseFor(v1_18_2)
     @ClientJson("https://launchermeta.mojang.com/v1/packages/ab18179469e2ec0bd497d919ca47edf6fb8242e3/1.18.2-pre1.json")
     @ClientJar("https://launcher.mojang.com/v1/objects/501e50015fd24332cd78010a5e57ba42ded41131/client.jar")
     @ServerJar("https://launcher.mojang.com/v1/objects/c3e2734bafdb017efab854b01c66dd795722a332/server.jar")
