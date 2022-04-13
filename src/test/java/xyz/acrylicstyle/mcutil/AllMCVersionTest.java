@@ -16,7 +16,7 @@ import xyz.acrylicstyle.mcutil.lang.ValueTypes;
 import java.util.List;
 import java.util.Objects;
 
-// contains many tests that doesn't check for order
+// contains many tests that don't check for order
 @RunWith(Parameterized.class)
 public class AllMCVersionTest {
     public static final ICollectionList<MCVersion> data = ICollectionList.asList(MCVersion.values());
@@ -60,7 +60,7 @@ public class AllMCVersionTest {
 
     @Test
     public void testVersionType() {
-        assert version.name().startsWith("v1_18_EXPERIMENTAL_SNAPSHOT") ||
+        assert version.getVersionType() == Type.Types.PENDING ||
                 !version.isSnapshot() ||
                 version.isCombatTest() ||
                 version.getVersionType() == Type.Types.SNAPSHOT
@@ -95,7 +95,7 @@ public class AllMCVersionTest {
 
     @Test
     public void ensureDownloadsAreInProperFormat() {
-        if (!version.name().startsWith("v1_18_EXPERIMENTAL_SNAPSHOT")) {
+        if (version.getVersionType() != Type.Types.PENDING) {
             endsWith("client json", version.getClientJsons(), version.isCombatTest() ? ".zip" : ".json");
         }
         if (version != MCVersion.SNAPSHOT_12W19A && version != MCVersion.SNAPSHOT_12W18A) {
